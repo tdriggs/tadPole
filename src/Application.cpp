@@ -3,34 +3,19 @@
 
 #include "Exception.h"
 
-using namespace tadPole;
+tadPole::Application::Application() { }
 
-Application::Application() : Singleton<Application>()
-{
-}
+tadPole::Application::~Application() { }
 
-Application::~Application()
-{
-}
-
-void Application::initialize_win32(HWND hWnd)
-{
-	std::string windowHandle = std::to_string((size_t)hWnd);
-	WindowParams windowParams;
-	windowParams["externalWindowHandle"] = windowHandle;
-
-	this->initialize_common(windowParams);
-}
-
-void Application::initialize_common(WindowParams & windowParams)
+void tadPole::Application::initialize(HWND windowHandle)
 {
 	try
 	{
-		this->renderManager = new RenderManager(windowParams);
-		this->logManager = new LogManager();
-		this->debugOverlay = new DebugOverlay();
-		this->inputManager = new InputManager();
-		this->gameObjectManager = new GameObjectManager();
+		RenderManager * renderManager = new RenderManager(windowHandle);
+		LogManager * logManager = new LogManager();
+		DebugOverlay * debugOverlay = new DebugOverlay();
+		InputManager * inputManager = new InputManager();
+		GameObjectManager * gameObjectManager = new GameObjectManager();
 
 		RENDER_MANAGER->initializeBaseScene();
 
@@ -44,13 +29,13 @@ void Application::initialize_common(WindowParams & windowParams)
 	}
 }
 
-void Application::update(float deltaTime)
+void tadPole::Application::update(float deltaTime)
 {
 	DEBUG_OVERLAY->update(deltaTime);
 	RENDER_MANAGER->update(deltaTime);
 }
 
-void Application::render()
+void tadPole::Application::render()
 {
 	RENDER_MANAGER->render();
 }

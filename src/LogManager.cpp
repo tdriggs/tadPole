@@ -5,8 +5,6 @@
 
 #include "DebugOverlay.h"
 
-using namespace tadPole;
-
 tadPole::LogManager::LogManager() : Singleton<LogManager>()
 {
 	this->logFile.open(LOG_FILE_PATH);
@@ -17,7 +15,7 @@ tadPole::LogManager::~LogManager()
 	this->logFile.close();
 }
 
-void LogManager::log(std::string message)
+void tadPole::LogManager::log(std::string message)
 {
 	DEBUG_OVERLAY->postMessage(message);
 

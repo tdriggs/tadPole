@@ -14,12 +14,11 @@ namespace tadPole
 	class Component
 	{
 	protected:
-		std::string name;
 		GameObject * owner;
 		bool isActive = true;
 
 	public:
-		Component(std::string n, GameObject * g) : owner(g), name(n) {}
+		Component(GameObject * g) : owner(g) {}
 		virtual ~Component() { }
 
 		virtual void update(float deltaTime) {}

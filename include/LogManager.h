@@ -5,7 +5,7 @@
 
 #include "Singleton.h"
 
-#define LOG_MANAGER LogManager::getInstance()
+#define LOG_MANAGER tadPole::LogManager::getInstance()
 #define LOG_FILE_PATH "tadPole_log.txt"
 
 namespace tadPole

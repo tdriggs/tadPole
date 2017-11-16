@@ -13,7 +13,7 @@ int main(int argc, char * argv[])
 	tadPole::Window * window = new tadPole::Window("tadPole", WINDOW_CENTERED, WINDOW_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, OPENGL_FLAGS);
 
 	tadPole::Application * app = new tadPole::Application();
-	tadPole::APPLICATION->initialize_win32(window->getWin32Handle());
+	app->initialize(window->getWin32Handle());
 
 	unsigned int prevTimeMS = 0;
 	unsigned int deltaTimeMS = 0;
@@ -40,11 +40,11 @@ int main(int argc, char * argv[])
 			}
 			if (event.getType() == EVT_KEYDOWN)
 			{
-				tadPole::INPUT_MANAGER->key_down(event.getKey());
+				INPUT_MANAGER->key_down(event.getKey());
 			}
 			if (event.getType() == EVT_KEYDOWN)
 			{
-				tadPole::INPUT_MANAGER->key_up(event.getKey());
+				INPUT_MANAGER->key_up(event.getKey());
 			}
 		}
 
@@ -52,10 +52,10 @@ int main(int argc, char * argv[])
 		if (frameTimer >= frameTime)
 		{
 			// Update
-			tadPole::APPLICATION->update(frameTimer / 1000.0f);
+			app->update(frameTimer / 1000.0f);
 
 			// Render
-			tadPole::APPLICATION->render();
+			app->render();
 
 			frameTimer = 0.0;
 		}

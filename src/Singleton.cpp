@@ -1,18 +1,14 @@
 #include "stdafx.h"
 #include "Singleton.h"
 
-#include "Application.h"
 #include "LogManager.h"
 #include "DebugOverlay.h"
 #include "InputManager.h"
 #include "RenderManager.h"
 #include "GameObjectManager.h"
 
-using namespace tadPole;
-
-template <> Application * Singleton<Application>::instance = NULL;
-template <> LogManager * Singleton<LogManager>::instance = NULL;
-template <> DebugOverlay * Singleton<DebugOverlay>::instance = NULL;
-template <> InputManager * Singleton<InputManager>::instance = NULL;
-template <> RenderManager * Singleton<RenderManager>::instance = NULL;
-template <> GameObjectManager * Singleton<GameObjectManager>::instance = NULL;
+template <> tadPole::LogManager			* tadPole::Singleton<tadPole::LogManager>::instance = NULL;
+template <> tadPole::DebugOverlay		* tadPole::Singleton<tadPole::DebugOverlay>::instance = NULL;
+template <> tadPole::InputManager		* tadPole::Singleton<tadPole::InputManager>::instance = NULL;
+template <> tadPole::GameObjectManager	* tadPole::Singleton<tadPole::GameObjectManager>::instance = NULL;
+template <> tadPole::RenderManager		* tadPole::Singleton<tadPole::RenderManager>::instance = NULL;

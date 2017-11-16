@@ -5,9 +5,9 @@
 #include "Application.h"
 #include "GameObject.h"
 
-tadPole::RenderManager::RenderManager(WindowParams & windowParams) : Singleton<RenderManager>()
+tadPole::RenderManager::RenderManager(HWND windowHandle) : Singleton<RenderManager>()
 {
-	RENDER_MANAGER->initialize(windowParams);
+	this->initialize(windowHandle);
 }
 
 tadPole::RenderManager::~RenderManager()
@@ -16,7 +16,7 @@ tadPole::RenderManager::~RenderManager()
 	delete this->overlaySystem;
 }
 
-void tadPole::RenderManager::initialize(WindowParams & windowParams)
+void tadPole::RenderManager::initialize(HWND windowHandle)
 {
 #ifdef _DEBUG
 	std::string plugins = "plugins_d.cfg";
@@ -36,6 +36,9 @@ void tadPole::RenderManager::initialize(WindowParams & windowParams)
 	// Initialize Ogre and Create a Context
 	this->root->initialise(false);
 	this->overlayManager = Ogre::OverlayManager::getSingletonPtr();
+
+	Ogre::NameValuePairList windowParams;
+	windowParams["externalWindowHandle"] = std::to_string((size_t)windowHandle);
 	this->renderWindow = this->root->createRenderWindow("tadPole", SCREEN_WIDTH, SCREEN_HEIGHT, false, &windowParams);
 
 	// Initialize SceneManager
@@ -49,6 +52,8 @@ void tadPole::RenderManager::initialize(WindowParams & windowParams)
 
 void tadPole::RenderManager::initializeBaseScene()
 {
+	Ogre::Camera * mainCamera;
+	Ogre::Viewport * mainViewport;
 	Ogre::SceneNode* camNode = this->sceneManager->getRootSceneNode()->createChildSceneNode();
 	Ogre::Light * light = this->sceneManager->createLight();
 	light->setType(Ogre::Light::LT_DIRECTIONAL);
@@ -56,47 +61,43 @@ void tadPole::RenderManager::initializeBaseScene()
 	light->setDiffuseColour(Ogre::ColourValue(0.2f, 0.2f, 0.2f));
 	camNode->setPosition(0, 15, 30);
 	camNode->lookAt(Ogre::Vector3(0, 0, -1), Ogre::Node::TS_PARENT);
-	this->mainCamera = this->sceneManager->createCamera("myCam");
-	this->mainCamera->setNearClipDistance(0.1f);
-	this->mainCamera->setFarClipDistance(1000.0f);
-	this->mainCamera->setAutoAspectRatio(true);
-	camNode->attachObject(this->mainCamera);
-	this->mainViewport = this->renderWindow->addViewport(this->mainCamera);
-	this->mainViewport->setBackgroundColour(Ogre::ColourValue::ColourValue(0.4f, 0.4f, 0.4f));
-	this->render();
+	mainCamera = this->sceneManager->createCamera("myCam");
+	mainCamera->setNearClipDistance(0.1f);
+	mainCamera->setFarClipDistance(1000.0f);
+	mainCamera->setAutoAspectRatio(true);
+	camNode->attachObject(mainCamera);
+	mainViewport = this->renderWindow->addViewport(mainCamera);
+	mainViewport->setBackgroundColour(Ogre::ColourValue::ColourValue(0.4f, 0.4f, 0.4f));
+	render();
 
 	GAME_OBJECT_MANAGER->createGroup("rotaters");
-	GAME_OBJECT_MANAGER->createGroup("rotaters/left");
-	GAME_OBJECT_MANAGER->createGroup("rotaters/left/orbiterBase");
-	GAME_OBJECT_MANAGER->createGroup("rotaters/orbiter");
-	GAME_OBJECT_MANAGER->createGroup("rotaters/central");
-	GAME_OBJECT_MANAGER->createGroup("rotaters/central/orbiterBase");
+	GAME_OBJECT_MANAGER->createGroup("orbiters");
 	GAME_OBJECT_MANAGER->createGroup("bullets");
-	GAME_OBJECT_MANAGER->createGroup("base");
 
 	GameObject * base = GAME_OBJECT_MANAGER->createGameObject("base");
 	MeshComponent * baseMesh = base->createMeshComponent("Barrel.mesh");
 	base->scale(20.0f, 20.0f, 20.0f);
 	base->translateWorld(0.0f, -70.0f, -30.0f);
 
-	GameObject * central = GAME_OBJECT_MANAGER->createGameObject("rotaters/central");
-	MeshComponent * centralMesh = central->createMeshComponent("Sinbad.mesh");
+	GameObject * central = GAME_OBJECT_MANAGER->createGameObject("rotaters", "central");
+	MeshComponent * centralMesh = central->createMeshComponent("sinbad.mesh");
 
-	GameObject * left = GAME_OBJECT_MANAGER->createGameObject("rotaters/left");
+	GameObject * left = GAME_OBJECT_MANAGER->createGameObject("rotaters", "left");
 	MeshComponent * leftMesh = left->createMeshComponent("robot.mesh");
 	left->scale(0.15f, 0.15f, 0.15f);
 
-	GameObject * leftOrbiterBase = GAME_OBJECT_MANAGER->createGameObject("rotaters/left/orbiterBase");
-	GameObject * centralOrbiterBase = GAME_OBJECT_MANAGER->createGameObject("rotaters/central/orbiterBase");
-	GameObject * orbiter = GAME_OBJECT_MANAGER->createGameObject("rotaters/orbiter");
+	GameObject * leftOrbiterBase = GAME_OBJECT_MANAGER->createGameObject("orbiters", "leftOrbiterBase");
+	GameObject * centralOrbiterBase = GAME_OBJECT_MANAGER->createGameObject("orbiters", "centralOrbiterBase");
+	GameObject * orbiter = GAME_OBJECT_MANAGER->createGameObject("orbiters", "orbiter");
 	MeshComponent * orbiterMesh = orbiter->createMeshComponent("penguin.mesh");
 	orbiter->setParent(leftOrbiterBase);
 	orbiter->scale(0.1f, 0.1f, 0.1f);
-	orbiter->translateParent(10, 0, 0);
+	orbiter->translateLocal(10, 0, 0);
 
 	left->translateLocal(-25, -6, -25);
-	tadPole::Vector3 leftPosition = left->getWorldPosition();
-	tadPole::Vector3 centralPosition = central->getWorldPosition();
+	central->translateLocal(-1, 0, 0);
+	glm::vec3 leftPosition = left->getWorldPosition();
+	glm::vec3 centralPosition = central->getWorldPosition();
 	leftOrbiterBase->setPosition(leftPosition.x, leftPosition.y, leftPosition.z);
 	centralOrbiterBase->setPosition(centralPosition.x, centralPosition.y, centralPosition.z);
 }
@@ -105,21 +106,20 @@ void tadPole::RenderManager::update(float deltaTime)
 {
 	this->bulletTimer += deltaTime;
 
-	GAME_OBJECT_MANAGER->getGameObject("rotaters/central")->rotateLocal(0, 1, 0, deltaTime * -20);
-	GAME_OBJECT_MANAGER->getGameObject("rotaters/left")->rotateLocal(0, 1, 0, deltaTime * 10);
-	GAME_OBJECT_MANAGER->getGameObject("rotaters/left/orbiterBase")->rotateLocal(0, 1, 0, deltaTime * 40);
-	GAME_OBJECT_MANAGER->getGameObject("rotaters/central/orbiterBase")->rotateLocal(0, 1, 0, deltaTime * 40);
-	GAME_OBJECT_MANAGER->getGameObject("rotaters/orbiter")->rotateLocal(0, 1, 0, deltaTime * -100);
+	GAME_OBJECT_MANAGER->getGameObject("central")->rotateLocal(0, 1, 0, deltaTime * -20);
+	GAME_OBJECT_MANAGER->getGameObject("left")->rotateLocal(0, 1, 0, deltaTime * 10);
+	GAME_OBJECT_MANAGER->getGameObject("leftOrbiterBase")->rotateLocal(0, 1, 0, deltaTime * 40);
+	GAME_OBJECT_MANAGER->getGameObject("centralOrbiterBase")->rotateLocal(0, 1, 0, deltaTime * 40);
+	GAME_OBJECT_MANAGER->getGameObject("orbiter")->rotateLocal(0, 1, 0, deltaTime * -100);
 
 
 	if (bulletTimer >= 0.5f)
 	{
 		bulletTimer = 0;
-		GAME_OBJECT_MANAGER->createGroup("bullets/" + std::to_string(numBullets));
-		GameObject * bullet = GAME_OBJECT_MANAGER->createGameObject("bullets/" + std::to_string(numBullets++));
+		GameObject * bullet = GAME_OBJECT_MANAGER->createGameObject("bullets", "bullet" + std::to_string(numBullets++));
 		MeshComponent * bulletMesh = bullet->createMeshComponent("RZR-002.mesh");
 		bullet->scale(0.05f, 0.05f, 0.05f);
-		bullet->setOrientation(GAME_OBJECT_MANAGER->getGameObject("rotaters/central")->getRelativeOrientation());
+		bullet->setOrientation(GAME_OBJECT_MANAGER->getGameObject("central")->getLocalOrientation());
 	}
 
 	std::vector<GameObject *> gameObjects = GAME_OBJECT_MANAGER->getGroup("bullets");
@@ -156,27 +156,6 @@ void tadPole::RenderManager::load_resources(std::string resources_file)
 
 void tadPole::RenderManager::load_renderSystem()
 {
-	/*std::string system_name = "Direct3D11 Rendering Subsystem";
-	//std::string system_name = "OpenGL 3+ Rendering Subsystem";
-
-	// Set the Render System (GL4, D3D11, etc.)
-	Ogre::RenderSystemList rsl = this->root->getAvailableRenderers();
-	if (rsl.size() > 0)
-	{
-		this->renderSystem = this->root->getRenderSystemByName(system_name);
-		if (this->renderSystem->getName() != system_name)
-		{
-			EXCEPTION("Requested render system is not available.");
-		}
-		else
-		{
-			this->renderSystem->setConfigOption("Full Screen", "No");
-			this->root->setRenderSystem(this->renderSystem);
-		}
-	}
-	else
-		EXCEPTION("No valid render systems available.");*/
-
 #pragma warning(disable: 4996)
 	if (!(this->root->restoreConfig() || this->root->showConfigDialog()))
 	{

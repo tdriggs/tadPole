@@ -2,10 +2,9 @@
 #include "DebugOverlay.h"
 
 #include "Application.h"
+#include "RenderManager.h"
 
-using namespace tadPole;
-
-DebugOverlay::DebugOverlay() : Singleton<DebugOverlay>()
+tadPole::DebugOverlay::DebugOverlay() : Singleton<DebugOverlay>()
 {
 	this->overlay = RENDER_MANAGER->overlayManager->create("DebugOverlay");
 	this->messageCount = 0;
@@ -17,11 +16,9 @@ DebugOverlay::DebugOverlay() : Singleton<DebugOverlay>()
 	this->overlay->show();
 }
 
-DebugOverlay::~DebugOverlay()
-{
-}
+tadPole::DebugOverlay::~DebugOverlay() { }
 
-Ogre::TextAreaOverlayElement * DebugOverlay::createTextElement(Ogre::OverlayContainer * parent, std::string name, std::string caption, float relX, float relY)
+Ogre::TextAreaOverlayElement * tadPole::DebugOverlay::createTextElement(Ogre::OverlayContainer * parent, std::string name, std::string caption, float relX, float relY)
 {
 	Ogre::TextAreaOverlayElement * result = (Ogre::TextAreaOverlayElement *)
 		(RENDER_MANAGER->overlayManager->createOverlayElement("TextArea", name));
@@ -51,7 +48,7 @@ void tadPole::DebugOverlay::updateInfoPanelCaptions(float deltaTime)
 	this->deltaTimeElement->setCaption("DELTA TIME: " + std::to_string(deltaTime));
 }
 
-void DebugOverlay::initializeMessagePanel()
+void tadPole::DebugOverlay::initializeMessagePanel()
 {
 	this->messagePanel = (Ogre::OverlayContainer *)
 		(RENDER_MANAGER->overlayManager->createOverlayElement("Panel", "MessagePanel"));
@@ -155,7 +152,7 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 	this->deltaTimeElement->setAlignment(Ogre::TextAreaOverlayElement::Alignment::Right);
 }
 
-void DebugOverlay::postMessage(std::string message)
+void tadPole::DebugOverlay::postMessage(std::string message)
 {
 	if (this->messageElements.size() + 1 > DEBUG_MESSAGE_MAX_COUNT)
 	{
@@ -178,7 +175,7 @@ void DebugOverlay::postMessage(std::string message)
 	++this->messageCount;
 }
 
-void DebugOverlay::toggleVisible()
+void tadPole::DebugOverlay::toggleVisible()
 {
 	if (this->overlay->isVisible())
 	{
@@ -190,7 +187,7 @@ void DebugOverlay::toggleVisible()
 	}
 }
 
-void DebugOverlay::update(float deltaTime)
+void tadPole::DebugOverlay::update(float deltaTime)
 {
 	// Update Message Panel
 	for (int i = 0; i < this->messageElements.size(); ++i)

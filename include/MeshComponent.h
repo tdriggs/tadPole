@@ -3,8 +3,6 @@
 
 #include "stdafx.h"
 
-#include <string>
-
 #include "ComponentType.h"
 #include "Component.h"
 
@@ -14,16 +12,17 @@ namespace tadPole
 
 	class MeshComponent : public Component
 	{
+		friend class GameObject;
+
 	protected:
-		std::string fname;
+		std::string fileName;
 		Ogre::Entity * entity;
 
 	public:
-		MeshComponent(std::string n, GameObject * g, std::string fname);
+		MeshComponent(GameObject * g, std::string fileName);
 		~MeshComponent();
 
 		void initialize();
-		void attach(Ogre::SceneNode * sceneNode);
 		void setActive(bool active);
 
 		ComponentType getType();

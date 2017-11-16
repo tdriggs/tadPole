@@ -61,7 +61,6 @@
     <ClInclude Include="..\..\include\Singleton.h" />
     <ClInclude Include="..\..\include\stdafx.h" />
     <ClInclude Include="..\..\include\targetver.h" />
-    <ClInclude Include="..\..\include\TMath.h" />
     <ClInclude Include="..\..\include\Window.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -137,7 +136,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG_WINDOWS;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -173,7 +172,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG_WINDOWS;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>

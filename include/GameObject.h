@@ -4,7 +4,6 @@
 #include "stdafx.h"
 
 #include "ComponentType.h"
-#include "TMath.h"
 
 namespace tadPole
 {
@@ -14,6 +13,7 @@ namespace tadPole
 
 	class GameObject
 	{
+		// Friends with Scene class.
 		friend class GameObjectManager;
 
 	protected:
@@ -25,7 +25,7 @@ namespace tadPole
 		std::map<tadPole::ComponentType, std::vector<Component *>> components;
 
 		GameObject(std::string name);
-		virtual ~GameObject();
+		~GameObject();
 
 	public:
 		void initialize();
@@ -34,28 +34,39 @@ namespace tadPole
 
 		void setScaleInheritance(bool inherit);
 		void setOrientationInheritance(bool inherit);
+
+		void setPosition(glm::vec3 position);
 		void setPosition(float x, float y, float z);
-		void setScale(float x, float y, float z);
+		void setOrientation(glm::quat orientation);
+		void setOrientation(glm::vec3 axis, float angle_degrees);
 		void setOrientation(float axis_x, float axis_y, float axis_z, float angle_degrees);
-		void setOrientation(Ogre::Quaternion orientation);
-		void rotateWorld(float axis_x, float axis_y, float axis_z, float angle_degrees);
-		void rotateParent(float axis_x, float axis_y, float axis_z, float angle_degrees);
-		void rotateLocal(float axis_x, float axis_y, float axis_z, float angle_degrees);
-		void translateWorld(float x, float y, float z);
-		void translateParent(float x, float y, float z);
+		void setScale(float scale);
+		void setScale(glm::vec3 scale);
+		void setScale(float x, float y, float z);
+
+		void translateLocal(glm::vec3 translation);
 		void translateLocal(float x, float y, float z);
+		void translateWorld(glm::vec3 translation);
+		void translateWorld(float x, float y, float z);
+		void rotateLocal(glm::quat rotation);
+		void rotateLocal(glm::vec3 axis, float angle_degrees);
+		void rotateLocal(float axis_x, float axis_y, float axis_z, float angle_degrees);
+		void rotateWorld(glm::quat rotation);
+		void rotateWorld(glm::vec3 axis, float angle_degrees);
+		void rotateWorld(float axis_x, float axis_y, float axis_z, float angle_degrees);
+		void scale(float scale);
+		void scale(glm::vec3 scale);
 		void scale(float x, float y, float z);
 
-		void update(float deltaTime);
-
-		Ogre::Quaternion getRelativeOrientation();
-		Ogre::Quaternion getWorldOrientation();
-		Vector3 getRelativePosition();
-		Vector3 getWorldPosition();
-		Vector3 getRelativeScale();
-		Vector3 getWorldScale();
+		glm::vec3 getLocalPosition();
+		glm::vec3 getWorldPosition();
+		glm::quat getLocalOrientation();
+		glm::quat getWorldOrientation();
+		glm::vec3 getLocalScale();
+		glm::vec3 getWorldScale();
 
 		MeshComponent * createMeshComponent(std::string fname);
+		void update(float deltaTime);
 	};
 }
 

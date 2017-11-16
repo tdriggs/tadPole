@@ -13,33 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\OGRE Interface">
+      <UniqueIdentifier>{479927df-7dc5-459d-bbdb-dbb2f0fd8b19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SDL2 Interface">
+      <UniqueIdentifier>{4bfb351a-5154-4d3f-9304-fb758a1f0b71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SDL2 Interface">
+      <UniqueIdentifier>{733e9e10-d0d0-4c50-afa3-efca4abb26c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OGRE Interface">
+      <UniqueIdentifier>{a35c99df-4a25-4042-961d-c1aa7121ba40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\tadPole.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\Event.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\Window.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Singleton.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\Exception.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\DebugOverlay.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\GameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\GameObjectManager.cpp">
@@ -51,33 +42,36 @@
     <ClCompile Include="..\..\src\LogManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\MeshComponent.cpp">
+    <ClCompile Include="..\..\src\Singleton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\RenderManager.cpp">
+    <ClCompile Include="..\..\src\stdafx.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tadPole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DebugOverlay.cpp">
+      <Filter>Source Files\OGRE Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GameObject.cpp">
+      <Filter>Source Files\OGRE Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\MeshComponent.cpp">
+      <Filter>Source Files\OGRE Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\RenderManager.cpp">
+      <Filter>Source Files\OGRE Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Event.cpp">
+      <Filter>Source Files\SDL2 Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Window.cpp">
+      <Filter>Source Files\SDL2 Interface</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Event.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Keyboard.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Exception.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\include\Application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\Singleton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Component.h">
@@ -86,10 +80,7 @@
     <ClInclude Include="..\..\include\ComponentType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\DebugOverlay.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\GameObject.h">
+    <ClInclude Include="..\..\include\Exception.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\GameObjectManager.h">
@@ -101,17 +92,35 @@
     <ClInclude Include="..\..\include\LogManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\MeshComponent.h">
+    <ClInclude Include="..\..\include\Singleton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\RenderManager.h">
+    <ClInclude Include="..\..\include\stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\TMath.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="..\..\include\Window.h">
+      <Filter>Header Files\SDL2 Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Keyboard.h">
+      <Filter>Header Files\SDL2 Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Event.h">
+      <Filter>Header Files\SDL2 Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\RenderManager.h">
+      <Filter>Header Files\OGRE Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\MeshComponent.h">
+      <Filter>Header Files\OGRE Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\GameObject.h">
+      <Filter>Header Files\OGRE Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\DebugOverlay.h">
+      <Filter>Header Files\OGRE Interface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

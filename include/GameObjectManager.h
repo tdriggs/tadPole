@@ -3,72 +3,30 @@
 
 #include "stdafx.h"
 #include "Singleton.h"
+
 #include "GameObject.h"
 
-#define GAME_OBJECT_MANAGER GameObjectManager::getInstance()
-
-// Tree Structure
-//
-// --- map<string, TreeNode>
-//	  |
-//    |-"player/"- map<string, TreeNode> (depth 1)
-//	          |
-//            |-"weapons/"- map<string, TreeNode> (depth 2)
-//                    |
-//                    |--- GameObject [name="player/weapons/sword"]
-//                    |--- GameObject [name="player/weapons/axe"]
-//	          |
-//            |-"armor/"- map<string, TreeNode> (depth 2)
-//                    |--- GameObject [name="player/armor/gauntlets"]
-//                    |--- GameObject [name="player/armor/leggings"]
-//    |-"enemies/"- map<string, TreeNode> (depth 1)
-//	          |
-//            |-"stealth/"- map<string, TreeNode> (depth 2)
-//                    |--- GameObject [name="enemies/stealth/skin1"]
-//                    |--- GameObject [name="enemies/stealth/skin2"]
-//	          |
-//            |-"brawl/"- map<string, TreeNode> (depth 2)
-//                    |--- GameObject [name="enemies/brawl/skin1"]
-//                    |--- GameObject [name="enemies/brawl/skin2"]
-
+#define GAME_OBJECT_MANAGER tadPole::GameObjectManager::getInstance()
+#define NO_GROUP_NAME "No Group"
 
 namespace tadPole
 {
 	class GameObjectManager : public Singleton<GameObjectManager>
 	{
 	protected:
-		class GOMTreeNode
-		{
-		public:
-			GOMTreeNode * parent;
-			GameObject * data;
-			std::map<std::string, GOMTreeNode *> children;
-			bool active;
-
-			GOMTreeNode(GOMTreeNode * parent);
-			~GOMTreeNode();
-
-			std::pair<std::string, std::string> splitName(std::string name);
-
-			void addNode(std::string namePath);
-			GOMTreeNode * getNode(std::string namePath);
-
-			std::vector<GameObject *> getObjectsInGroup();
-			void setGroupActive(bool active);
-		};
-
-		GOMTreeNode * rootNode;
+		std::map<std::string, std::vector<GameObject *>> components;
 
 	public:
 		 GameObjectManager();
 		 ~GameObjectManager();
 
-		 void createGroup(std::string groupPath);
-		 void setGroupActive(std::string groupPath, bool active);
-		 void deleteGroup(std::string groupPath);
-		 GameObject * getGameObject(std::string namePath);
-		 GameObject * createGameObject(std::string namePath);
-		 std::vector<GameObject *> getGroup(std::string groupPath);
+		 void createGroup(std::string group);
+		 void setGroupActive(std::string group, bool active);
+		 void deleteGroup(std::string group);
+		 GameObject * getGameObject(std::string name);
+		 GameObject * createGameObject(std::string name);
+		 GameObject * createGameObject(std::string group, std::string name);
+		 std::vector<GameObject *> getGroup(std::string group);
 	};
 }
 

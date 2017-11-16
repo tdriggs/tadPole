@@ -6,7 +6,7 @@
 #include "Singleton.h"
 #include "Keyboard.h"
 
-#define INPUT_MANAGER InputManager::getInstance()
+#define INPUT_MANAGER tadPole::InputManager::getInstance()
 
 namespace tadPole
 {

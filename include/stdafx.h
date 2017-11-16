@@ -14,6 +14,9 @@
 // Other Headers to be Pre-Compiled
 #include "SDL.h"
 
+#include "glm.hpp"
+#include "gtc/quaternion.hpp"
+
 #include "Ogre.h"
 #include "OgreOverlay.h"
 #include "OgreOverlaySystem.h"

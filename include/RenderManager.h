@@ -5,37 +5,40 @@
 
 #include "Singleton.h"
 
-#define RENDER_MANAGER RenderManager::getInstance()
+#define RENDER_MANAGER tadPole::RenderManager::getInstance()
 
 namespace tadPole
 {
-	typedef Ogre::NameValuePairList WindowParams;
-
 	class RenderManager : public Singleton<RenderManager>
 	{
+		// Friends with GameObject and all OGRE related Component classes.
+		friend class DebugOverlay;
+		friend class GameObject;
+		friend class MeshComponent;
+
 	public:
+		Ogre::OverlayManager * overlayManager;
+
+		RenderManager(HWND windowHandle);
+		~RenderManager();
+
+		// Get rid of these
+		void initializeBaseScene();
+		void update(float deltaTime);
+
+		void render();
+
+	protected:
 		Ogre::Root * root;
 		Ogre::RenderSystem * renderSystem;
 		Ogre::RenderWindow * renderWindow;
 		Ogre::SceneManager * sceneManager;
 		Ogre::OverlaySystem * overlaySystem;
-		Ogre::OverlayManager * overlayManager;
-
-		Ogre::Camera * mainCamera;
-		Ogre::Viewport * mainViewport;
 
 		float bulletTimer = 0;
 		int numBullets = 0;
 
-		RenderManager(WindowParams & windowParams);
-		~RenderManager();
-
-		void initialize(WindowParams & windowParams);
-		void initializeBaseScene();
-		void update(float deltaTime);
-		void render();
-
-	protected:
+		void initialize(HWND windowHandle);
 		void load_resources(std::string resources_file);
 		void load_renderSystem();
 	};

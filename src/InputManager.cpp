@@ -5,17 +5,11 @@
 #include "DebugOverlay.h"
 #include "GameObjectManager.h"
 
-using namespace tadPole;
+tadPole::InputManager::InputManager() : Singleton<InputManager>() { }
 
-InputManager::InputManager() : Singleton<InputManager>()
-{
-}
+tadPole::InputManager::~InputManager() { }
 
-InputManager::~InputManager()
-{
-}
-
-void InputManager::key_down(Key key)
+void tadPole::InputManager::key_down(Key key)
 {
 	if (key == KEY_F11)
 	{
@@ -23,11 +17,11 @@ void InputManager::key_down(Key key)
 	}
 	if (key == KEY_C)
 	{
-		GAME_OBJECT_MANAGER->getGameObject("rotaters/orbiter")->setParent(GAME_OBJECT_MANAGER->getGameObject("rotaters/central/orbiterBase"));
+		GAME_OBJECT_MANAGER->getGameObject("orbiter")->setParent(GAME_OBJECT_MANAGER->getGameObject("centralOrbiterBase"));
 	}
 	if (key == KEY_L)
 	{
-		GAME_OBJECT_MANAGER->getGameObject("rotaters/orbiter")->setParent(GAME_OBJECT_MANAGER->getGameObject("rotaters/left/orbiterBase"));
+		GAME_OBJECT_MANAGER->getGameObject("orbiter")->setParent(GAME_OBJECT_MANAGER->getGameObject("leftOrbiterBase"));
 	}
 	if (key == KEY_H)
 	{
@@ -46,7 +40,7 @@ void InputManager::key_down(Key key)
 	LOG_MANAGER->log("KEY PRESS: " + std::to_string(key));
 }
 
-void InputManager::key_up(Key key)
+void tadPole::InputManager::key_up(Key key)
 {
-	//LOG_MANAGER->log("KEY UP: " + KEY_NAMES.at(key));
+
 }

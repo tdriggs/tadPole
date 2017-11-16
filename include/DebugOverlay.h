@@ -5,7 +5,7 @@
 
 #include "Singleton.h"
 
-#define DEBUG_OVERLAY DebugOverlay::getInstance()
+#define DEBUG_OVERLAY tadPole::DebugOverlay::getInstance()
 #define DEBUG_MESSAGE_MAX_COUNT 15
 #define DEBUG_MESSAGE_PANEL_RELATIVE_HEIGHT 0.75f
 #define DEBUG_MESSAGE_PANEL_RELATIVE_WIDTH 0.2f

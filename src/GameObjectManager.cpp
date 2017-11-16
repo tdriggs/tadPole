@@ -3,155 +3,43 @@
 
 #include "Exception.h"
 
-tadPole::GameObjectManager::GOMTreeNode::GOMTreeNode(GOMTreeNode * parent)
-{
-	this->parent = parent;
-	this->data = nullptr;
-	this->children = std::map<std::string, GOMTreeNode *>();
-	if (parent != nullptr)
-	{
-		this->active = parent->active;
-	}
-	else
-	{
-		this->active = true;
-	}
-}
-
-tadPole::GameObjectManager::GOMTreeNode::~GOMTreeNode()
-{
-	std::map<std::string, GOMTreeNode *>::iterator map_it;
-	for (map_it = this->children.begin(); map_it != this->children.end(); ++map_it)
-	{
-		delete map_it->second;
-	}
-
-	delete this->data;
-}
-
-std::pair<std::string, std::string> tadPole::GameObjectManager::GOMTreeNode::splitName(std::string name)
-{
-	std::string first = name.substr(0, name.find('/'));
-	std::string second = "";
-	if (name.find('/') != std::string::npos)
-	{
-		second = name.substr(name.find('/') + 1, name.length());
-	}
-	return std::pair<std::string, std::string>(first, second);
-}
-
-void tadPole::GameObjectManager::GOMTreeNode::addNode(std::string namePath)
-{
-	std::pair<std::string, std::string> nameParts = this->splitName(namePath);
-
-	if (nameParts.second.length() != 0)
-	{
-		if (this->children.find(nameParts.first) == this->children.end())
-		{
-			EXCEPTION("Create base group first: " + namePath);
-			// Uncomment if I don't want to require that base groups are created first.
-			// this->children[nameParts.first] = new GOMTreeNode(this);
-		}
-
-		this->children[nameParts.first]->addNode(nameParts.second);
-	}
-	else
-	{
-		if (this->children.find(nameParts.first) != this->children.end())
-		{
-			EXCEPTION("Cannot create GameObjects with the same name: " + namePath);
-		}
-
-		this->children[nameParts.first] = new GOMTreeNode(this);
-	}
-}
-
-tadPole::GameObjectManager::GOMTreeNode * tadPole::GameObjectManager::GOMTreeNode::getNode(std::string namePath)
-{
-	std::pair<std::string, std::string> nameParts = this->splitName(namePath);
-
-	if (this->children.find(nameParts.first) == this->children.end())
-	{
-		EXCEPTION("No such group: " + namePath);
-		// Uncomment this if I don't want to require that the group be created to retrieve this node.
-		// this->children[nameParts.first] = new GOMTreeNode(this);
-	}
-
-	if (nameParts.second.length() == 0)
-	{
-		return this->children[nameParts.first];
-	}
-	else
-	{
-		return this->children[nameParts.first]->getNode(nameParts.second);
-	}
-}
-
-std::vector<tadPole::GameObject *> tadPole::GameObjectManager::GOMTreeNode::getObjectsInGroup()
-{
-	std::vector<tadPole::GameObject *> gameObjectsInGroup = std::vector<tadPole::GameObject *>();
-	std::vector<tadPole::GameObjectManager::GOMTreeNode *> nodesToSearch = std::vector<tadPole::GameObjectManager::GOMTreeNode *>();
-	nodesToSearch.push_back(this);
-
-	while (nodesToSearch.size() > 0)
-	{
-		tadPole::GameObjectManager::GOMTreeNode * node = nodesToSearch.front();
-		nodesToSearch.erase(nodesToSearch.begin());
-
-		std::map<std::string, tadPole::GameObjectManager::GOMTreeNode *>::iterator map_it;
-		for (map_it = node->children.begin(); map_it != node->children.end(); ++map_it)
-		{
-			if (map_it->second->data != nullptr)
-			{
-				gameObjectsInGroup.push_back(map_it->second->data);
-			}
-
-			nodesToSearch.push_back(map_it->second);
-		}
-	}
-
-	return gameObjectsInGroup;
-}
-
-void tadPole::GameObjectManager::GOMTreeNode::setGroupActive(bool active)
-{
-	std::vector<tadPole::GameObjectManager::GOMTreeNode *> nodesToSearch = std::vector<tadPole::GameObjectManager::GOMTreeNode *>();
-	nodesToSearch.push_back(this);
-
-	while (nodesToSearch.size() > 0)
-	{
-		tadPole::GameObjectManager::GOMTreeNode * node = nodesToSearch.front();
-		nodesToSearch.erase(nodesToSearch.begin());
-
-		node->active = active;
-
-		std::map<std::string, tadPole::GameObjectManager::GOMTreeNode *>::iterator map_it;
-		for (map_it = node->children.begin(); map_it != node->children.end(); ++map_it)
-		{
-			nodesToSearch.push_back(map_it->second);
-		}
-	}
-}
-
 tadPole::GameObjectManager::GameObjectManager() : Singleton<GameObjectManager>()
 {
-	this->rootNode = new GOMTreeNode(nullptr);
+	this->components = std::map<std::string, std::vector<GameObject *>>();
+	this->components[NO_GROUP_NAME] = std::vector<GameObject *>();
 }
 
 tadPole::GameObjectManager::~GameObjectManager()
 {
-	delete this->rootNode;
+	std::map<std::string, std::vector<GameObject *>>::iterator map_it;
+	for (map_it = this->components.begin(); map_it != this->components.end(); ++map_it)
+	{
+		std::vector<GameObject *>::iterator vector_it;
+		for (vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
+		{
+			delete *vector_it;
+		}
+	}
 }
 
-void tadPole::GameObjectManager::createGroup(std::string groupPath)
+void tadPole::GameObjectManager::createGroup(std::string group)
 {
-	this->rootNode->addNode(groupPath);
+	if (this->components.find(group) != this->components.end())
+	{
+		EXCEPTION("Group already exists: " + group);
+	}
+
+	this->components[group] = std::vector<GameObject *>();
 }
 
-void tadPole::GameObjectManager::setGroupActive(std::string groupPath, bool active)
+void tadPole::GameObjectManager::setGroupActive(std::string group, bool active)
 {
-	this->rootNode->getNode(groupPath)->setGroupActive(active);
-	std::vector<GameObject *> gameObjects = this->rootNode->getNode(groupPath)->getObjectsInGroup();
+	if (this->components.find(group) == this->components.end())
+	{
+		EXCEPTION("Group does not exist: " + group);
+	}
+
+	std::vector<GameObject *> gameObjects = this->components[group];
 	std::vector<GameObject *>::iterator it;
 	for (it = gameObjects.begin(); it != gameObjects.end(); ++it)
 	{
@@ -159,53 +47,69 @@ void tadPole::GameObjectManager::setGroupActive(std::string groupPath, bool acti
 	}
 }
 
-void tadPole::GameObjectManager::deleteGroup(std::string groupPath)
+void tadPole::GameObjectManager::deleteGroup(std::string group)
 {
-	GOMTreeNode * node = this->rootNode->getNode(groupPath);
-
-	if (node->parent == nullptr)
+	if (this->components.find(group) == this->components.end())
 	{
-		EXCEPTION("Cannot delete root group: " + groupPath);
+		EXCEPTION("Group does not exist: " + group);
 	}
 
-	std::string nameKey = groupPath;
-	if (nameKey.find('/') != std::string::npos)
+	std::vector<GameObject *> gameObjects = this->components[group];
+	std::vector<GameObject *>::iterator it;
+	for (it = gameObjects.begin(); it != gameObjects.end(); ++it)
 	{
-		nameKey = nameKey.substr(nameKey.find('/') + 1, nameKey.length());
+		delete *it;
 	}
 
-	GOMTreeNode * parent = node->parent;
-	delete node;
-	parent->children.erase(nameKey);
+	this->components.erase(group);
 }
 
-tadPole::GameObject * tadPole::GameObjectManager::getGameObject(std::string namePath)
+tadPole::GameObject * tadPole::GameObjectManager::getGameObject(std::string name)
 {
-	GOMTreeNode * node = this->rootNode->getNode(namePath);
-
-	if (node->data == nullptr)
+	std::map<std::string, std::vector<GameObject *>>::iterator map_it;
+	for (map_it = this->components.begin(); map_it != this->components.end(); ++map_it)
 	{
-		EXCEPTION("GameObject does not exist: " + namePath);
-	}
+		std::vector<GameObject *>::iterator vector_it;
+		for (vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
+		{
+			GameObject * go = (GameObject *)(*vector_it);
+			if (std::strcmp(go->name.c_str(), name.c_str()) == 0)
+			{
+				return go;
+			}
+		}
+	};
 
-	return node->data;
+	EXCEPTION("GameObject does not exist: " + name);
 }
 
-tadPole::GameObject * tadPole::GameObjectManager::createGameObject(std::string namePath)
+tadPole::GameObject * tadPole::GameObjectManager::createGameObject(std::string name)
 {
-	GOMTreeNode * node = this->rootNode->getNode(namePath);
+	GameObject * go = new GameObject(name);
+	this->components[NO_GROUP_NAME].push_back(go);
 
-	if (node->data != nullptr)
-	{
-		EXCEPTION("Cannot create GameObjects with the same name: " + namePath);
-	}
-
-	node->data = new GameObject(namePath);
-	node->data->setActive(node->active);
-	return node->data;
+	return go;
 }
 
-std::vector<tadPole::GameObject*> tadPole::GameObjectManager::getGroup(std::string groupPath)
+tadPole::GameObject * tadPole::GameObjectManager::createGameObject(std::string group, std::string name)
 {
-	return this->rootNode->getNode(groupPath)->getObjectsInGroup();
+	if (this->components.find(group) == this->components.end())
+	{
+		EXCEPTION("Group does not exist: " + group);
+	}
+
+	GameObject * go = new GameObject(name);
+	this->components[group].push_back(go);
+	
+	return go;
+}
+
+std::vector<tadPole::GameObject*> tadPole::GameObjectManager::getGroup(std::string group)
+{
+	if (this->components.find(group) == this->components.end())
+	{
+		EXCEPTION("Group does not exist: " + group);
+	}
+
+	return this->components[group];
 }
