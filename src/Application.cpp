@@ -15,11 +15,11 @@ void tadPole::Application::initialize(HWND windowHandle)
 		LogManager * logManager = new LogManager();
 		DebugOverlay * debugOverlay = new DebugOverlay();
 		InputManager * inputManager = new InputManager();
-		GameObjectManager * gameObjectManager = new GameObjectManager();
-
-		RENDER_MANAGER->initializeBaseScene();
 
 		LOG_MANAGER->log("Initialized Successfully!");
+
+		Scene * scene = new Scene("lv01.json");
+		scene->load();
 	}
 	catch (Exception e) {
 		if (LOG_MANAGER)
@@ -32,7 +32,6 @@ void tadPole::Application::initialize(HWND windowHandle)
 void tadPole::Application::update(float deltaTime)
 {
 	DEBUG_OVERLAY->update(deltaTime);
-	RENDER_MANAGER->update(deltaTime);
 }
 
 void tadPole::Application::render()

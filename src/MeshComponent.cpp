@@ -8,27 +8,37 @@ tadPole::MeshComponent::MeshComponent(GameObject * g, std::string fileName) : Co
 {
 	this->fileName = fileName;
 
-	this->initialize();
+	this->entity = RENDER_MANAGER->sceneManager->createEntity(g->getName() + "_mesh_" + std::to_string(g->getComponentCount(ComponentType::MESH)), fileName);
 }
 
 tadPole::MeshComponent::~MeshComponent()
 {
-	RENDER_MANAGER->sceneManager->destroyEntity(this->entity);
-}
+	if (this->entity != NULL)
+	{
+		if (this->entity->getParentSceneNode())
+		{
+			this->entity->getParentSceneNode()->detachObject(this->entity);
+		}
+		RENDER_MANAGER->sceneManager->destroyEntity(this->entity);
+	}
 
-void tadPole::MeshComponent::initialize()
-{
-	this->entity = RENDER_MANAGER->sceneManager->createEntity(this->fileName);
 }
 
 void tadPole::MeshComponent::setActive(bool active)
 {
-	Component::setActive(active);
-
 	this->entity->setVisible(active);
 }
 
 tadPole::ComponentType tadPole::MeshComponent::getType()
 {
 	return ComponentType::MESH;
+}
+
+std::string tadPole::MeshComponent::serialize()
+{
+	std::ostringstream result;
+
+	result << "{\n\t\t\t\t\t\t\t\"type\": \"" << "MESH" << "\",\n\t\t\t\t\t\t\t\"fileName\": \"" << this->fileName << "\"\n\t\t\t\t\t\t}";
+
+	return result.str();
 }

@@ -5,17 +5,17 @@
 
 #include <string>
 
+#include "Serializable.h"
 #include "ComponentType.h"
 
 namespace tadPole
 {	
 	class GameObject;
 
-	class Component
+	class Component: Serializable
 	{
 	protected:
 		GameObject * owner;
-		bool isActive = true;
 
 	public:
 		Component(GameObject * g) : owner(g) {}
@@ -23,16 +23,14 @@ namespace tadPole
 
 		virtual void update(float deltaTime) {}
 
+		virtual std::string serialize() = 0;
 		virtual ComponentType getType() = 0;
+
+		virtual void setActive(bool active) = 0;
 
 		GameObject * getOwner() 
 		{
 			return this->owner;
-		}
-
-		void setActive(bool active) 
-		{
-			this->isActive = active;
 		}
 	};
 }

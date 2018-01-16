@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "DebugOverlay.h"
 
-#include "Application.h"
 #include "RenderManager.h"
 
 tadPole::DebugOverlay::DebugOverlay() : Singleton<DebugOverlay>()
@@ -16,15 +15,65 @@ tadPole::DebugOverlay::DebugOverlay() : Singleton<DebugOverlay>()
 	this->overlay->show();
 }
 
-tadPole::DebugOverlay::~DebugOverlay() { }
+tadPole::DebugOverlay::~DebugOverlay()
+{ 
+	this->messageElements.clear();
+}
 
-Ogre::TextAreaOverlayElement * tadPole::DebugOverlay::createTextElement(Ogre::OverlayContainer * parent, std::string name, std::string caption, float relX, float relY)
+void tadPole::DebugOverlay::postMessage(std::string message)
+{
+	if (this->messageElements.size() + 1 > DEBUG_MESSAGE_MAX_COUNT)
+	{
+		this->messagePanel->removeChild(this->messageElements.at(0)->getName());
+
+		Ogre::TextAreaOverlayElement * message = this->messageElements.at(0);
+		this->messageElements.erase(this->messageElements.begin());
+		delete message;
+	}
+
+	Ogre::TextAreaOverlayElement * messageElement = this->createTextElement(
+		this->messagePanel,
+		"Message " + std::to_string(this->messageCount),
+		message,
+		0.0f,
+		DEBUG_MESSAGE_CHAR_HEIGHT * this->messageElements.size()
+	);
+
+	this->messageElements.push_back(messageElement);
+	++this->messageCount;
+}
+
+void tadPole::DebugOverlay::toggleVisible()
+{
+	if (this->overlay->isVisible())
+	{
+		this->overlay->hide();
+	}
+	else
+	{
+		this->overlay->show();
+	}
+}
+
+void tadPole::DebugOverlay::update(float deltaTime)
+{
+	// Update Message Panel
+	for (int i = 0; i < this->messageElements.size(); ++i)
+	{
+		this->messageElements.at(i)->setPosition(0.0f, DEBUG_MESSAGE_CHAR_HEIGHT * i);
+	}
+
+	// Update Info Panel
+	this->updateInfoPanelCaptions(deltaTime);
+}
+
+Ogre::TextAreaOverlayElement * tadPole::DebugOverlay::createTextElement(Ogre::OverlayContainer * parent, std::string name, std::string caption, float relativeX, float relativeY)
 {
 	Ogre::TextAreaOverlayElement * result = (Ogre::TextAreaOverlayElement *)
 		(RENDER_MANAGER->overlayManager->createOverlayElement("TextArea", name));
 
 	result->setMetricsMode(Ogre::GMM_RELATIVE);
-	result->setPosition(relX, relY);
+	result->setPosition(relativeX, relativeY);
 	result->setColourBottom(DEBUG_TEXT_BOTTOM_COLOR);
 	result->setColourTop(DEBUG_TEXT_TOP_COLOR);
 	result->setCharHeight(DEBUG_INFO_CHAR_HEIGHT);
@@ -150,51 +199,4 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 	this->bestFrameTimeElement->setAlignment(Ogre::TextAreaOverlayElement::Alignment::Right);
 	this->worstFrameTimeElement->setAlignment(Ogre::TextAreaOverlayElement::Alignment::Right);
 	this->deltaTimeElement->setAlignment(Ogre::TextAreaOverlayElement::Alignment::Right);
-}
-
-void tadPole::DebugOverlay::postMessage(std::string message)
-{
-	if (this->messageElements.size() + 1 > DEBUG_MESSAGE_MAX_COUNT)
-	{
-		this->messagePanel->removeChild(this->messageElements.at(0)->getName());
-
-		Ogre::TextAreaOverlayElement * message = this->messageElements.at(0);
-		this->messageElements.erase(this->messageElements.begin());
-		delete message;
-	}
-
-	Ogre::TextAreaOverlayElement * messageElement = this->createTextElement(
-		this->messagePanel,
-		"Message " + std::to_string(this->messageCount),
-		message,
-		0.0f,
-		DEBUG_MESSAGE_CHAR_HEIGHT * this->messageElements.size()
-	);
-
-	this->messageElements.push_back(messageElement);
-	++this->messageCount;
-}
-
-void tadPole::DebugOverlay::toggleVisible()
-{
-	if (this->overlay->isVisible())
-	{
-		this->overlay->hide();
-	}
-	else
-	{
-		this->overlay->show();
-	}
-}
-
-void tadPole::DebugOverlay::update(float deltaTime)
-{
-	// Update Message Panel
-	for (int i = 0; i < this->messageElements.size(); ++i)
-	{
-		this->messageElements.at(i)->setPosition(0.0f, DEBUG_MESSAGE_CHAR_HEIGHT * i);
-	}
-
-	// Update Info Panel
-	this->updateInfoPanelCaptions(deltaTime);
 }

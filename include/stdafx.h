@@ -14,6 +14,9 @@
 // Other Headers to be Pre-Compiled
 #include "SDL.h"
 
+#include "rapidjson.h"
+#include "document.h"
+
 #include "glm.hpp"
 #include "gtc/quaternion.hpp"
 

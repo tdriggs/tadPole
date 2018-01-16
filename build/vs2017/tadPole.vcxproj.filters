@@ -33,9 +33,6 @@
     <ClCompile Include="..\..\src\Exception.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\GameObjectManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\InputManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -69,6 +66,15 @@
     <ClCompile Include="..\..\src\Window.cpp">
       <Filter>Source Files\SDL2 Interface</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\CameraComponent.cpp">
+      <Filter>Source Files\OGRE Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\include\LightComponent.cpp">
+      <Filter>Source Files\OGRE Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Application.h">
@@ -81,9 +87,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Exception.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\GameObjectManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\InputManager.h">
@@ -121,6 +124,18 @@
     </ClInclude>
     <ClInclude Include="..\..\include\DebugOverlay.h">
       <Filter>Header Files\OGRE Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Serializable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\CameraComponent.h">
+      <Filter>Header Files\OGRE Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\LightComponent.h">
+      <Filter>Header Files\OGRE Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\Scene.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

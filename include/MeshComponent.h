@@ -10,22 +10,55 @@ namespace tadPole
 {
 	class GameObject;
 
+	/**
+	* 
+	*/
 	class MeshComponent : public Component
 	{
+		// @@@@@ FRIENDS @@@@@
 		friend class GameObject;
 
-	protected:
-		std::string fileName;
-		Ogre::Entity * entity;
 
+		// @@@@@ ATTRIBUTES @@@@@
+	protected:
+		std::string fileName;	///<
+		Ogre::Entity * entity;	///<
+
+
+		// @@@@@ CONSTRUCTORS / DESTRUCTOR @@@@@
 	public:
-		MeshComponent(GameObject * g, std::string fileName);
+		/**
+		*
+		*/
+		MeshComponent(
+			GameObject * g,			///<
+			std::string fileName	///<
+		);
+
+		/**
+		*
+		*/
 		~MeshComponent();
 
-		void initialize();
-		void setActive(bool active);
 
+		// @@@@@ BASE CLASS / INTERFACE METHODS @@@@@
+	public:
+		/**
+		*
+		*/
+		void setActive(
+			bool active	///<
+		);
+
+		/**
+		*
+		*/
 		ComponentType getType();
+
+		/**
+		*
+		*/
+		std::string serialize();
 	};
 }
 

@@ -2,7 +2,6 @@
 #include "Window.h"
 
 #include "SDL_syswm.h"
-
 #include "Exception.h"
 
 tadPole::Window::Window(std::string name, int x, int y, int width, int height, int flags)

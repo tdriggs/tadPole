@@ -7,7 +7,7 @@
 
 namespace tadPole
 {
-	typedef int EventType;
+	typedef int EventType;	///<
 
 	#define EVT_QUIT				 SDL_QUIT
 	#define EVT_WINDOW				 SDL_WINDOWEVENT
@@ -38,41 +38,45 @@ namespace tadPole
 	#define EVT_FINGERUP			 SDL_FINGERUP
 	#define EVT_FINGERMOVE			 SDL_FINGERMOTION
 
+	/**
+	* 
+	*/
 	class Event
 	{
+		// @@@@@ ATTRIBUTES @@@@@
 	protected:
-		SDL_Event sdlEvent;
+		SDL_Event sdlEvent;	///<
 
+
+		// @@@@@ CONSTRUCTORS / DESTRUCTOR @@@@@
 	public:
+		/**
+		*
+		*/
 		Event();
+
+		/**
+		*
+		*/
 		~Event();
 
+
+		// @@@@@ PUBLIC METHODS @@@@@
+	public:
+		/**
+		*
+		*/
 		bool poll();
-		// wait();
-		// waitTimeout();
-		// peep();
-		// push();
+
+		/**
+		*
+		*/
 		EventType getType();
+
+		/**
+		*
+		*/
 		Key getKey();
-		// getCommon();
-		// getWindow();
-		// getTextEdit();
-		// getTextInput();
-		// getMouseMotion();
-		// getMouseButton();
-		// getMouseWheel();
-		// getJoyAxis();
-		// getJoyBall();
-		// getJoyHat();
-		// getJoyButton();
-		// getControllerAxis();
-		// getControllerButton();
-		// getControllerDevice();
-		// getAudioDevice();
-		// getQuit();
-		// getUser();
-		// getSystemWindow();
-		// getTouch();
 	};
 }
 

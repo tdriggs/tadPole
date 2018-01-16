@@ -7,7 +7,9 @@ namespace tadPole
 {
 	enum class ComponentType
 	{
-		MESH
+		MESH,
+		LIGHT,
+		CAMERA
 	};
 }
 

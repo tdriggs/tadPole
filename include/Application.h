@@ -7,7 +7,7 @@
 #include "LogManager.h"
 #include "DebugOverlay.h"
 #include "InputManager.h"
-#include "GameObjectManager.h"
+#include "Scene.h"
 
 #define SCREEN_WIDTH 1280  // Maintain a 16:9 aspect ratio
 #define SCREEN_HEIGHT 720

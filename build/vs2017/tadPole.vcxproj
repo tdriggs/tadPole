@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\include\LightComponent.cpp" />
     <ClCompile Include="..\..\src\Application.cpp" />
+    <ClCompile Include="..\..\src\CameraComponent.cpp" />
     <ClCompile Include="..\..\src\DebugOverlay.cpp" />
     <ClCompile Include="..\..\src\Event.cpp" />
     <ClCompile Include="..\..\src\Exception.cpp" />
     <ClCompile Include="..\..\src\GameObject.cpp" />
-    <ClCompile Include="..\..\src\GameObjectManager.cpp" />
+    <ClCompile Include="..\..\src\Scene.cpp" />
     <ClCompile Include="..\..\src\InputManager.cpp" />
     <ClCompile Include="..\..\src\LogManager.cpp" />
     <ClCompile Include="..\..\src\MeshComponent.cpp" />
@@ -46,18 +48,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Application.h" />
+    <ClInclude Include="..\..\include\CameraComponent.h" />
     <ClInclude Include="..\..\include\Component.h" />
     <ClInclude Include="..\..\include\ComponentType.h" />
     <ClInclude Include="..\..\include\DebugOverlay.h" />
     <ClInclude Include="..\..\include\Event.h" />
     <ClInclude Include="..\..\include\Exception.h" />
     <ClInclude Include="..\..\include\GameObject.h" />
-    <ClInclude Include="..\..\include\GameObjectManager.h" />
+    <ClInclude Include="..\..\include\Scene.h" />
     <ClInclude Include="..\..\include\InputManager.h" />
     <ClInclude Include="..\..\include\Keyboard.h" />
+    <ClInclude Include="..\..\include\LightComponent.h" />
     <ClInclude Include="..\..\include\LogManager.h" />
     <ClInclude Include="..\..\include\MeshComponent.h" />
     <ClInclude Include="..\..\include\RenderManager.h" />
+    <ClInclude Include="..\..\include\Serializable.h" />
     <ClInclude Include="..\..\include\Singleton.h" />
     <ClInclude Include="..\..\include\stdafx.h" />
     <ClInclude Include="..\..\include\targetver.h" />
@@ -136,7 +141,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;C:\Users\taylo\Documents\Code\tadPole\dependencies\RAPIDJSON-1.1.0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG_WINDOWS;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
