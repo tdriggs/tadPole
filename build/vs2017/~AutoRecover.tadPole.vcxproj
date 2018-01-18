@@ -31,6 +31,7 @@
     <ClCompile Include="..\..\src\LogManager.cpp" />
     <ClCompile Include="..\..\src\MeshComponent.cpp" />
     <ClCompile Include="..\..\src\RenderManager.cpp" />
+    <ClCompile Include="..\..\src\ScriptManager.cpp" />
     <ClCompile Include="..\..\src\Singleton.cpp" />
     <ClCompile Include="..\..\src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -62,6 +63,7 @@
     <ClInclude Include="..\..\include\LogManager.h" />
     <ClInclude Include="..\..\include\MeshComponent.h" />
     <ClInclude Include="..\..\include\RenderManager.h" />
+    <ClInclude Include="..\..\include\ScriptManager.h" />
     <ClInclude Include="..\..\include\Serializable.h" />
     <ClInclude Include="..\..\include\Singleton.h" />
     <ClInclude Include="..\..\include\stdafx.h" />
@@ -141,11 +143,11 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;..\..\dependencies\RAPIDJSON-1.1.0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;..\..\dependencies\RAPIDJSON-1.1.0\;..\..\dependencies\PYTHON-3.6.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG_WINDOWS;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>..\..\dependencies\SDL2-2.0.7\lib\x86;..\..\dependencies\OGRE-1.10.9\lib;..\..\dependencies\OGRE-1.10.9\lib\OGRE;..\..\dependencies\OGRE-1.10.9\lib\OGRE\Samples;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\dependencies\SDL2-2.0.7\lib\x86;..\..\dependencies\OGRE-1.10.9\lib;..\..\dependencies\OGRE-1.10.9\lib\OGRE;..\..\dependencies\OGRE-1.10.9\lib\OGRE\Samples;..\..\dependencies\PYTHON-3.6.4\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>OgreMain_d.lib;OgreOverlay_d.lib;SDL2.lib;SDL2main.lib;python3_d.lib;python36_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>

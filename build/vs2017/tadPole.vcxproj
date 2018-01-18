@@ -31,6 +31,7 @@
     <ClCompile Include="..\..\src\LogManager.cpp" />
     <ClCompile Include="..\..\src\MeshComponent.cpp" />
     <ClCompile Include="..\..\src\RenderManager.cpp" />
+    <ClCompile Include="..\..\src\ScriptManager.cpp" />
     <ClCompile Include="..\..\src\Singleton.cpp" />
     <ClCompile Include="..\..\src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -62,6 +63,7 @@
     <ClInclude Include="..\..\include\LogManager.h" />
     <ClInclude Include="..\..\include\MeshComponent.h" />
     <ClInclude Include="..\..\include\RenderManager.h" />
+    <ClInclude Include="..\..\include\ScriptManager.h" />
     <ClInclude Include="..\..\include\Serializable.h" />
     <ClInclude Include="..\..\include\Singleton.h" />
     <ClInclude Include="..\..\include\stdafx.h" />
