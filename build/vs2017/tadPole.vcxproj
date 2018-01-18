@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -141,12 +141,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;C:\Users\taylo\Documents\Code\tadPole\dependencies\RAPIDJSON-1.1.0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;..\..\dependencies\RAPIDJSON-1.1.0\;..\..\dependencies\PYTHON-3.6.4\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG_WINDOWS;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>..\..\dependencies\SDL2-2.0.7\lib\x86;..\..\dependencies\OGRE-1.10.9\lib;..\..\dependencies\OGRE-1.10.9\lib\OGRE;..\..\dependencies\OGRE-1.10.9\lib\OGRE\Samples;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>OgreMain_d.lib;OgreOverlay_d.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\dependencies\SDL2-2.0.7\lib\x86;..\..\dependencies\OGRE-1.10.9\lib;..\..\dependencies\OGRE-1.10.9\lib\OGRE;..\..\dependencies\OGRE-1.10.9\lib\OGRE\Samples;..\..\dependencies\PYTHON-3.6.4\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain_d.lib;OgreOverlay_d.lib;SDL2.lib;SDL2main.lib;python3_d.lib;python36_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
       <SubSystem>Windows</SubSystem>
@@ -177,14 +177,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>Use</PrecompiledHeader>
-      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;..\..\dependencies\RAPIDJSON-1.1.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG_WINDOWS;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>..\..\dependencies\SDL2-2.0.7\lib\x86;..\..\dependencies\OGRE-1.10.9\lib;..\..\dependencies\OGRE-1.10.9\lib\OGRE;..\..\dependencies\OGRE-1.10.9\lib\OGRE\Samples;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>OgreMain.lib;OgreOverlay.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OgreMain.lib;OgreOverlay.lib;SDL2.lib;SDL2main.lib;python3.lib;python36.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>
       </EntryPointSymbol>
       <SubSystem>Windows</SubSystem>

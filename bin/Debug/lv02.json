@@ -7,60 +7,17 @@
 					"name": "base",
 					"parentName": "ROOT",
 					"active": true,
-					"worldPosition": [0, -70, -30],
+					"worldPosition": [0, 0, 0],
 					"worldOrientation": [0, 0, 1, 0],
-					"worldScale": [20, 20, 20],
+					"worldScale": [1, 1, 1],
 					"components": [
 						{
 							"type": "MESH",
 							"fileName": "Barrel.mesh"
 						}
 					]
-				},{
-					"name": "camera",
-					"parentName": "ROOT",
-					"active": true,
-					"worldPosition": [0, 5, 30],
-					"worldOrientation": [0, 0, 1, 0],
-					"worldScale": [1, 1, 1],
-					"components": [
-						{
-							"type": "CAMERA",
-							"direction": [0, 0, -1],
-							"nearClipDistance": 0.1,
-							"farClipDistance": 1000,
-							"viewport": ""
-						}
-					]
-				},{
-					"name": "light",
-					"parentName": "ROOT",
-					"active": true,
-					"worldPosition": [0, 5, 0],
-					"worldOrientation": [0, -1, 0, 0],
-					"worldScale": [1, 1, 1],
-					"components": [
-						{
-							"type": "LIGHT",
-							"lightType": "SPOT",
-							"direction": [0, 0, 1],
-							"diffuseColor": [1, 1, 1],
-							"specularColor": [0, 0, 0],
-							"spotlightInnerAngle": 0.000174533,
-							"spotlightOuterAngle": 0.000349066
-						},
-						{
-							"type": "MESH",
-							"fileName": "Barrel.mesh"
-						}
-					]
-				}
-			]
-		},{
-			"groupName": "SCENEVIEW", 
-			"gameObjects": [
-				{
-					"name": "SCENECAMERA",
+				},{	
+					"name": "SCENECAMERA1",
 					"parentName": "ROOT",
 					"active": true,
 					"worldPosition": [0, 5, 40],
@@ -73,75 +30,6 @@
 							"nearClipDistance": 0.1,
 							"farClipDistance": 1000,
 							"viewport": "MAIN"
-						}
-					]
-				}
-			]
-		},{
-			"groupName": "orbiters", 
-			"gameObjects": [
-				{
-					"name": "leftOrbiterBase",
-					"parentName": "ROOT",
-					"active": true,
-					"worldPosition": [-25, -6, -25],
-					"worldOrientation": [0, 0, 1, 0],
-					"worldScale": [1, 1, 1],
-					"components": [
-						
-					]
-				},{
-					"name": "centralOrbiterBase",
-					"parentName": "ROOT",
-					"active": true,
-					"worldPosition": [-1, 0, 0],
-					"worldOrientation": [0, 0, 1, 0],
-					"worldScale": [1, 1, 1],
-					"components": [
-						
-					]
-				},{
-					"name": "orbiter",
-					"parentName": "leftOrbiterBase",
-					"active": true,
-					"worldPosition": [-15, -6, -25],
-					"worldOrientation": [0, 0, 1, 0],
-					"worldScale": [0.1, 0.1, 0.1],
-					"components": [
-						{
-							"type": "MESH",
-							"fileName": "penguin.mesh"
-						}
-					]
-				}
-			]
-		},{
-			"groupName": "rotaters", 
-			"gameObjects": [
-				{
-					"name": "central",
-					"parentName": "ROOT",
-					"active": true,
-					"worldPosition": [-1, 0, 0],
-					"worldOrientation": [0, 0, 1, 0],
-					"worldScale": [1, 1, 1],
-					"components": [
-						{
-							"type": "MESH",
-							"fileName": "sinbad.mesh"
-						}
-					]
-				},{
-					"name": "left",
-					"parentName": "ROOT",
-					"active": true,
-					"worldPosition": [-25, -6, -25],
-					"worldOrientation": [0, 0, 1, 0],
-					"worldScale": [0.15, 0.15, 0.15],
-					"components": [
-						{
-							"type": "MESH",
-							"fileName": "robot.mesh"
 						}
 					]
 				}
