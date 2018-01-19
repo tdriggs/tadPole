@@ -7,7 +7,7 @@
 
 namespace tadPole
 {
-	typedef int EventType;	///<
+	typedef int EventType;	///< The tadPole representation of SDL_EventType.
 
 	#define EVT_QUIT				 SDL_QUIT
 	#define EVT_WINDOW				 SDL_WINDOWEVENT
@@ -39,24 +39,25 @@ namespace tadPole
 	#define EVT_FINGERMOVE			 SDL_FINGERMOTION
 
 	/**
-	* 
+	* A class that is primarily for handling interrupts and system events and integrating
+	* support for those events into tadPole.
 	*/
 	class Event
 	{
 		// @@@@@ ATTRIBUTES @@@@@
 	protected:
-		SDL_Event sdlEvent;	///<
+		SDL_Event sdlEvent;	///< The SDL representation of this Event.
 
 
 		// @@@@@ CONSTRUCTORS / DESTRUCTOR @@@@@
 	public:
 		/**
-		*
+		* Event constructor.
 		*/
 		Event();
 
 		/**
-		*
+		* Event destructor.
 		*/
 		~Event();
 
@@ -64,17 +65,18 @@ namespace tadPole
 		// @@@@@ PUBLIC METHODS @@@@@
 	public:
 		/**
-		*
+		* Ask the operating system to get the next waiting event.
 		*/
 		bool poll();
 
 		/**
-		*
+		* Get the EventType of this Event.
 		*/
 		EventType getType();
 
 		/**
-		*
+		* Get the key of this Event. Only applicable if this Event involves
+		* a keyboard key.
 		*/
 		Key getKey();
 	};

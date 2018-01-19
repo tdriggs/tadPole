@@ -7,6 +7,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "Exception.cpp", "_exception_8cpp.html", null ],
     [ "GameObject.cpp", "_game_object_8cpp.html", null ],
     [ "InputManager.cpp", "_input_manager_8cpp.html", null ],
+    [ "LightComponent.cpp", "_light_component_8cpp.html", null ],
     [ "LogManager.cpp", "_log_manager_8cpp.html", null ],
     [ "MeshComponent.cpp", "_mesh_component_8cpp.html", null ],
     [ "RenderManager.cpp", "_render_manager_8cpp.html", null ],

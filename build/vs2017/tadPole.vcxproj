@@ -19,13 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\include\LightComponent.cpp" />
     <ClCompile Include="..\..\src\Application.cpp" />
     <ClCompile Include="..\..\src\CameraComponent.cpp" />
     <ClCompile Include="..\..\src\DebugOverlay.cpp" />
     <ClCompile Include="..\..\src\Event.cpp" />
     <ClCompile Include="..\..\src\Exception.cpp" />
     <ClCompile Include="..\..\src\GameObject.cpp" />
+    <ClCompile Include="..\..\src\LightComponent.cpp" />
     <ClCompile Include="..\..\src\Scene.cpp" />
     <ClCompile Include="..\..\src\InputManager.cpp" />
     <ClCompile Include="..\..\src\LogManager.cpp" />
@@ -65,7 +65,6 @@
     <ClInclude Include="..\..\include\Serializable.h" />
     <ClInclude Include="..\..\include\Singleton.h" />
     <ClInclude Include="..\..\include\stdafx.h" />
-    <ClInclude Include="..\..\include\targetver.h" />
     <ClInclude Include="..\..\include\Window.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -142,7 +141,7 @@
       <SDLCheck>true</SDLCheck>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <AdditionalIncludeDirectories>$(SolutionDir);..\..\include;..\..\dependencies\SDL2-2.0.7\include;..\..\dependencies\OGRE-1.10.9\include;..\..\dependencies\OGRE-1.10.9\include\OGRE;..\..\dependencies\OGRE-1.10.9\include\OGRE\Overlay;..\..\dependencies\GLM-0.9.8.5;C:\Users\taylo\Documents\Code\tadPole\dependencies\RAPIDJSON-1.1.0\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG_WINDOWS;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG_WINDOWS;_WINDOWS;_CRT_SECURE_NO_WARNINGS;_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>..\..\dependencies\SDL2-2.0.7\lib\x86;..\..\dependencies\OGRE-1.10.9\lib;..\..\dependencies\OGRE-1.10.9\lib\OGRE;..\..\dependencies\OGRE-1.10.9\lib\OGRE\Samples;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>

@@ -27,10 +27,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="tadpole.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">tadPole
    </div>
-   <div id="projectbrief">A simple game engine to create simple games.</div>
+   <div id="projectbrief">A simple game engine for simple games.</div>
   </td>
  </tr>
  </tbody>
@@ -81,6 +82,7 @@ $(document).ready(function(){initNavTree('classtad_pole_1_1_serializable.html','
 
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classtad_pole_1_1_serializable-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">tadPole::Serializable Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -102,8 +104,47 @@ Inheritance diagram for tadPole::Serializable:</div>
 <area href="classtad_pole_1_1_mesh_component.html" alt="tadPole::MeshComponent" shape="rect" coords="354,112,521,136"/>
 </map>
  </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2726ced92678e78699f03a1e1c30b762"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtad_pole_1_1_serializable.html#a2726ced92678e78699f03a1e1c30b762">serialize</a> ()=0</td></tr>
+<tr class="separator:a2726ced92678e78699f03a1e1c30b762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>An interface in spirit that requires children classes to be able to be serialized into JSON for saving to a file. </p>
+
+<p class="definition">Definition at line <a class="el" href="_serializable_8h_source.html#l00014">14</a> of file <a class="el" href="_serializable_8h_source.html">Serializable.h</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2726ced92678e78699f03a1e1c30b762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2726ced92678e78699f03a1e1c30b762">&#9670;&nbsp;</a></span>serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::string tadPole::Serializable::serialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Turn this object into a std::string of valid, formatted JSON. </p>
+
+<p>Implemented in <a class="el" href="classtad_pole_1_1_light_component.html#aef772b113f26b2b0e27b7b5f24deed75">tadPole::LightComponent</a>, <a class="el" href="classtad_pole_1_1_game_object.html#a29da956964935519ed390953098b074a">tadPole::GameObject</a>, <a class="el" href="classtad_pole_1_1_mesh_component.html#a310c139553aff42cd4e3ad9bf7b1c116">tadPole::MeshComponent</a>, <a class="el" href="classtad_pole_1_1_camera_component.html#a2b9571d7c15cee944cd53a18197437c3">tadPole::CameraComponent</a>, <a class="el" href="classtad_pole_1_1_scene.html#a76b76eadc78efede59c8d0f882c4b45e">tadPole::Scene</a>, and <a class="el" href="classtad_pole_1_1_component.html#a3343644a403a85cd1d2f6fcad0e399b0">tadPole::Component</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>include/<a class="el" href="_serializable_8h_source.html">Serializable.h</a></li>
+<li>C:/Users/taylo/Documents/Code/tadPole/include/<a class="el" href="_serializable_8h_source.html">Serializable.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

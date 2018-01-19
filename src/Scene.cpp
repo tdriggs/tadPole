@@ -21,6 +21,34 @@ tadPole::Scene::~Scene()
 	this->clear();
 }
 
+std::string tadPole::Scene::serialize()
+{
+	std::ostringstream result;
+	std::ostringstream groupString;
+	std::string groupSeperator = "";
+	std::map<std::string, std::vector<GameObject *>>::iterator map_it;
+	for (map_it = this->objects.begin(); map_it != this->objects.end(); ++map_it)
+	{
+		std::ostringstream gameObjectString;
+		std::string objectSeperator = "";
+		std::vector<GameObject *>::iterator vector_it;
+		for (vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
+		{
+			GameObject * gameObject = ((GameObject *)(*vector_it));
+			std::string gameObjectJson = gameObject->serialize();
+			gameObjectString << objectSeperator << gameObjectJson;
+			objectSeperator = ",";
+		}
+
+		groupString << groupSeperator << "{\n\t\t\t\"groupName\": \"" << map_it->first << "\", \n\t\t\t\"gameObjects\": [\n\t\t\t\t" << gameObjectString.str() << "\n\t\t\t]\n\t\t}";
+		groupSeperator = ",";
+	}
+
+	result << "{\n\t\"groups\": [\n\t\t" << groupString.str() << "\n\t]\n}";
+
+	return result.str();
+}
+
 void tadPole::Scene::save()
 {
 	std::string jsonString = this->serialize();
@@ -35,6 +63,8 @@ void tadPole::Scene::save()
 
 void tadPole::Scene::load()
 {
+	this->clear();
+
 	rapidjson::Document document;
 	std::ifstream file;
 	std::ostringstream fileText;
@@ -149,34 +179,7 @@ void tadPole::Scene::clear()
 		map_it->second.clear();
 	}
 	this->objects.clear();
-}
-
-std::string tadPole::Scene::serialize()
-{
-	std::ostringstream result;
-	std::ostringstream groupString;
-	std::string groupSeperator = "";
-	std::map<std::string, std::vector<GameObject *>>::iterator map_it;
-	for (map_it = this->objects.begin(); map_it != this->objects.end(); ++map_it)
-	{
-		std::ostringstream gameObjectString;
-		std::string objectSeperator = "";
-		std::vector<GameObject *>::iterator vector_it;
-		for (vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
-		{
-			GameObject * gameObject = ((GameObject *)(*vector_it));
-			std::string gameObjectJson = gameObject->serialize();
-			gameObjectString << objectSeperator << gameObjectJson;
-			objectSeperator = ",";
-		}
-
-		groupString << groupSeperator << "{\n\t\t\t\"groupName\": \"" << map_it->first << "\", \n\t\t\t\"gameObjects\": [\n\t\t\t\t" << gameObjectString.str() << "\n\t\t\t]\n\t\t}";
-		groupSeperator = ",";
-	}
-
-	result << "{\n\t\"groups\": [\n\t\t" << groupString.str() << "\n\t]\n}";
-
-	return result.str();
+	this->objects[NO_GROUP_NAME] = std::vector<GameObject *>();
 }
 
 void tadPole::Scene::createGroup(std::string group)
@@ -187,21 +190,6 @@ void tadPole::Scene::createGroup(std::string group)
 	}
 
 	this->objects[group] = std::vector<GameObject *>();
-}
-
-void tadPole::Scene::setGroupActive(std::string group, bool active)
-{
-	if (this->objects.find(group) == this->objects.end())
-	{
-		EXCEPTION("Group does not exist: " + group);
-	}
-
-	std::vector<GameObject *> gameObjects = this->objects[group];
-	std::vector<GameObject *>::iterator it;
-	for (it = gameObjects.begin(); it != gameObjects.end(); ++it)
-	{
-		(*it)->setActive(active);
-	}
 }
 
 void tadPole::Scene::deleteGroup(std::string group)
@@ -221,23 +209,19 @@ void tadPole::Scene::deleteGroup(std::string group)
 	this->objects.erase(group);
 }
 
-tadPole::GameObject * tadPole::Scene::getGameObject(std::string name)
+void tadPole::Scene::setGroupActive(std::string group, bool active)
 {
-	std::map<std::string, std::vector<GameObject *>>::iterator map_it;
-	for (map_it = this->objects.begin(); map_it != this->objects.end(); ++map_it)
+	if (this->objects.find(group) == this->objects.end())
 	{
-		std::vector<GameObject *>::iterator vector_it;
-		for (vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
-		{
-			GameObject * go = (GameObject *)(*vector_it);
-			if (std::strcmp(go->name.c_str(), name.c_str()) == 0)
-			{
-				return go;
-			}
-		}
-	};
+		EXCEPTION("Group does not exist: " + group);
+	}
 
-	EXCEPTION("GameObject does not exist: " + name);
+	std::vector<GameObject *> gameObjects = this->objects[group];
+	std::vector<GameObject *>::iterator it;
+	for (it = gameObjects.begin(); it != gameObjects.end(); ++it)
+	{
+		(*it)->setActive(active);
+	}
 }
 
 tadPole::GameObject * tadPole::Scene::createGameObject(std::string name)
@@ -269,4 +253,23 @@ std::vector<tadPole::GameObject*> tadPole::Scene::getGroup(std::string group)
 	}
 
 	return this->objects[group];
+}
+
+tadPole::GameObject * tadPole::Scene::getGameObject(std::string name)
+{
+	std::map<std::string, std::vector<GameObject *>>::iterator map_it;
+	for (map_it = this->objects.begin(); map_it != this->objects.end(); ++map_it)
+	{
+		std::vector<GameObject *>::iterator vector_it;
+		for (vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
+		{
+			GameObject * go = (GameObject *)(*vector_it);
+			if (std::strcmp(go->name.c_str(), name.c_str()) == 0)
+			{
+				return go;
+			}
+		}
+	};
+
+	EXCEPTION("GameObject does not exist: " + name);
 }

@@ -3,6 +3,7 @@
 
 #include "RenderManager.h"
 #include "GameObject.h"
+#include "Exception.h"
 
 tadPole::CameraComponent::CameraComponent(GameObject * g) : Component(g)
 {
@@ -62,5 +63,9 @@ void tadPole::CameraComponent::setViewport(std::string viewport)
 	if (viewport == "MAIN")
 	{
 		RENDER_MANAGER->mainViewport->setCamera(this->camera);
+	}
+	else if (viewport != "")
+	{
+		EXCEPTION("Viewport does not exist: " + viewport);
 	}
 }

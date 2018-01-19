@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "GameObject.h"
 
+#include "Exception.h"
 #include "RenderManager.h"
 #include "Component.h"
 #include "MeshComponent.h"
@@ -193,12 +194,14 @@ void tadPole::GameObject::setActive(bool active)
 
 void tadPole::GameObject::setParent(GameObject * parent)
 {
-	if (this->parentObject != NULL)
+	if (this->parentObject == NULL)
 	{
-		this->parentObject->sceneNode->removeChild(this->sceneNode);
-		this->parentObject = parent;
-		this->parentObject->sceneNode->addChild(this->sceneNode);
+		EXCEPTION("Cannot set the parent of the root object of a Scene.");
 	}
+
+	this->parentObject->sceneNode->removeChild(this->sceneNode);
+	this->parentObject = parent;
+	this->parentObject->sceneNode->addChild(this->sceneNode);
 }
 
 void tadPole::GameObject::setParentInPlace(GameObject * parent)

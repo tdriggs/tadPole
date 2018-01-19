@@ -5,7 +5,7 @@
 
 namespace tadPole
 {
-	typedef int Key;	///<
+	typedef int Key;	///< The tadPole representation of SDL_Key.
 
 	#define KEY_A			 SDLK_a
 	#define KEY_B			 SDLK_b

@@ -7,33 +7,122 @@
 #include "Singleton.h"
 #include "GameObject.h"
 
-#define NO_GROUP_NAME "No Group"
+#define NO_GROUP_NAME "No Group"	///< The name of the group for GameObjects that don't belong to a group.
 
 namespace tadPole
 {
-	class Scene : Serializable
+	/**
+	* A representation of a collection of GameObjects and the groups to which they belong.
+	*/
+	class Scene : public Serializable
 	{
+		// @@@@@ ATTRIBUTES @@@@@
 	protected:
-		std::string fileName;
-		GameObject * rootObject;
-		std::map<std::string, std::vector<GameObject *>> objects;
+		std::string fileName;										///< The name of the file from which to load and save.
+		GameObject * rootObject;									///< The GameObject that is the root of this Scene.
+		std::map<std::string, std::vector<GameObject *>> objects;	///< The collection of GameObjects in this Scene and the groups to which they belong.
 
+
+		// @@@@@ CONSTRUCTORS / DESTRUCTOR @@@@@
 	public:
-		Scene(std::string fileName);
-		 ~Scene();
+		/**
+		* Scene constructor.
+		*/
+		Scene(
+			std::string fileName	///< The name of the file from which to load and save.
+		);
 
-		 void save();
-		 void load();
-		 void clear();
-		 std::string serialize();
+		/**
+		* Scene destructor.
+		*/
+		~Scene();
 
-		 void createGroup(std::string group);
-		 void setGroupActive(std::string group, bool active);
-		 void deleteGroup(std::string group);
-		 GameObject * getGameObject(std::string name);
-		 GameObject * createGameObject(std::string name);
-		 GameObject * createGameObject(std::string group, std::string name);
-		 std::vector<GameObject *> getGroup(std::string group);
+
+		// @@@@@ BASE CLASS / INTERFACE METHODS @@@@@
+	public:
+		/**
+		* Turn this Scene into a std::string of valid, formatted JSON.
+		*/
+		std::string serialize();
+
+
+		// @@@@@ INITIALIZATION METHODS @@@@@
+	public:
+		/**
+		* Write the serialized string of this Scene to the Scene's file.
+		*/
+		void save();
+
+		/**
+		* Reload the Scene from the Scene's file.
+		*/
+		void load();
+
+		/**
+		* Remove all GameObjects from the scene and delete all groups.
+		*/
+		void clear();
+		
+
+		// @@@@@ GROUP MANIPULATION METHODS @@@@@
+	public:
+		/**
+		* Create a new group to which GameObjects can be added.
+		*/
+		void createGroup(
+			std::string group	///< The name of the group to be created.
+		);
+
+		/**
+		* Delete a group and all GameObjects in that group.
+		*/
+		void deleteGroup(
+			std::string group	///< The name of the group to be deleted.
+		);
+
+		/**
+		* Set whether all GameObjects in a group are visible and can be interacted with in this Scene.
+		*/
+		void setGroupActive(
+			std::string group,	///< The name of the group to modify.
+			bool active			///< Whether this group is visible in the scene and can be interacted with.
+		);
+
+
+		// @@@@@ GAME OBJECT MANIPULATION METHODS @@@@@
+	public:
+		/**
+		* Create a GameObject that is not in a group.
+		*/
+		GameObject * createGameObject(
+			std::string name	///< The unique name of the GameObject to be created.
+		);
+
+		/**
+		* Create a GameObject and add it to a group immediately. This method requires the group
+		* to have already been created.
+		*/
+		GameObject * createGameObject(
+			std::string group,	///< The name of the group to which the GameObject will be added.
+			std::string name	///< The unique name of the GameObject to be created.
+		);
+
+
+		// @@@@@ GENERAL GETTERS @@@@@
+	public:
+		/**
+		* Get all GameObjects in a group.
+		*/
+		std::vector<GameObject *> getGroup(
+			std::string group	///< The name of the group to get.
+		);
+
+		/**
+		* Get a specific GameObject.
+		*/
+		GameObject * getGameObject(
+			std::string name	///< The unique name of the GameObject to get.
+		);
 	};
 }
 

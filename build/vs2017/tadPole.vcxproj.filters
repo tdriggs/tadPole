@@ -69,11 +69,11 @@
     <ClCompile Include="..\..\src\CameraComponent.cpp">
       <Filter>Source Files\OGRE Interface</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\include\LightComponent.cpp">
-      <Filter>Source Files\OGRE Interface</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\Scene.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LightComponent.cpp">
+      <Filter>Source Files\OGRE Interface</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,9 +99,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\stdafx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\Window.h">

@@ -1,2 +1,2 @@
-[01/15/2018@07:51:42]  Initialized Successfully!
-[01/15/2018@07:51:43]  File Loaded: lv01.json
+[01/16/2018@09:34:33]  Initialized Successfully!
+[01/16/2018@09:34:33]  File Loaded: lv01.json

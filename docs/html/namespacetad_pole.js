@@ -13,7 +13,7 @@ var namespacetad_pole =
     [ "MeshComponent", "classtad_pole_1_1_mesh_component.html", "classtad_pole_1_1_mesh_component" ],
     [ "RenderManager", "classtad_pole_1_1_render_manager.html", "classtad_pole_1_1_render_manager" ],
     [ "Scene", "classtad_pole_1_1_scene.html", "classtad_pole_1_1_scene" ],
-    [ "Serializable", "classtad_pole_1_1_serializable.html", null ],
+    [ "Serializable", "classtad_pole_1_1_serializable.html", "classtad_pole_1_1_serializable" ],
     [ "Singleton", "classtad_pole_1_1_singleton.html", "classtad_pole_1_1_singleton" ],
     [ "Window", "classtad_pole_1_1_window.html", "classtad_pole_1_1_window" ]
 ];

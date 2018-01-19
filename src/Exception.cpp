@@ -3,16 +3,16 @@
 
 #include "LogManager.h"
 
-tadPole::Exception::Exception(std::string message, std::string fname, int lnum)
+tadPole::Exception::Exception(std::string message, std::string fileName, int lineNumber)
 {
 	this->message = message;
-	this->fname = fname.substr(fname.find_last_of('\\') + 1, fname.length());
-	this->lnum = lnum;
+	this->fileName = fileName.substr(fileName.find_last_of('\\') + 1, fileName.length());
+	this->lineNumber = lineNumber;
 }
 
 void tadPole::Exception::logException()
 {
 	char formattedMessage[1024];
-	sprintf(formattedMessage, "[%s: %d] %s", this->fname.c_str(), this->lnum, this->message.c_str());
+	sprintf(formattedMessage, "[%s: %d] %s", this->fileName.c_str(), this->lineNumber, this->message.c_str());
 	LOG_MANAGER->log((std::string)formattedMessage);
 }

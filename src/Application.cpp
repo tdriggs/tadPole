@@ -31,10 +31,28 @@ void tadPole::Application::initialize(HWND windowHandle)
 
 void tadPole::Application::update(float deltaTime)
 {
-	DEBUG_OVERLAY->update(deltaTime);
+	try
+	{
+		DEBUG_OVERLAY->update(deltaTime);
+	}
+	catch (Exception e) {
+		if (LOG_MANAGER)
+		{
+			e.logException();
+		}
+	}
 }
 
 void tadPole::Application::render()
 {
-	RENDER_MANAGER->render();
+	try
+	{
+		RENDER_MANAGER->render();
+	}
+	catch (Exception e) {
+		if (LOG_MANAGER)
+		{
+			e.logException();
+		}
+	}
 }

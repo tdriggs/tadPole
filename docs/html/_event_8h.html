@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>tadPole: include/Event.h File Reference</title>
+<title>tadPole: C:/Users/taylo/Documents/Code/tadPole/include/Event.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="tadpole.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">tadPole
    </div>
-   <div id="projectbrief">A simple game engine to create simple games.</div>
+   <div id="projectbrief">A simple game engine for simple games.</div>
   </td>
  </tr>
  </tbody>
@@ -106,66 +107,67 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a39e01ff57f10410a7354454e8ee60b6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a39e01ff57f10410a7354454e8ee60b6c">EVT_QUIT</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa31acc5fdafc86ebe2c1f5c3cae48d603">SDL_QUIT</a></td></tr>
+<tr class="memitem:a39e01ff57f10410a7354454e8ee60b6c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a39e01ff57f10410a7354454e8ee60b6c">EVT_QUIT</a>&#160;&#160;&#160;SDL_QUIT</td></tr>
 <tr class="separator:a39e01ff57f10410a7354454e8ee60b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5de251f70f973a5f0f30227709c63a3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a5de251f70f973a5f0f30227709c63a3d">EVT_WINDOW</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa5ff4e41f0d8b5def11cfe6a69ec0b698">SDL_WINDOWEVENT</a></td></tr>
+<tr class="memitem:a5de251f70f973a5f0f30227709c63a3d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a5de251f70f973a5f0f30227709c63a3d">EVT_WINDOW</a>&#160;&#160;&#160;SDL_WINDOWEVENT</td></tr>
 <tr class="separator:a5de251f70f973a5f0f30227709c63a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad34b75aebf8d018672fc147d57ba9ef4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#ad34b75aebf8d018672fc147d57ba9ef4">EVT_SYSTEM</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa73749d735a18ce6ef17a09ee70d5dbe7">SDL_SYSWMEVENT</a></td></tr>
+<tr class="memitem:ad34b75aebf8d018672fc147d57ba9ef4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#ad34b75aebf8d018672fc147d57ba9ef4">EVT_SYSTEM</a>&#160;&#160;&#160;SDL_SYSWMEVENT</td></tr>
 <tr class="separator:ad34b75aebf8d018672fc147d57ba9ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a43634fecaeb6df2845dc2ee14e1609"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a7a43634fecaeb6df2845dc2ee14e1609">EVT_KEYDOWN</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaacaf8cfd53c985cdbf6a90c811d51a1fc">SDL_KEYDOWN</a></td></tr>
+<tr class="memitem:a7a43634fecaeb6df2845dc2ee14e1609"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a7a43634fecaeb6df2845dc2ee14e1609">EVT_KEYDOWN</a>&#160;&#160;&#160;SDL_KEYDOWN</td></tr>
 <tr class="separator:a7a43634fecaeb6df2845dc2ee14e1609"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ce9e80165fb36bc745b8facf47d48c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a5ce9e80165fb36bc745b8facf47d48c1">EVT_KEYUP</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaadefb8866b9d28be21c2c33c35cc66c4b">SDL_KEYUP</a></td></tr>
+<tr class="memitem:a5ce9e80165fb36bc745b8facf47d48c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a5ce9e80165fb36bc745b8facf47d48c1">EVT_KEYUP</a>&#160;&#160;&#160;SDL_KEYUP</td></tr>
 <tr class="separator:a5ce9e80165fb36bc745b8facf47d48c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d8e0287f56d2d3c6581c1e65a4a9506"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a5d8e0287f56d2d3c6581c1e65a4a9506">EVT_TEXTEDITING</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa1b80c465df69c0b6d06f026ce7a230e3">SDL_TEXTEDITING</a></td></tr>
+<tr class="memitem:a5d8e0287f56d2d3c6581c1e65a4a9506"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a5d8e0287f56d2d3c6581c1e65a4a9506">EVT_TEXTEDITING</a>&#160;&#160;&#160;SDL_TEXTEDITING</td></tr>
 <tr class="separator:a5d8e0287f56d2d3c6581c1e65a4a9506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0224a372f128abb4d1d45030d773f540"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a0224a372f128abb4d1d45030d773f540">EVT_TEXTINPUT</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa4fa2570088f6b9cbd109ae91b511368f">SDL_TEXTINPUT</a></td></tr>
+<tr class="memitem:a0224a372f128abb4d1d45030d773f540"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a0224a372f128abb4d1d45030d773f540">EVT_TEXTINPUT</a>&#160;&#160;&#160;SDL_TEXTINPUT</td></tr>
 <tr class="separator:a0224a372f128abb4d1d45030d773f540"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3418a6d8d5c7996251314d992d407e83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a3418a6d8d5c7996251314d992d407e83">EVT_KEYMAPCHANGE</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaacd473484a07dfdc628c4a02fbf9f83c9">SDL_KEYMAPCHANGED</a></td></tr>
+<tr class="memitem:a3418a6d8d5c7996251314d992d407e83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a3418a6d8d5c7996251314d992d407e83">EVT_KEYMAPCHANGE</a>&#160;&#160;&#160;SDL_KEYMAPCHANGED</td></tr>
 <tr class="separator:a3418a6d8d5c7996251314d992d407e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f21e4b1035f095d4023f2b113cb4dab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a0f21e4b1035f095d4023f2b113cb4dab">EVT_MOUSEMOVE</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa04c436ef80fef38fb77a89e0e9124c30">SDL_MOUSEMOTION</a></td></tr>
+<tr class="memitem:a0f21e4b1035f095d4023f2b113cb4dab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a0f21e4b1035f095d4023f2b113cb4dab">EVT_MOUSEMOVE</a>&#160;&#160;&#160;SDL_MOUSEMOTION</td></tr>
 <tr class="separator:a0f21e4b1035f095d4023f2b113cb4dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9353a39f8d8a87e9d8a04a8f8a4a8d5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a9353a39f8d8a87e9d8a04a8f8a4a8d5c">EVT_MOUSEBUTTONDOWN</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa9267166e1536dfa8b0daa98c0afa9052">SDL_MOUSEBUTTONDOWN</a></td></tr>
+<tr class="memitem:a9353a39f8d8a87e9d8a04a8f8a4a8d5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a9353a39f8d8a87e9d8a04a8f8a4a8d5c">EVT_MOUSEBUTTONDOWN</a>&#160;&#160;&#160;SDL_MOUSEBUTTONDOWN</td></tr>
 <tr class="separator:a9353a39f8d8a87e9d8a04a8f8a4a8d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11fdc9be7f830fc9ebd1c9f793678800"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a11fdc9be7f830fc9ebd1c9f793678800">EVT_MOUSEBUTTONUP</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa4ab85278398d29b9e50f500aad2b952b">SDL_MOUSEBUTTONUP</a></td></tr>
+<tr class="memitem:a11fdc9be7f830fc9ebd1c9f793678800"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a11fdc9be7f830fc9ebd1c9f793678800">EVT_MOUSEBUTTONUP</a>&#160;&#160;&#160;SDL_MOUSEBUTTONUP</td></tr>
 <tr class="separator:a11fdc9be7f830fc9ebd1c9f793678800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac34092f5d5e364fa93c8751756cbeeb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#ac34092f5d5e364fa93c8751756cbeeb6">EVT_MOUSEWHEEL</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa63135c2e0aea2286f05066f3c0bc5c4e">SDL_MOUSEWHEEL</a></td></tr>
+<tr class="memitem:ac34092f5d5e364fa93c8751756cbeeb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#ac34092f5d5e364fa93c8751756cbeeb6">EVT_MOUSEWHEEL</a>&#160;&#160;&#160;SDL_MOUSEWHEEL</td></tr>
 <tr class="separator:ac34092f5d5e364fa93c8751756cbeeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68a3887fc4bc2b6acff24d5e9705139a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a68a3887fc4bc2b6acff24d5e9705139a">EVT_JOYAXISMOTION</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaf0803b3f8a12de3d85f81ebd7b514cd1">SDL_JOYAXISMOTION</a></td></tr>
+<tr class="memitem:a68a3887fc4bc2b6acff24d5e9705139a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a68a3887fc4bc2b6acff24d5e9705139a">EVT_JOYAXISMOTION</a>&#160;&#160;&#160;SDL_JOYAXISMOTION</td></tr>
 <tr class="separator:a68a3887fc4bc2b6acff24d5e9705139a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affb3a2de301005d86d1b3be5aeabcf64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#affb3a2de301005d86d1b3be5aeabcf64">EVT_JOYBALLMOTION</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa78f859489cfd565c305c7f6f9d5b25c1">SDL_JOYBALLMOTION</a></td></tr>
+<tr class="memitem:affb3a2de301005d86d1b3be5aeabcf64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#affb3a2de301005d86d1b3be5aeabcf64">EVT_JOYBALLMOTION</a>&#160;&#160;&#160;SDL_JOYBALLMOTION</td></tr>
 <tr class="separator:affb3a2de301005d86d1b3be5aeabcf64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a850aee182ab2c3c2c6ed02b058961dcd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a850aee182ab2c3c2c6ed02b058961dcd">EVT_JOYHATMOTION</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaafba4080bfbad335e520097b2024f0dff">SDL_JOYHATMOTION</a></td></tr>
+<tr class="memitem:a850aee182ab2c3c2c6ed02b058961dcd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a850aee182ab2c3c2c6ed02b058961dcd">EVT_JOYHATMOTION</a>&#160;&#160;&#160;SDL_JOYHATMOTION</td></tr>
 <tr class="separator:a850aee182ab2c3c2c6ed02b058961dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32fe6f69e6ba58e289a9d67dc4b4f882"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a32fe6f69e6ba58e289a9d67dc4b4f882">EVT_JOYBUTTONDOWN</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa386ac978bc145a45883fe0adab70710b">SDL_JOYBUTTONDOWN</a></td></tr>
+<tr class="memitem:a32fe6f69e6ba58e289a9d67dc4b4f882"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a32fe6f69e6ba58e289a9d67dc4b4f882">EVT_JOYBUTTONDOWN</a>&#160;&#160;&#160;SDL_JOYBUTTONDOWN</td></tr>
 <tr class="separator:a32fe6f69e6ba58e289a9d67dc4b4f882"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37f8b6c8b1c256e77f1a6528ba4bf26a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a37f8b6c8b1c256e77f1a6528ba4bf26a">EVT_JOYBUTTONUP</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa76f91c81110f012e3a47cbbc0449e3c3">SDL_JOYBUTTONUP</a></td></tr>
+<tr class="memitem:a37f8b6c8b1c256e77f1a6528ba4bf26a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a37f8b6c8b1c256e77f1a6528ba4bf26a">EVT_JOYBUTTONUP</a>&#160;&#160;&#160;SDL_JOYBUTTONUP</td></tr>
 <tr class="separator:a37f8b6c8b1c256e77f1a6528ba4bf26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da02aef11af4fa1037840798e6bcf8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a0da02aef11af4fa1037840798e6bcf8f">EVT_JOYDEVICEADDED</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa0500c4e830a1822e6d0a90294c3f1393">SDL_JOYDEVICEADDED</a></td></tr>
+<tr class="memitem:a0da02aef11af4fa1037840798e6bcf8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a0da02aef11af4fa1037840798e6bcf8f">EVT_JOYDEVICEADDED</a>&#160;&#160;&#160;SDL_JOYDEVICEADDED</td></tr>
 <tr class="separator:a0da02aef11af4fa1037840798e6bcf8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45a6ba511b07847868f2ee06a571b8ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a45a6ba511b07847868f2ee06a571b8ae">EVT_JOYDEVICEREMOVED</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa4e2d7a1067dc56abeee393d46309ecd0">SDL_JOYDEVICEREMOVED</a></td></tr>
+<tr class="memitem:a45a6ba511b07847868f2ee06a571b8ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a45a6ba511b07847868f2ee06a571b8ae">EVT_JOYDEVICEREMOVED</a>&#160;&#160;&#160;SDL_JOYDEVICEREMOVED</td></tr>
 <tr class="separator:a45a6ba511b07847868f2ee06a571b8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4d98fc21020343a2821de8b5d1b5db7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#ac4d98fc21020343a2821de8b5d1b5db7">EVT_CONTAXISMOTION</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaca6330126f4126f6a45454fa046c25f3">SDL_CONTROLLERAXISMOTION</a></td></tr>
+<tr class="memitem:ac4d98fc21020343a2821de8b5d1b5db7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#ac4d98fc21020343a2821de8b5d1b5db7">EVT_CONTAXISMOTION</a>&#160;&#160;&#160;SDL_CONTROLLERAXISMOTION</td></tr>
 <tr class="separator:ac4d98fc21020343a2821de8b5d1b5db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4950a30aa6d95d3a0cdf203d49ac92a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a4950a30aa6d95d3a0cdf203d49ac92a7">EVT_CONTBUTTONDOWN</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaafe044d5f92ac9608ded473218569474">SDL_CONTROLLERBUTTONDOWN</a></td></tr>
+<tr class="memitem:a4950a30aa6d95d3a0cdf203d49ac92a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a4950a30aa6d95d3a0cdf203d49ac92a7">EVT_CONTBUTTONDOWN</a>&#160;&#160;&#160;SDL_CONTROLLERBUTTONDOWN</td></tr>
 <tr class="separator:a4950a30aa6d95d3a0cdf203d49ac92a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d53ee5023368f952014ce9526bed71a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a2d53ee5023368f952014ce9526bed71a">EVT_CONTBUTTONUP</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa8cb5a10b1ae0e185ef69a321d3d2d1be">SDL_CONTROLLERBUTTONUP</a></td></tr>
+<tr class="memitem:a2d53ee5023368f952014ce9526bed71a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a2d53ee5023368f952014ce9526bed71a">EVT_CONTBUTTONUP</a>&#160;&#160;&#160;SDL_CONTROLLERBUTTONUP</td></tr>
 <tr class="separator:a2d53ee5023368f952014ce9526bed71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27882151ab4688638773c998fd4a5f97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a27882151ab4688638773c998fd4a5f97">EVT_CONTDEVICEADDED</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa9642de478348da1aba4fb5791e8c5314">SDL_CONTROLLERDEVICEADDED</a></td></tr>
+<tr class="memitem:a27882151ab4688638773c998fd4a5f97"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a27882151ab4688638773c998fd4a5f97">EVT_CONTDEVICEADDED</a>&#160;&#160;&#160;SDL_CONTROLLERDEVICEADDED</td></tr>
 <tr class="separator:a27882151ab4688638773c998fd4a5f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a701097b27aedcf9c0f7203288d7224a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a701097b27aedcf9c0f7203288d7224a3">EVT_CONTDEVICEREMOVED</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaae00ac6995dfb7b92bfae68b9f47ae07a">SDL_CONTROLLERDEVICEREMOVED</a></td></tr>
+<tr class="memitem:a701097b27aedcf9c0f7203288d7224a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a701097b27aedcf9c0f7203288d7224a3">EVT_CONTDEVICEREMOVED</a>&#160;&#160;&#160;SDL_CONTROLLERDEVICEREMOVED</td></tr>
 <tr class="separator:a701097b27aedcf9c0f7203288d7224a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89589e47eecd4f84571e028b59f4c4e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a89589e47eecd4f84571e028b59f4c4e6">EVT_CONTADEVICECHANGE</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaeca87c7b5bb21915d444298449a78ee6">SDL_CONTROLLERDEVICEREMAPPED</a></td></tr>
+<tr class="memitem:a89589e47eecd4f84571e028b59f4c4e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a89589e47eecd4f84571e028b59f4c4e6">EVT_CONTADEVICECHANGE</a>&#160;&#160;&#160;SDL_CONTROLLERDEVICEREMAPPED</td></tr>
 <tr class="separator:a89589e47eecd4f84571e028b59f4c4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe977c1b24e24967b527c2b9556b54da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#afe977c1b24e24967b527c2b9556b54da">EVT_FINGERDOWN</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaa712d1fa8bb69f6042e24a31e835a9ec">SDL_FINGERDOWN</a></td></tr>
+<tr class="memitem:afe977c1b24e24967b527c2b9556b54da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#afe977c1b24e24967b527c2b9556b54da">EVT_FINGERDOWN</a>&#160;&#160;&#160;SDL_FINGERDOWN</td></tr>
 <tr class="separator:afe977c1b24e24967b527c2b9556b54da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a879d004aa23d8530be64b54efd252dbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a879d004aa23d8530be64b54efd252dbc">EVT_FINGERUP</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa8266a108a628cc698c5172e72c1fc1e6">SDL_FINGERUP</a></td></tr>
+<tr class="memitem:a879d004aa23d8530be64b54efd252dbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a879d004aa23d8530be64b54efd252dbc">EVT_FINGERUP</a>&#160;&#160;&#160;SDL_FINGERUP</td></tr>
 <tr class="separator:a879d004aa23d8530be64b54efd252dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d97e3c291fdc79e16dbd706f1a4575f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a8d97e3c291fdc79e16dbd706f1a4575f">EVT_FINGERMOVE</a>&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa1862d7d009ade2c79b2f1fe4a30c9dd2">SDL_FINGERMOTION</a></td></tr>
+<tr class="memitem:a8d97e3c291fdc79e16dbd706f1a4575f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_event_8h.html#a8d97e3c291fdc79e16dbd706f1a4575f">EVT_FINGERMOVE</a>&#160;&#160;&#160;SDL_FINGERMOTION</td></tr>
 <tr class="separator:a8d97e3c291fdc79e16dbd706f1a4575f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a5a8f5fcefe6284549603fe7083d837e5"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetad_pole.html#a5a8f5fcefe6284549603fe7083d837e5">tadPole::EventType</a></td></tr>
+<tr class="memdesc:a5a8f5fcefe6284549603fe7083d837e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="namespacetad_pole.html">tadPole</a> representation of SDL_EventType.  <a href="namespacetad_pole.html#a5a8f5fcefe6284549603fe7083d837e5">More...</a><br /></td></tr>
 <tr class="separator:a5a8f5fcefe6284549603fe7083d837e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -176,10 +178,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_CONTADEVICECHANGE&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaeca87c7b5bb21915d444298449a78ee6">SDL_CONTROLLERDEVICEREMAPPED</a></td>
+          <td class="memname">#define EVT_CONTADEVICECHANGE&#160;&#160;&#160;SDL_CONTROLLERDEVICEREMAPPED</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00036">36</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -190,10 +194,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_CONTAXISMOTION&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaca6330126f4126f6a45454fa046c25f3">SDL_CONTROLLERAXISMOTION</a></td>
+          <td class="memname">#define EVT_CONTAXISMOTION&#160;&#160;&#160;SDL_CONTROLLERAXISMOTION</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00031">31</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -204,10 +210,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_CONTBUTTONDOWN&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaafe044d5f92ac9608ded473218569474">SDL_CONTROLLERBUTTONDOWN</a></td>
+          <td class="memname">#define EVT_CONTBUTTONDOWN&#160;&#160;&#160;SDL_CONTROLLERBUTTONDOWN</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00032">32</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -218,10 +226,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_CONTBUTTONUP&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa8cb5a10b1ae0e185ef69a321d3d2d1be">SDL_CONTROLLERBUTTONUP</a></td>
+          <td class="memname">#define EVT_CONTBUTTONUP&#160;&#160;&#160;SDL_CONTROLLERBUTTONUP</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00033">33</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -232,10 +242,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_CONTDEVICEADDED&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa9642de478348da1aba4fb5791e8c5314">SDL_CONTROLLERDEVICEADDED</a></td>
+          <td class="memname">#define EVT_CONTDEVICEADDED&#160;&#160;&#160;SDL_CONTROLLERDEVICEADDED</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00034">34</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -246,10 +258,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_CONTDEVICEREMOVED&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaae00ac6995dfb7b92bfae68b9f47ae07a">SDL_CONTROLLERDEVICEREMOVED</a></td>
+          <td class="memname">#define EVT_CONTDEVICEREMOVED&#160;&#160;&#160;SDL_CONTROLLERDEVICEREMOVED</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00035">35</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -260,10 +274,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_FINGERDOWN&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaa712d1fa8bb69f6042e24a31e835a9ec">SDL_FINGERDOWN</a></td>
+          <td class="memname">#define EVT_FINGERDOWN&#160;&#160;&#160;SDL_FINGERDOWN</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00037">37</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -274,10 +290,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_FINGERMOVE&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa1862d7d009ade2c79b2f1fe4a30c9dd2">SDL_FINGERMOTION</a></td>
+          <td class="memname">#define EVT_FINGERMOVE&#160;&#160;&#160;SDL_FINGERMOTION</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00039">39</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -288,10 +306,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_FINGERUP&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa8266a108a628cc698c5172e72c1fc1e6">SDL_FINGERUP</a></td>
+          <td class="memname">#define EVT_FINGERUP&#160;&#160;&#160;SDL_FINGERUP</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00038">38</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -302,10 +322,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_JOYAXISMOTION&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaaf0803b3f8a12de3d85f81ebd7b514cd1">SDL_JOYAXISMOTION</a></td>
+          <td class="memname">#define EVT_JOYAXISMOTION&#160;&#160;&#160;SDL_JOYAXISMOTION</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00024">24</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -316,10 +338,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_JOYBALLMOTION&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa78f859489cfd565c305c7f6f9d5b25c1">SDL_JOYBALLMOTION</a></td>
+          <td class="memname">#define EVT_JOYBALLMOTION&#160;&#160;&#160;SDL_JOYBALLMOTION</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00025">25</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -330,10 +354,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_JOYBUTTONDOWN&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa386ac978bc145a45883fe0adab70710b">SDL_JOYBUTTONDOWN</a></td>
+          <td class="memname">#define EVT_JOYBUTTONDOWN&#160;&#160;&#160;SDL_JOYBUTTONDOWN</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00027">27</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -344,10 +370,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_JOYBUTTONUP&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa76f91c81110f012e3a47cbbc0449e3c3">SDL_JOYBUTTONUP</a></td>
+          <td class="memname">#define EVT_JOYBUTTONUP&#160;&#160;&#160;SDL_JOYBUTTONUP</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00028">28</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -358,10 +386,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_JOYDEVICEADDED&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa0500c4e830a1822e6d0a90294c3f1393">SDL_JOYDEVICEADDED</a></td>
+          <td class="memname">#define EVT_JOYDEVICEADDED&#160;&#160;&#160;SDL_JOYDEVICEADDED</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00029">29</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -372,10 +402,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_JOYDEVICEREMOVED&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa4e2d7a1067dc56abeee393d46309ecd0">SDL_JOYDEVICEREMOVED</a></td>
+          <td class="memname">#define EVT_JOYDEVICEREMOVED&#160;&#160;&#160;SDL_JOYDEVICEREMOVED</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00030">30</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -386,10 +418,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_JOYHATMOTION&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaafba4080bfbad335e520097b2024f0dff">SDL_JOYHATMOTION</a></td>
+          <td class="memname">#define EVT_JOYHATMOTION&#160;&#160;&#160;SDL_JOYHATMOTION</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00026">26</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -400,10 +434,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_KEYDOWN&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaacaf8cfd53c985cdbf6a90c811d51a1fc">SDL_KEYDOWN</a></td>
+          <td class="memname">#define EVT_KEYDOWN&#160;&#160;&#160;SDL_KEYDOWN</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00015">15</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -414,10 +450,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_KEYMAPCHANGE&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaacd473484a07dfdc628c4a02fbf9f83c9">SDL_KEYMAPCHANGED</a></td>
+          <td class="memname">#define EVT_KEYMAPCHANGE&#160;&#160;&#160;SDL_KEYMAPCHANGED</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00019">19</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -428,10 +466,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_KEYUP&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaadefb8866b9d28be21c2c33c35cc66c4b">SDL_KEYUP</a></td>
+          <td class="memname">#define EVT_KEYUP&#160;&#160;&#160;SDL_KEYUP</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00016">16</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -442,10 +482,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_MOUSEBUTTONDOWN&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa9267166e1536dfa8b0daa98c0afa9052">SDL_MOUSEBUTTONDOWN</a></td>
+          <td class="memname">#define EVT_MOUSEBUTTONDOWN&#160;&#160;&#160;SDL_MOUSEBUTTONDOWN</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00021">21</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -456,10 +498,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_MOUSEBUTTONUP&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa4ab85278398d29b9e50f500aad2b952b">SDL_MOUSEBUTTONUP</a></td>
+          <td class="memname">#define EVT_MOUSEBUTTONUP&#160;&#160;&#160;SDL_MOUSEBUTTONUP</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00022">22</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -470,10 +514,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_MOUSEMOVE&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa04c436ef80fef38fb77a89e0e9124c30">SDL_MOUSEMOTION</a></td>
+          <td class="memname">#define EVT_MOUSEMOVE&#160;&#160;&#160;SDL_MOUSEMOTION</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00020">20</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -484,10 +530,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_MOUSEWHEEL&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa63135c2e0aea2286f05066f3c0bc5c4e">SDL_MOUSEWHEEL</a></td>
+          <td class="memname">#define EVT_MOUSEWHEEL&#160;&#160;&#160;SDL_MOUSEWHEEL</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00023">23</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -498,10 +546,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_QUIT&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa31acc5fdafc86ebe2c1f5c3cae48d603">SDL_QUIT</a></td>
+          <td class="memname">#define EVT_QUIT&#160;&#160;&#160;SDL_QUIT</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00012">12</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -512,10 +562,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_SYSTEM&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa73749d735a18ce6ef17a09ee70d5dbe7">SDL_SYSWMEVENT</a></td>
+          <td class="memname">#define EVT_SYSTEM&#160;&#160;&#160;SDL_SYSWMEVENT</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00014">14</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -526,10 +578,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_TEXTEDITING&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa1b80c465df69c0b6d06f026ce7a230e3">SDL_TEXTEDITING</a></td>
+          <td class="memname">#define EVT_TEXTEDITING&#160;&#160;&#160;SDL_TEXTEDITING</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00017">17</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -540,10 +594,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_TEXTINPUT&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa4fa2570088f6b9cbd109ae91b511368f">SDL_TEXTINPUT</a></td>
+          <td class="memname">#define EVT_TEXTINPUT&#160;&#160;&#160;SDL_TEXTINPUT</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00018">18</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>
@@ -554,10 +610,12 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define EVT_WINDOW&#160;&#160;&#160;<a class="el" href="_s_d_l__events_8h.html#a3b589e89be6b35c02e0dd34a55f3fccaa5ff4e41f0d8b5def11cfe6a69ec0b698">SDL_WINDOWEVENT</a></td>
+          <td class="memname">#define EVT_WINDOW&#160;&#160;&#160;SDL_WINDOWEVENT</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_event_8h_source.html#l00013">13</a> of file <a class="el" href="_event_8h_source.html">Event.h</a>.</p>
 
 </div>
 </div>

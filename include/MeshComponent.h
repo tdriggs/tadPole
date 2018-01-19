@@ -11,7 +11,7 @@ namespace tadPole
 	class GameObject;
 
 	/**
-	* 
+	* A component that represents a mesh that is rendered at the location of the parent GameObject.
 	*/
 	class MeshComponent : public Component
 	{
@@ -21,22 +21,22 @@ namespace tadPole
 
 		// @@@@@ ATTRIBUTES @@@@@
 	protected:
-		std::string fileName;	///<
-		Ogre::Entity * entity;	///<
+		std::string fileName;	///< The name of the file in which the mesh is located.
+		Ogre::Entity * entity;	///< The OGRE representation of this MeshComponent.
 
 
 		// @@@@@ CONSTRUCTORS / DESTRUCTOR @@@@@
 	public:
 		/**
-		*
+		* MeshComponent constructor.
 		*/
 		MeshComponent(
-			GameObject * g,			///<
-			std::string fileName	///<
+			GameObject * g,			///< The GameObject to which this LightComponent is connected.
+			std::string fileName	///< The name of the file in which the mesh is located.
 		);
 
 		/**
-		*
+		* MeshComponent destructor.
 		*/
 		~MeshComponent();
 
@@ -44,19 +44,19 @@ namespace tadPole
 		// @@@@@ BASE CLASS / INTERFACE METHODS @@@@@
 	public:
 		/**
-		*
+		* Set whether this Component is visible and can be interacted with in its Scene.
 		*/
 		void setActive(
-			bool active	///<
+			bool active	///< Whether this Component is visible in the scene and can be interacted with.
 		);
 
 		/**
-		*
+		* Get the ComponentType of this Component.
 		*/
 		ComponentType getType();
 
 		/**
-		*
+		* Turn this GameObject into a std::string of valid, formatted JSON.
 		*/
 		std::string serialize();
 	};

@@ -2,7 +2,6 @@
 #include "LogManager.h"
 
 #include <ctime>
-
 #include "DebugOverlay.h"
 
 tadPole::LogManager::LogManager() : Singleton<LogManager>()

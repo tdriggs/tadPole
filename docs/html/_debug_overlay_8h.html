@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>tadPole: include/DebugOverlay.h File Reference</title>
+<title>tadPole: C:/Users/taylo/Documents/Code/tadPole/include/DebugOverlay.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,10 +27,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="tadpole.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">tadPole
    </div>
-   <div id="projectbrief">A simple game engine to create simple games.</div>
+   <div id="projectbrief">A simple game engine for simple games.</div>
   </td>
  </tr>
  </tbody>
@@ -106,28 +107,40 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a933f1b55282bfa3082a1e3ffc65910b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a933f1b55282bfa3082a1e3ffc65910b1">DEBUG_OVERLAY</a>&#160;&#160;&#160;<a class="el" href="classtad_pole_1_1_singleton.html#a85bfc88346ffe8e7f983876c79462f36">tadPole::DebugOverlay::getInstance</a>()</td></tr>
+<tr class="memdesc:a933f1b55282bfa3082a1e3ffc65910b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convienience macro for the singleton instance.  <a href="#a933f1b55282bfa3082a1e3ffc65910b1">More...</a><br /></td></tr>
 <tr class="separator:a933f1b55282bfa3082a1e3ffc65910b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa44f471d3566a1357489851132a329c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#aa44f471d3566a1357489851132a329c2">DEBUG_MESSAGE_MAX_COUNT</a>&#160;&#160;&#160;15</td></tr>
+<tr class="memdesc:aa44f471d3566a1357489851132a329c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of messages to be displayed.  <a href="#aa44f471d3566a1357489851132a329c2">More...</a><br /></td></tr>
 <tr class="separator:aa44f471d3566a1357489851132a329c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2965746fd68aca1acf42157e9151724b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a2965746fd68aca1acf42157e9151724b">DEBUG_MESSAGE_PANEL_RELATIVE_HEIGHT</a>&#160;&#160;&#160;0.75f</td></tr>
+<tr class="memdesc:a2965746fd68aca1acf42157e9151724b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The height of the debug message panel relative to the screen height.  <a href="#a2965746fd68aca1acf42157e9151724b">More...</a><br /></td></tr>
 <tr class="separator:a2965746fd68aca1acf42157e9151724b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b9e31b09301a8bd524c1dbcfb1afb72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a6b9e31b09301a8bd524c1dbcfb1afb72">DEBUG_MESSAGE_PANEL_RELATIVE_WIDTH</a>&#160;&#160;&#160;0.2f</td></tr>
+<tr class="memdesc:a6b9e31b09301a8bd524c1dbcfb1afb72"><td class="mdescLeft">&#160;</td><td class="mdescRight">The width of the debug message panel relative to the screen width.  <a href="#a6b9e31b09301a8bd524c1dbcfb1afb72">More...</a><br /></td></tr>
 <tr class="separator:a6b9e31b09301a8bd524c1dbcfb1afb72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3400f9843dd94524379ffb58b1020107"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a3400f9843dd94524379ffb58b1020107">DEBUG_MESSAGE_CHAR_HEIGHT</a>&#160;&#160;&#160;(1.0f / DEBUG_MESSAGE_MAX_COUNT) * DEBUG_MESSAGE_PANEL_RELATIVE_HEIGHT</td></tr>
+<tr class="memdesc:a3400f9843dd94524379ffb58b1020107"><td class="mdescLeft">&#160;</td><td class="mdescRight">The height of the debug message panel characters.  <a href="#a3400f9843dd94524379ffb58b1020107">More...</a><br /></td></tr>
 <tr class="separator:a3400f9843dd94524379ffb58b1020107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14533b3ca12bc7349421936e11b3fb28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a14533b3ca12bc7349421936e11b3fb28">DEBUG_INFO_PANEL_RELATIVE_HEIGHT</a>&#160;&#160;&#160;0.1f</td></tr>
+<tr class="memdesc:a14533b3ca12bc7349421936e11b3fb28"><td class="mdescLeft">&#160;</td><td class="mdescRight">The height of the debug info panel relative to the screen height.  <a href="#a14533b3ca12bc7349421936e11b3fb28">More...</a><br /></td></tr>
 <tr class="separator:a14533b3ca12bc7349421936e11b3fb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a751c4891d32bca887e2939ac1b85cf49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a751c4891d32bca887e2939ac1b85cf49">DEBUG_INFO_PANEL_RELATIVE_WIDTH</a>&#160;&#160;&#160;0.3f</td></tr>
+<tr class="memdesc:a751c4891d32bca887e2939ac1b85cf49"><td class="mdescLeft">&#160;</td><td class="mdescRight">The width of the debug info panel relative to the screen width.  <a href="#a751c4891d32bca887e2939ac1b85cf49">More...</a><br /></td></tr>
 <tr class="separator:a751c4891d32bca887e2939ac1b85cf49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4a152afb9b21797fcad14282deababb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#ad4a152afb9b21797fcad14282deababb">DEBUG_INFO_CHAR_HEIGHT</a>&#160;&#160;&#160;0.5f * DEBUG_INFO_PANEL_RELATIVE_HEIGHT</td></tr>
+<tr class="memdesc:ad4a152afb9b21797fcad14282deababb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The height of the debug info panel characters.  <a href="#ad4a152afb9b21797fcad14282deababb">More...</a><br /></td></tr>
 <tr class="separator:ad4a152afb9b21797fcad14282deababb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0156d10fcbb7e5b07bd6ee9cdc152d1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a0156d10fcbb7e5b07bd6ee9cdc152d1e">DEBUG_TEXT_TOP_COLOR</a>&#160;&#160;&#160;<a class="el" href="class_ogre_1_1_colour_value.html">Ogre::ColourValue</a>(0.6f, 0.6f, 0.6f)</td></tr>
+<tr class="memitem:a0156d10fcbb7e5b07bd6ee9cdc152d1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a0156d10fcbb7e5b07bd6ee9cdc152d1e">DEBUG_TEXT_TOP_COLOR</a>&#160;&#160;&#160;Ogre::ColourValue(0.6f, 0.6f, 0.6f)</td></tr>
+<tr class="memdesc:a0156d10fcbb7e5b07bd6ee9cdc152d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color of the top of the text on the DebugOverlay.  <a href="#a0156d10fcbb7e5b07bd6ee9cdc152d1e">More...</a><br /></td></tr>
 <tr class="separator:a0156d10fcbb7e5b07bd6ee9cdc152d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab86ca8fc5a50e4863048cfd686c6a91a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#ab86ca8fc5a50e4863048cfd686c6a91a">DEBUG_TEXT_BOTTOM_COLOR</a>&#160;&#160;&#160;<a class="el" href="class_ogre_1_1_colour_value.html">Ogre::ColourValue</a>(1.0f, 1.0f, 1.0f)</td></tr>
+<tr class="memitem:ab86ca8fc5a50e4863048cfd686c6a91a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#ab86ca8fc5a50e4863048cfd686c6a91a">DEBUG_TEXT_BOTTOM_COLOR</a>&#160;&#160;&#160;Ogre::ColourValue(1.0f, 1.0f, 1.0f)</td></tr>
+<tr class="memdesc:ab86ca8fc5a50e4863048cfd686c6a91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The color of the bottom of the text on the DebugOverlay.  <a href="#ab86ca8fc5a50e4863048cfd686c6a91a">More...</a><br /></td></tr>
 <tr class="separator:ab86ca8fc5a50e4863048cfd686c6a91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a061126c2d3bdfb92123b222ac3124888"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a061126c2d3bdfb92123b222ac3124888">DEBUG_TEXT_FONT_NAME</a>&#160;&#160;&#160;&quot;SdkTrays/<a class="el" href="document_8h.html#a071cf97155ba72ac9a1fc4ad7e63d481">Value</a>&quot;</td></tr>
+<tr class="memitem:a061126c2d3bdfb92123b222ac3124888"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#a061126c2d3bdfb92123b222ac3124888">DEBUG_TEXT_FONT_NAME</a>&#160;&#160;&#160;&quot;SdkTrays/Value&quot;</td></tr>
+<tr class="memdesc:a061126c2d3bdfb92123b222ac3124888"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the font of the text on the DebugOverlay.  <a href="#a061126c2d3bdfb92123b222ac3124888">More...</a><br /></td></tr>
 <tr class="separator:a061126c2d3bdfb92123b222ac3124888"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb7afcbf971d329293e2236a03797fe6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_debug_overlay_8h.html#acb7afcbf971d329293e2236a03797fe6">DEBUG_PANEL_MATERIAL_NAME</a>&#160;&#160;&#160;&quot;SdkTrays/Base&quot;</td></tr>
+<tr class="memdesc:acb7afcbf971d329293e2236a03797fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of the material of the panels on the DebugOverlay.  <a href="#acb7afcbf971d329293e2236a03797fe6">More...</a><br /></td></tr>
 <tr class="separator:acb7afcbf971d329293e2236a03797fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -143,6 +156,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The height of the debug info panel characters. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00015">15</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
+
 </div>
 </div>
 <a id="a14533b3ca12bc7349421936e11b3fb28"></a>
@@ -156,6 +173,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The height of the debug info panel relative to the screen height. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00013">13</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
 
 </div>
 </div>
@@ -171,6 +192,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The width of the debug info panel relative to the screen width. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00014">14</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
+
 </div>
 </div>
 <a id="a3400f9843dd94524379ffb58b1020107"></a>
@@ -184,6 +209,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The height of the debug message panel characters. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00012">12</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
 
 </div>
 </div>
@@ -199,6 +228,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The maximum number of messages to be displayed. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00009">9</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
+
 </div>
 </div>
 <a id="a2965746fd68aca1acf42157e9151724b"></a>
@@ -212,6 +245,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The height of the debug message panel relative to the screen height. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00010">10</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
 
 </div>
 </div>
@@ -227,6 +264,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The width of the debug message panel relative to the screen width. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00011">11</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
+
 </div>
 </div>
 <a id="a933f1b55282bfa3082a1e3ffc65910b1"></a>
@@ -240,6 +281,10 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Convienience macro for the singleton instance. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00008">8</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
 
 </div>
 </div>
@@ -255,6 +300,10 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>The name of the material of the panels on the DebugOverlay. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00019">19</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
+
 </div>
 </div>
 <a id="ab86ca8fc5a50e4863048cfd686c6a91a"></a>
@@ -264,10 +313,14 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEBUG_TEXT_BOTTOM_COLOR&#160;&#160;&#160;<a class="el" href="class_ogre_1_1_colour_value.html">Ogre::ColourValue</a>(1.0f, 1.0f, 1.0f)</td>
+          <td class="memname">#define DEBUG_TEXT_BOTTOM_COLOR&#160;&#160;&#160;Ogre::ColourValue(1.0f, 1.0f, 1.0f)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The color of the bottom of the text on the DebugOverlay. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00017">17</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
 
 </div>
 </div>
@@ -278,10 +331,14 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEBUG_TEXT_FONT_NAME&#160;&#160;&#160;&quot;SdkTrays/<a class="el" href="document_8h.html#a071cf97155ba72ac9a1fc4ad7e63d481">Value</a>&quot;</td>
+          <td class="memname">#define DEBUG_TEXT_FONT_NAME&#160;&#160;&#160;&quot;SdkTrays/Value&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The name of the font of the text on the DebugOverlay. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00018">18</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
 
 </div>
 </div>
@@ -292,10 +349,14 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEBUG_TEXT_TOP_COLOR&#160;&#160;&#160;<a class="el" href="class_ogre_1_1_colour_value.html">Ogre::ColourValue</a>(0.6f, 0.6f, 0.6f)</td>
+          <td class="memname">#define DEBUG_TEXT_TOP_COLOR&#160;&#160;&#160;Ogre::ColourValue(0.6f, 0.6f, 0.6f)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The color of the top of the text on the DebugOverlay. </p>
+
+<p class="definition">Definition at line <a class="el" href="_debug_overlay_8h_source.html#l00016">16</a> of file <a class="el" href="_debug_overlay_8h_source.html">DebugOverlay.h</a>.</p>
 
 </div>
 </div>

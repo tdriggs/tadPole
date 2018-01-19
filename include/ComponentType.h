@@ -5,6 +5,9 @@
 
 namespace tadPole 
 {
+	/**
+	* The type of a Component.
+	*/
 	enum class ComponentType
 	{
 		MESH,

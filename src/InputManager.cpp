@@ -8,7 +8,7 @@ tadPole::InputManager::InputManager() : Singleton<InputManager>() { }
 
 tadPole::InputManager::~InputManager() { }
 
-void tadPole::InputManager::key_down(Key key)
+void tadPole::InputManager::keyDown(Key key)
 {
 	LOG_MANAGER->log("KEY PRESS: " + std::to_string(key));
 	if (key == KEY_F11)
@@ -17,7 +17,7 @@ void tadPole::InputManager::key_down(Key key)
 	}
 }
 
-void tadPole::InputManager::key_up(Key key)
+void tadPole::InputManager::keyUp(Key key)
 {
 
 }

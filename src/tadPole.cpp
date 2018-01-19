@@ -40,11 +40,11 @@ int main(int argc, char * argv[])
 			}
 			if (event.getType() == EVT_KEYDOWN)
 			{
-				INPUT_MANAGER->key_down(event.getKey());
+				INPUT_MANAGER->keyDown(event.getKey());
 			}
 			if (event.getType() == EVT_KEYDOWN)
 			{
-				INPUT_MANAGER->key_up(event.getKey());
+				INPUT_MANAGER->keyUp(event.getKey());
 			}
 		}
 

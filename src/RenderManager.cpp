@@ -6,22 +6,6 @@
 
 tadPole::RenderManager::RenderManager(HWND windowHandle) : Singleton<RenderManager>()
 {
-	this->initialize(windowHandle);
-}
-
-tadPole::RenderManager::~RenderManager()
-{
-	delete this->root;
-	delete this->overlaySystem;
-}
-
-void tadPole::RenderManager::render()
-{
-	this->root->renderOneFrame();
-}
-
-void tadPole::RenderManager::initialize(HWND windowHandle)
-{
 #ifdef _DEBUG
 	std::string plugins = "plugins_d.cfg";
 	std::string resources = "resources_d.cfg";
@@ -57,6 +41,17 @@ void tadPole::RenderManager::initialize(HWND windowHandle)
 	this->mainViewport->setBackgroundColour(Ogre::ColourValue(0.4, 0.4, 0.4));
 
 	Ogre::ResourceGroupManager::getSingleton().initialiseAllResourceGroups();
+}
+
+tadPole::RenderManager::~RenderManager()
+{
+	delete this->root;
+	delete this->overlaySystem;
+}
+
+void tadPole::RenderManager::render()
+{
+	this->root->renderOneFrame();
 }
 
 void tadPole::RenderManager::load_resources(std::string resources_file)
