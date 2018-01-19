@@ -4,19 +4,6 @@
 			"groupName": "No Group", 
 			"gameObjects": [
 				{
-					"name": "base",
-					"parentName": "ROOT",
-					"active": true,
-					"worldPosition": [0, -70, -30],
-					"worldOrientation": [0, 0, 1, 0],
-					"worldScale": [20, 20, 20],
-					"components": [
-						{
-							"type": "MESH",
-							"fileName": "Barrel.mesh"
-						}
-					]
-				},{
 					"name": "camera",
 					"parentName": "ROOT",
 					"active": true,

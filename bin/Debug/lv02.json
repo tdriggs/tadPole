@@ -1,0 +1,39 @@
+{
+	"groups": [
+		{
+			"groupName": "No Group", 
+			"gameObjects": [
+				{
+					"name": "base",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [0, 0, 0],
+					"worldOrientation": [0, 0, 1, 0],
+					"worldScale": [1, 1, 1],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "Barrel.mesh"
+						}
+					]
+				},{	
+					"name": "SCENECAMERA1",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [0, 5, 40],
+					"worldOrientation": [0, 0, 1, 0],
+					"worldScale": [1, 1, 1],
+					"components": [
+						{
+							"type": "CAMERA",
+							"direction": [0, 0, -1],
+							"nearClipDistance": 0.1,
+							"farClipDistance": 1000,
+							"viewport": "MAIN"
+						}
+					]
+				}
+			]
+		}
+	]
+}
