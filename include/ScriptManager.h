@@ -10,25 +10,6 @@
 namespace tadPole
 {
 	/**
-	*
-	*/
-	struct PyModuleDef moduleDefinition =
-	{
-		PyModuleDef_HEAD_INIT,
-		"tadPole",
-		"A simple game engine for simple games.",
-		-1,
-		NULL
-	};
-
-
-	/**
-	*
-	*/
-	PyMODINIT_FUNC PyInit_tadPole(void);
-
-
-	/**
 	* 
 	*/
 	class ScriptManager : public Singleton<ScriptManager>

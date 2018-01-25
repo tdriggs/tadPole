@@ -84,6 +84,9 @@
     <ClCompile Include="..\..\src\ScriptManager.cpp">
       <Filter>Source Files\Python Interface</Filter>
     </ClCompile>
+    <ClCompile Include="PyTadPole.cpp">
+      <Filter>Source Files\Python Interface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Application.h">
@@ -144,6 +147,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\ScriptManager.h">
+      <Filter>Header Files\Python Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="PyTadPole.h">
       <Filter>Header Files\Python Interface</Filter>
     </ClInclude>
   </ItemGroup>

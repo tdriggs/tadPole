@@ -1,12 +1,21 @@
-#include "..\include\ScriptManager.h"
-
 #include "stdafx.h"
+#include "ScriptManager.h"
 
-/*PyMODINIT_FUNC tadPole::PyInit_tadPole(void)
+#include "PyTadPole.h"
+
+extern struct PyModuleDef moduleDefinition;
+
+tadPole::ScriptManager::ScriptManager()
 {
-	PyObject * mod = PyModule_Create(&(tadPole::moduleDefinition));
-	if (mod == NULL)
-		return NULL;
+	PyImport_AppendInittab("tadPole", &tadPole::PyInit_tadPole);	Py_Initialize();
+}
 
-	return mod;
-}*/
+tadPole::ScriptManager::~ScriptManager()
+{
+	Py_Finalize();
+}
+
+void tadPole::ScriptManager::executeScript(std::string scriptName)
+{
+
+}
