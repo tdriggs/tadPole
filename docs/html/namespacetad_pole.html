@@ -84,7 +84,8 @@ $(document).ready(function(){initNavTree('namespacetad_pole.html','');});
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">tadPole Namespace Reference</div>  </div>
 </div><!--header-->
@@ -113,6 +114,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtad_pole_1_1_log_manager.html">LogManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtad_pole_1_1_mesh_component.html">MeshComponent</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtad_pole_1_1_python_script_manager.html">PythonScriptManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtad_pole_1_1_render_manager.html">RenderManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +149,13 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespacetad_pole.html#a9226c666a59f155e00e1a6c1066aa745a5bac85a0c611ddef64ab0dfb383056f4">LightType::SPOT</a>
  }</td></tr>
 <tr class="separator:a9226c666a59f155e00e1a6c1066aa745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a32f5786031063b40de49e2754df24d4b"><td class="memItemLeft" align="right" valign="top">PyObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetad_pole.html#a32f5786031063b40de49e2754df24d4b">pyTadPole_log</a> (PyObject *self, PyObject *args)</td></tr>
+<tr class="separator:a32f5786031063b40de49e2754df24d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352d10755f53fc78c33d3a9b9954f2bd"><td class="memItemLeft" align="right" valign="top">PyMODINIT_FUNC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetad_pole.html#a352d10755f53fc78c33d3a9b9954f2bd">PyInit_tadPole</a> ()</td></tr>
+<tr class="separator:a352d10755f53fc78c33d3a9b9954f2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a5a8f5fcefe6284549603fe7083d837e5"></a>
@@ -242,6 +252,58 @@ Enumerations</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="_light_component_8h_source.html#l00016">16</a> of file <a class="el" href="_light_component_8h_source.html">LightComponent.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a352d10755f53fc78c33d3a9b9954f2bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352d10755f53fc78c33d3a9b9954f2bd">&#9670;&nbsp;</a></span>PyInit_tadPole()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyMODINIT_FUNC tadPole::PyInit_tadPole </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialize the pyTadPole Python module. </p>
+
+<p class="definition">Definition at line <a class="el" href="_py_tad_pole_module_8cpp_source.html#l00021">21</a> of file <a class="el" href="_py_tad_pole_module_8cpp_source.html">PyTadPoleModule.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a32f5786031063b40de49e2754df24d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f5786031063b40de49e2754df24d4b">&#9670;&nbsp;</a></span>pyTadPole_log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PyObject * tadPole::pyTadPole_log </td>
+          <td>(</td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PyObject *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Log a message through the <a class="el" href="classtad_pole_1_1_log_manager.html">LogManager</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="_py_tad_pole_functions_8cpp_source.html#l00006">6</a> of file <a class="el" href="_py_tad_pole_functions_8cpp_source.html">PyTadPoleFunctions.cpp</a>.</p>
 
 </div>
 </div>

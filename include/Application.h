@@ -3,12 +3,6 @@
 
 #include "stdafx.h"
 
-#include "RenderManager.h"
-#include "LogManager.h"
-#include "DebugOverlay.h"
-#include "InputManager.h"
-#include "Scene.h"
-
 #define SCREEN_WIDTH 1280	///< The height of the screen.
 #define SCREEN_HEIGHT 720	///< The width of the screen.
 #define FPS 60				///< The frames per second at which the display will be rendered.

@@ -10,6 +10,7 @@ var searchData=
   ['_7elightcomponent',['~LightComponent',['../classtad_pole_1_1_light_component.html#ab7659d1121d7db999a4a172b8915d515',1,'tadPole::LightComponent']]],
   ['_7elogmanager',['~LogManager',['../classtad_pole_1_1_log_manager.html#a12d10b4f0e0a66322e7018d11723564b',1,'tadPole::LogManager']]],
   ['_7emeshcomponent',['~MeshComponent',['../classtad_pole_1_1_mesh_component.html#a475c0915ea2a631bb686ab1cc91a0f48',1,'tadPole::MeshComponent']]],
+  ['_7epythonscriptmanager',['~PythonScriptManager',['../classtad_pole_1_1_python_script_manager.html#aad6725a870c880d133bd6ea37d7acf27',1,'tadPole::PythonScriptManager']]],
   ['_7erendermanager',['~RenderManager',['../classtad_pole_1_1_render_manager.html#a0fe404fe5ca34830491d21a2062c66ce',1,'tadPole::RenderManager']]],
   ['_7escene',['~Scene',['../classtad_pole_1_1_scene.html#a3d3694268def94a52d64a671696a690b',1,'tadPole::Scene']]],
   ['_7esingleton',['~Singleton',['../classtad_pole_1_1_singleton.html#af4d63ec0a449776816502352ebc483d2',1,'tadPole::Singleton']]],

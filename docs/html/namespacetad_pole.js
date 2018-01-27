@@ -11,6 +11,7 @@ var namespacetad_pole =
     [ "LightComponent", "classtad_pole_1_1_light_component.html", "classtad_pole_1_1_light_component" ],
     [ "LogManager", "classtad_pole_1_1_log_manager.html", "classtad_pole_1_1_log_manager" ],
     [ "MeshComponent", "classtad_pole_1_1_mesh_component.html", "classtad_pole_1_1_mesh_component" ],
+    [ "PythonScriptManager", "classtad_pole_1_1_python_script_manager.html", "classtad_pole_1_1_python_script_manager" ],
     [ "RenderManager", "classtad_pole_1_1_render_manager.html", "classtad_pole_1_1_render_manager" ],
     [ "Scene", "classtad_pole_1_1_scene.html", "classtad_pole_1_1_scene" ],
     [ "Serializable", "classtad_pole_1_1_serializable.html", "classtad_pole_1_1_serializable" ],

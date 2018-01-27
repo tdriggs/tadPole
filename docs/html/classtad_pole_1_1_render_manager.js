@@ -2,7 +2,6 @@ var classtad_pole_1_1_render_manager =
 [
     [ "RenderManager", "classtad_pole_1_1_render_manager.html#ac128d796c196fe7b7f352753289375c6", null ],
     [ "~RenderManager", "classtad_pole_1_1_render_manager.html#a0fe404fe5ca34830491d21a2062c66ce", null ],
-    [ "initialize", "classtad_pole_1_1_render_manager.html#a0b012ecd486fccbfccd9069372e30c9a", null ],
     [ "load_renderSystem", "classtad_pole_1_1_render_manager.html#a78f196b0f1361154c65338b642dc8cd7", null ],
     [ "load_resources", "classtad_pole_1_1_render_manager.html#ac2937b2ffda62b328d25dd2b807b58eb", null ],
     [ "render", "classtad_pole_1_1_render_manager.html#aae9ca2fa15f786ffcb4839e1c8a17e93", null ],

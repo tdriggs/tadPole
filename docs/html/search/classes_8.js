@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rendermanager',['RenderManager',['../classtad_pole_1_1_render_manager.html',1,'tadPole']]]
+  ['pythonscriptmanager',['PythonScriptManager',['../classtad_pole_1_1_python_script_manager.html',1,'tadPole']]]
 ];

@@ -21,6 +21,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "MeshComponent.h", "_mesh_component_8h.html", [
       [ "MeshComponent", "classtad_pole_1_1_mesh_component.html", "classtad_pole_1_1_mesh_component" ]
     ] ],
+    [ "PyTadPoleFunctions.h", "_py_tad_pole_functions_8h.html", "_py_tad_pole_functions_8h" ],
+    [ "PyTadPoleModule.h", "_py_tad_pole_module_8h.html", "_py_tad_pole_module_8h" ],
+    [ "PythonScriptManager.h", "_python_script_manager_8h.html", "_python_script_manager_8h" ],
     [ "RenderManager.h", "_render_manager_8h.html", "_render_manager_8h" ],
     [ "Scene.h", "_scene_8h.html", "_scene_8h" ],
     [ "Serializable.h", "_serializable_8h.html", [

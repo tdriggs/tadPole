@@ -4,6 +4,7 @@ var menudata={children:[
 {text:"Namespace List",url:"namespaces.html"},
 {text:"Namespace Members",url:"namespacemembers.html",children:[
 {text:"All",url:"namespacemembers.html"},
+{text:"Functions",url:"namespacemembers_func.html"},
 {text:"Typedefs",url:"namespacemembers_type.html"},
 {text:"Enumerations",url:"namespacemembers_enum.html"}]}]},
 {text:"Classes",url:"annotated.html",children:[
@@ -80,10 +81,12 @@ var menudata={children:[
 {text:"m",url:"globals.html#index_m"},
 {text:"n",url:"globals.html#index_n"},
 {text:"o",url:"globals.html#index_o"},
+{text:"p",url:"globals.html#index_p"},
 {text:"r",url:"globals.html#index_r"},
 {text:"s",url:"globals.html#index_s"},
 {text:"w",url:"globals.html#index_w"}]},
 {text:"Functions",url:"globals_func.html"},
+{text:"Variables",url:"globals_vars.html"},
 {text:"Macros",url:"globals_defs.html",children:[
 {text:"d",url:"globals_defs.html#index_d"},
 {text:"e",url:"globals_defs.html#index_e"},
@@ -93,6 +96,7 @@ var menudata={children:[
 {text:"l",url:"globals_defs.html#index_l"},
 {text:"n",url:"globals_defs.html#index_n"},
 {text:"o",url:"globals_defs.html#index_o"},
+{text:"p",url:"globals_defs.html#index_p"},
 {text:"r",url:"globals_defs.html#index_r"},
 {text:"s",url:"globals_defs.html#index_s"},
 {text:"w",url:"globals_defs.html#index_w"}]}]}]}]}

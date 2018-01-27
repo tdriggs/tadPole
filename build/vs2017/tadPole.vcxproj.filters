@@ -81,10 +81,13 @@
     <ClCompile Include="..\..\src\LightComponent.cpp">
       <Filter>Source Files\OGRE Interface</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\ScriptManager.cpp">
+    <ClCompile Include="..\..\src\PythonScriptManager.cpp">
       <Filter>Source Files\Python Interface</Filter>
     </ClCompile>
-    <ClCompile Include="PyTadPole.cpp">
+    <ClCompile Include="..\..\src\PyTadPoleFunctions.cpp">
+      <Filter>Source Files\Python Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PyTadPoleModule.cpp">
       <Filter>Source Files\Python Interface</Filter>
     </ClCompile>
   </ItemGroup>
@@ -146,10 +149,13 @@
     <ClInclude Include="..\..\include\Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\ScriptManager.h">
+    <ClInclude Include="..\..\include\PythonScriptManager.h">
       <Filter>Header Files\Python Interface</Filter>
     </ClInclude>
-    <ClInclude Include="PyTadPole.h">
+    <ClInclude Include="..\..\include\PyTadPoleFunctions.h">
+      <Filter>Header Files\Python Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\PyTadPoleModule.h">
       <Filter>Header Files\Python Interface</Filter>
     </ClInclude>
   </ItemGroup>

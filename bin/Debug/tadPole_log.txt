@@ -1,2 +1,11 @@
-[01/18/2018@09:21:02]  Initialized Successfully!
-[01/18/2018@09:21:02]  File Loaded: lv01.json
+[01/27/2018@10:58:17]  Initialized Successfully!
+[01/27/2018@10:58:18]  File Loaded: lv01.json
+[01/27/2018@10:58:18]  This is a message from Python!
+[01/27/2018@10:58:18]  The next message should fail:
+[01/27/2018@10:58:18]  Traceback (most recent call last):
+
+  File "logTest.py", line 5, in <module>
+    pyTadPole.log(15)
+
+TypeError: bad argument type for built-in operation
+

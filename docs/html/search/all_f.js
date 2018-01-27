@@ -33,6 +33,7 @@ var searchData=
   ['singleton_3c_20debugoverlay_20_3e',['Singleton&lt; DebugOverlay &gt;',['../classtad_pole_1_1_singleton.html',1,'tadPole']]],
   ['singleton_3c_20inputmanager_20_3e',['Singleton&lt; InputManager &gt;',['../classtad_pole_1_1_singleton.html',1,'tadPole']]],
   ['singleton_3c_20logmanager_20_3e',['Singleton&lt; LogManager &gt;',['../classtad_pole_1_1_singleton.html',1,'tadPole']]],
+  ['singleton_3c_20pythonscriptmanager_20_3e',['Singleton&lt; PythonScriptManager &gt;',['../classtad_pole_1_1_singleton.html',1,'tadPole']]],
   ['singleton_3c_20rendermanager_20_3e',['Singleton&lt; RenderManager &gt;',['../classtad_pole_1_1_singleton.html',1,'tadPole']]],
   ['spot',['SPOT',['../namespacetad_pole.html#a9226c666a59f155e00e1a6c1066aa745a5bac85a0c611ddef64ab0dfb383056f4',1,'tadPole']]],
   ['stdafx_2ecpp',['stdafx.cpp',['../stdafx_8cpp.html',1,'']]],

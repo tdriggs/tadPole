@@ -26,12 +26,14 @@
     <ClCompile Include="..\..\src\Exception.cpp" />
     <ClCompile Include="..\..\src\GameObject.cpp" />
     <ClCompile Include="..\..\src\LightComponent.cpp" />
+    <ClCompile Include="..\..\src\PyTadPoleFunctions.cpp" />
+    <ClCompile Include="..\..\src\PyTadPoleModule.cpp" />
     <ClCompile Include="..\..\src\Scene.cpp" />
     <ClCompile Include="..\..\src\InputManager.cpp" />
     <ClCompile Include="..\..\src\LogManager.cpp" />
     <ClCompile Include="..\..\src\MeshComponent.cpp" />
     <ClCompile Include="..\..\src\RenderManager.cpp" />
-    <ClCompile Include="..\..\src\ScriptManager.cpp" />
+    <ClCompile Include="..\..\src\PythonScriptManager.cpp" />
     <ClCompile Include="..\..\src\Singleton.cpp" />
     <ClCompile Include="..\..\src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -46,7 +48,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Use</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="..\..\src\Window.cpp" />
-    <ClCompile Include="PyTadPole.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Application.h" />
@@ -57,6 +58,8 @@
     <ClInclude Include="..\..\include\Event.h" />
     <ClInclude Include="..\..\include\Exception.h" />
     <ClInclude Include="..\..\include\GameObject.h" />
+    <ClInclude Include="..\..\include\PyTadPoleFunctions.h" />
+    <ClInclude Include="..\..\include\PyTadPoleModule.h" />
     <ClInclude Include="..\..\include\Scene.h" />
     <ClInclude Include="..\..\include\InputManager.h" />
     <ClInclude Include="..\..\include\Keyboard.h" />
@@ -64,12 +67,11 @@
     <ClInclude Include="..\..\include\LogManager.h" />
     <ClInclude Include="..\..\include\MeshComponent.h" />
     <ClInclude Include="..\..\include\RenderManager.h" />
-    <ClInclude Include="..\..\include\ScriptManager.h" />
+    <ClInclude Include="..\..\include\PythonScriptManager.h" />
     <ClInclude Include="..\..\include\Serializable.h" />
     <ClInclude Include="..\..\include\Singleton.h" />
     <ClInclude Include="..\..\include\stdafx.h" />
     <ClInclude Include="..\..\include\Window.h" />
-    <ClInclude Include="PyTadPole.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

@@ -22,6 +22,9 @@ var hierarchy =
     [ "tadPole::Singleton< LogManager >", "classtad_pole_1_1_singleton.html", [
       [ "tadPole::LogManager", "classtad_pole_1_1_log_manager.html", null ]
     ] ],
+    [ "tadPole::Singleton< PythonScriptManager >", "classtad_pole_1_1_singleton.html", [
+      [ "tadPole::PythonScriptManager", "classtad_pole_1_1_python_script_manager.html", null ]
+    ] ],
     [ "tadPole::Singleton< RenderManager >", "classtad_pole_1_1_singleton.html", [
       [ "tadPole::RenderManager", "classtad_pole_1_1_render_manager.html", null ]
     ] ],

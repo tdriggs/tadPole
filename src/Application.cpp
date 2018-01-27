@@ -2,6 +2,12 @@
 #include "Application.h"
 
 #include "Exception.h"
+#include "RenderManager.h"
+#include "LogManager.h"
+#include "DebugOverlay.h"
+#include "InputManager.h"
+#include "PythonScriptManager.h"
+#include "Scene.h"
 
 tadPole::Application::Application() { }
 
@@ -15,11 +21,13 @@ void tadPole::Application::initialize(HWND windowHandle)
 		LogManager * logManager = new LogManager();
 		DebugOverlay * debugOverlay = new DebugOverlay();
 		InputManager * inputManager = new InputManager();
+		PythonScriptManager * pythonScriptManager = new PythonScriptManager();
 
 		LOG_MANAGER->log("Initialized Successfully!");
 
 		Scene * scene = new Scene("lv01.json");
 		scene->load();
+		PYTHON_SCRIPT_MANAGER->executeScript("logTest.py");
 	}
 	catch (Exception e) {
 		if (LOG_MANAGER)
