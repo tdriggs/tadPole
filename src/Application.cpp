@@ -22,12 +22,11 @@ void tadPole::Application::initialize(HWND windowHandle)
 		DebugOverlay * debugOverlay = new DebugOverlay();
 		InputManager * inputManager = new InputManager();
 		PythonScriptManager * pythonScriptManager = new PythonScriptManager();
+		Scene * scene = new Scene();
 
 		LOG_MANAGER->log("Initialized Successfully!");
 
-		Scene * scene = new Scene("lv01.json");
-		scene->load();
-		PYTHON_SCRIPT_MANAGER->executeScript("logTest.py");
+		PYTHON_SCRIPT_MANAGER->executeScript("init.py");
 	}
 	catch (Exception e) {
 		if (LOG_MANAGER)

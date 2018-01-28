@@ -7,18 +7,22 @@
 #include "Singleton.h"
 #include "GameObject.h"
 
-#define NO_GROUP_NAME "No Group"	///< The name of the group for GameObjects that don't belong to a group.
+#define NO_GROUP_NAME "No Group"				///< The name of the group for GameObjects that don't belong to a group.
+#define SCENE tadPole::Scene::getInstance()		///< Convienience macro for the singleton instance.
 
 namespace tadPole
 {
 	/**
 	* A representation of a collection of GameObjects and the groups to which they belong.
 	*/
-	class Scene : public Serializable
+	class Scene : public Serializable, public Singleton<Scene>
 	{
+		// @@@@@ FRIENDS @@@@@
+		friend class GameObject;
+
+
 		// @@@@@ ATTRIBUTES @@@@@
 	protected:
-		std::string fileName;										///< The name of the file from which to load and save.
 		GameObject * rootObject;									///< The GameObject that is the root of this Scene.
 		std::map<std::string, std::vector<GameObject *>> objects;	///< The collection of GameObjects in this Scene and the groups to which they belong.
 
@@ -28,9 +32,7 @@ namespace tadPole
 		/**
 		* Scene constructor.
 		*/
-		Scene(
-			std::string fileName	///< The name of the file from which to load and save.
-		);
+		Scene();
 
 		/**
 		* Scene destructor.
@@ -51,12 +53,16 @@ namespace tadPole
 		/**
 		* Write the serialized string of this Scene to the Scene's file.
 		*/
-		void save();
+		void save(
+			std::string fileName	///< The name of the file to which to save.
+		);
 
 		/**
 		* Reload the Scene from the Scene's file.
 		*/
-		void load();
+		void load(
+			std::string fileName	///< The name of the file from which to load.
+		);
 
 		/**
 		* Remove all GameObjects from the scene and delete all groups.
@@ -105,6 +111,13 @@ namespace tadPole
 		GameObject * createGameObject(
 			std::string group,	///< The name of the group to which the GameObject will be added.
 			std::string name	///< The unique name of the GameObject to be created.
+		);
+
+		/**
+		* Delete a GameObject no matter what group it is in.
+		*/
+		void deleteGameObject(
+			std::string name	///< The unique name of the GameObject to be deleted.
 		);
 
 

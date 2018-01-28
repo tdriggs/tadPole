@@ -30,6 +30,7 @@ namespace tadPole
 		std::string name;															///< The unique name of the GameObject.
 		bool active;																///< Whether the GameObject is visible in the scene and can be interacted with.
 		GameObject * parentObject;													///< The parent GameObject of this GameObject.
+		std::vector<GameObject *> children;											///< The children of this GameObject.
 		Ogre::SceneNode * sceneNode;												///< The OGRE representation of this GameObject.
 		std::map<tadPole::ComponentType, std::vector<Component *>> components;		///< All components that this GameObject has, grouped by ComponentType.
 

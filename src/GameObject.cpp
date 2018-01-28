@@ -2,6 +2,7 @@
 #include "GameObject.h"
 
 #include "Exception.h"
+#include "Scene.h"
 #include "RenderManager.h"
 #include "Component.h"
 #include "MeshComponent.h"
@@ -12,6 +13,7 @@ tadPole::GameObject::GameObject(std::string name)
 {
 	this->name = name;
 	this->active = true;
+	this->children = std::vector<GameObject *>();
 	this->components = std::map<tadPole::ComponentType, std::vector<Component *>>();
 
 	this->parentObject = NULL;
@@ -22,6 +24,7 @@ tadPole::GameObject::GameObject(GameObject * rootObject, std::string name)
 {
 	this->name = name;
 	this->active = true;
+	this->children = std::vector<GameObject *>();
 	this->components = std::map<tadPole::ComponentType, std::vector<Component *>>();
 
 	this->parentObject = rootObject;
@@ -41,6 +44,11 @@ tadPole::GameObject::~GameObject()
 		map_it->second.clear();
 	}
 	this->components.clear();
+
+	for (std::vector<GameObject *>::iterator it = this->children.begin(); it < this->children.end(); ++it)
+	{
+		(*it)->parentObject = SCENE->rootObject;
+	}
 
 	if (this->sceneNode != NULL)
 	{
@@ -202,6 +210,8 @@ void tadPole::GameObject::setParent(GameObject * parent)
 	this->parentObject->sceneNode->removeChild(this->sceneNode);
 	this->parentObject = parent;
 	this->parentObject->sceneNode->addChild(this->sceneNode);
+
+	this->parentObject->children.push_back(this);
 }
 
 void tadPole::GameObject::setParentInPlace(GameObject * parent)

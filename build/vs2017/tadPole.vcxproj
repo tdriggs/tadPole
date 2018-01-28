@@ -27,6 +27,7 @@
     <ClCompile Include="..\..\src\GameObject.cpp" />
     <ClCompile Include="..\..\src\LightComponent.cpp" />
     <ClCompile Include="..\..\src\PyTadPoleFunctions.cpp" />
+    <ClCompile Include="..\..\src\PyTadPoleGameObject.cpp" />
     <ClCompile Include="..\..\src\PyTadPoleModule.cpp" />
     <ClCompile Include="..\..\src\Scene.cpp" />
     <ClCompile Include="..\..\src\InputManager.cpp" />
@@ -59,6 +60,7 @@
     <ClInclude Include="..\..\include\Exception.h" />
     <ClInclude Include="..\..\include\GameObject.h" />
     <ClInclude Include="..\..\include\PyTadPoleFunctions.h" />
+    <ClInclude Include="..\..\include\PyTadPoleGameObject.h" />
     <ClInclude Include="..\..\include\PyTadPoleModule.h" />
     <ClInclude Include="..\..\include\Scene.h" />
     <ClInclude Include="..\..\include\InputManager.h" />

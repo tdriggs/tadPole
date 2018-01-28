@@ -8,9 +8,8 @@
 #include "LightComponent.h"
 #include "RenderManager.h"
 
-tadPole::Scene::Scene(std::string fileName)
+tadPole::Scene::Scene()
 {
-	this->fileName = fileName;
 	this->rootObject = new GameObject("ROOT");
 	this->objects = std::map<std::string, std::vector<GameObject *>>();
 	this->objects[NO_GROUP_NAME] = std::vector<GameObject *>();
@@ -18,7 +17,14 @@ tadPole::Scene::Scene(std::string fileName)
 
 tadPole::Scene::~Scene()
 {
-	this->clear();
+	for (std::map<std::string, std::vector<GameObject *>>::iterator map_it = this->objects.begin(); map_it != this->objects.end(); ++map_it)
+	{
+		for (std::vector<GameObject *>::iterator vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
+		{
+			delete * vector_it;
+		}
+	}
+	this->objects.clear();
 }
 
 std::string tadPole::Scene::serialize()
@@ -49,19 +55,19 @@ std::string tadPole::Scene::serialize()
 	return result.str();
 }
 
-void tadPole::Scene::save()
+void tadPole::Scene::save(std::string fileName)
 {
 	std::string jsonString = this->serialize();
 	std::ofstream file;
-	file.open(this->fileName);
+	file.open(fileName);
 	file << jsonString;
 	file.flush();
 	file.close();
 
-	LOG_MANAGER->log("Scene Saved to File: " + this->fileName);
+	LOG_MANAGER->log("Scene Saved to File: " + fileName);
 }
 
-void tadPole::Scene::load()
+void tadPole::Scene::load(std::string fileName)
 {
 	this->clear();
 
@@ -69,7 +75,7 @@ void tadPole::Scene::load()
 	std::ifstream file;
 	std::ostringstream fileText;
 	std::string tempString;
-	file.open(this->fileName);
+	file.open(fileName);
 	while (!file.eof())
 	{
 		std::getline(file, tempString);
@@ -163,22 +169,29 @@ void tadPole::Scene::load()
 		map_it->first->setParentInPlace(this->getGameObject(map_it->second));
 	}
 
-	LOG_MANAGER->log("File Loaded: " + this->fileName);
+	LOG_MANAGER->log("File Loaded: " + fileName);
 }
 
 void tadPole::Scene::clear()
 {
-	std::map<std::string, std::vector<GameObject *>>::iterator map_it;
-	for (map_it = this->objects.begin(); map_it != this->objects.end(); ++map_it)
+	std::vector<std::string> groups = std::vector<std::string>();
+	for (std::map<std::string, std::vector<GameObject *>>::iterator map_it = this->objects.begin(); map_it != this->objects.end(); ++map_it)
 	{
-		std::vector<GameObject *>::iterator vector_it;
-		for (vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
+		if (map_it->first != "SCENEVIEW")
 		{
-			delete *vector_it;
+			for (std::vector<GameObject *>::iterator vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
+			{
+				delete * vector_it;
+			}
+			groups.push_back(map_it->first);
 		}
-		map_it->second.clear();
 	}
-	this->objects.clear();
+
+	for (std::vector<std::string>::iterator vector_it = groups.begin(); vector_it != groups.end(); ++vector_it)
+	{
+		this->objects.erase(*vector_it);
+	}
+
 	this->objects[NO_GROUP_NAME] = std::vector<GameObject *>();
 }
 
@@ -243,6 +256,25 @@ tadPole::GameObject * tadPole::Scene::createGameObject(std::string group, std::s
 	this->objects[group].push_back(go);
 	
 	return go;
+}
+
+void tadPole::Scene::deleteGameObject(std::string name)
+{
+	std::map<std::string, std::vector<GameObject *>>::iterator map_it;
+	for (map_it = this->objects.begin(); map_it != this->objects.end(); ++map_it)
+	{
+		std::vector<GameObject *>::iterator vector_it;
+		for (vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
+		{
+			GameObject * go = (GameObject *)(*vector_it);
+			if (std::strcmp(go->name.c_str(), name.c_str()) == 0)
+			{
+				map_it->second.erase(vector_it);
+				delete go;
+				break;
+			}
+		}
+	}
 }
 
 std::vector<tadPole::GameObject*> tadPole::Scene::getGroup(std::string group)
