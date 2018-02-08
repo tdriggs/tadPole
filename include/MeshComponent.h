@@ -31,7 +31,7 @@ namespace tadPole
 		* MeshComponent constructor.
 		*/
 		MeshComponent(
-			GameObject * g,			///< The GameObject to which this LightComponent is connected.
+			GameObject * g,			///< The GameObject to which this MeshComponent is connected.
 			std::string fileName	///< The name of the file in which the mesh is located.
 		);
 

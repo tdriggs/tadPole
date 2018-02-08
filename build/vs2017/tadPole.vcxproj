@@ -29,6 +29,8 @@
     <ClCompile Include="..\..\src\PyTadPoleFunctions.cpp" />
     <ClCompile Include="..\..\src\PyTadPoleGameObject.cpp" />
     <ClCompile Include="..\..\src\PyTadPoleModule.cpp" />
+    <ClCompile Include="..\..\src\PyTadPoleScriptComponent.cpp" />
+    <ClCompile Include="..\..\src\PythonScriptComponent.cpp" />
     <ClCompile Include="..\..\src\Scene.cpp" />
     <ClCompile Include="..\..\src\InputManager.cpp" />
     <ClCompile Include="..\..\src\LogManager.cpp" />
@@ -62,6 +64,8 @@
     <ClInclude Include="..\..\include\PyTadPoleFunctions.h" />
     <ClInclude Include="..\..\include\PyTadPoleGameObject.h" />
     <ClInclude Include="..\..\include\PyTadPoleModule.h" />
+    <ClInclude Include="..\..\include\PyTadPoleScriptComponent.h" />
+    <ClInclude Include="..\..\include\PythonScriptComponent.h" />
     <ClInclude Include="..\..\include\Scene.h" />
     <ClInclude Include="..\..\include\InputManager.h" />
     <ClInclude Include="..\..\include\Keyboard.h" />
@@ -79,7 +83,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{8C48E935-FE9C-41E2-B671-C416B0F10AF7}</ProjectGuid>
     <RootNamespace>tadPole</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

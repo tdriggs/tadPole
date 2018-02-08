@@ -4,7 +4,10 @@
 #include "stdafx.h"
 
 #include "Singleton.h"
+#include "GameObject.h"
+#include "PythonScriptComponent.h"
 
+#define SCRIPT_LOCATION "Python Scripts/"
 #define PYTHON_SCRIPT_MANAGER tadPole::PythonScriptManager::getInstance()	///< Convnenience macro for access to the singleton instance.
 
 namespace tadPole
@@ -34,6 +37,21 @@ namespace tadPole
 		* by the LogManager.
 		*/
 		void executeScript(std::string scriptName);
+
+		/**
+		*
+		*/
+		void createPythonScriptComponent(
+			PythonScriptComponent * scriptComponent,
+			std::string scriptName
+		);
+
+		/**
+		*
+		*/
+		void createPythonGameObject(
+			GameObject * gameObject
+		);
 	};
 }
 

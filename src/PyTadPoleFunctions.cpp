@@ -4,8 +4,25 @@
 #include "LogManager.h"
 #include "Scene.h"
 #include "PyTadPoleGameObject.h"
+#include "PythonScriptManager.h"
 
 extern PyTypeObject pyTadPole_GameObject_type;
+
+PyObject * tadPole::pyTadPole_loadScript(PyObject * self, PyObject * args)
+{
+	char * scriptName;
+	if (!(
+		(PyTuple_Size(args) == 1 && PyArg_ParseTuple(args, "s", &scriptName))
+		))
+	{
+		PyErr_BadArgument();
+		return NULL;
+	}
+
+	PYTHON_SCRIPT_MANAGER->executeScript(scriptName);
+
+	Py_RETURN_NONE;
+}
 
 PyObject * tadPole::pyTadPole_log(PyObject * self, PyObject * args)
 {
@@ -151,10 +168,7 @@ PyObject * tadPole::pyTadPole_getGroup(PyObject * self, PyObject * args)
 	PyObject * result = PyList_New(group.size());
 	for (int i = 0; i < group.size(); ++i)
 	{
-		PyTadPole_GameObject * newItem = (PyTadPole_GameObject *)PyObject_CallObject((PyObject *)&pyTadPole_GameObject_type, PyTuple_New(0));
-		newItem->gameObject = group.at(i);
-		PyList_SetItem(result, i, (PyObject *)newItem);
-		Py_DECREF(newItem);
+		PyList_SetItem(result, i, (PyObject *)group.at(i)->getPyObject());
 	}
 
 	return result;
@@ -172,8 +186,6 @@ PyObject * tadPole::pyTadPole_getGameObject(PyObject * self, PyObject * args)
 	}
 
 	GameObject * gameObject = SCENE->getGameObject(name);
-	PyObject * result = PyObject_CallObject((PyObject *)(&pyTadPole_GameObject_type), NULL);
-	((PyTadPole_GameObject *)result)->gameObject = gameObject;
 
-	return (PyObject *)result;
+	return (PyObject *)gameObject->getPyObject();
 }

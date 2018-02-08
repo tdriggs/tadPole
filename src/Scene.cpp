@@ -2,10 +2,12 @@
 #include "Scene.h"
 
 #include "LogManager.h"
+#include "PythonScriptManager.h"
 #include "Exception.h"
 #include "MeshComponent.h"
 #include "CameraComponent.h"
 #include "LightComponent.h"
+#include "PythonScriptComponent.h"
 #include "RenderManager.h"
 
 tadPole::Scene::Scene()
@@ -59,7 +61,7 @@ void tadPole::Scene::save(std::string fileName)
 {
 	std::string jsonString = this->serialize();
 	std::ofstream file;
-	file.open(fileName);
+	file.open(SCENE_FILE_LOCATION + fileName);
 	file << jsonString;
 	file.flush();
 	file.close();
@@ -75,7 +77,7 @@ void tadPole::Scene::load(std::string fileName)
 	std::ifstream file;
 	std::ostringstream fileText;
 	std::string tempString;
-	file.open(fileName);
+	file.open(SCENE_FILE_LOCATION + fileName);
 	while (!file.eof())
 	{
 		std::getline(file, tempString);
@@ -109,6 +111,7 @@ void tadPole::Scene::load(std::string fileName)
 			glm::vec3 worldScale(worldScaleArray[0].GetFloat(), worldScaleArray[1].GetFloat(), worldScaleArray[2].GetFloat());
 
 			GameObject * gameObject = this->createGameObject(groupName, name);
+			PYTHON_SCRIPT_MANAGER->createPythonGameObject(gameObject);
 			gameObject->active = active;
 			gameObject->setPosition(worldPosition);
 			gameObject->setOrientation(worldOrientationAxis, worldOrientationAngle);
@@ -122,6 +125,12 @@ void tadPole::Scene::load(std::string fileName)
 				{
 					std::string fileName = (*component_it)["fileName"].GetString();
 					MeshComponent * meshComponent = gameObject->createMeshComponent(fileName);
+				}
+				else if (type == "SCRIPT")
+				{
+					std::string scriptName = (*component_it)["scriptName"].GetString();
+					PythonScriptComponent * scriptComponent = gameObject->createPythonScriptComponent(scriptName);
+					PYTHON_SCRIPT_MANAGER->createPythonScriptComponent(scriptComponent, scriptName);
 				}
 				else if (type == "CAMERA")
 				{
@@ -273,6 +282,17 @@ void tadPole::Scene::deleteGameObject(std::string name)
 				delete go;
 				break;
 			}
+		}
+	}
+}
+
+void tadPole::Scene::update(float deltaTime)
+{
+	for (std::map<std::string, std::vector<GameObject *>>::iterator map_it = this->objects.begin(); map_it != this->objects.end(); ++map_it)
+	{
+		for (std::vector<GameObject *>::iterator vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
+		{
+			(*vector_it)->update(deltaTime);
 		}
 	}
 }

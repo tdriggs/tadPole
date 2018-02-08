@@ -12,7 +12,8 @@ namespace tadPole
 	{
 		MESH,
 		LIGHT,
-		CAMERA
+		CAMERA,
+		SCRIPT
 	};
 }
 

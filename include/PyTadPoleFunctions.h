@@ -6,6 +6,11 @@
 namespace tadPole
 {
 	/**
+	* Loads a Python script through the ScriptManager.
+	*/
+	PyObject * pyTadPole_loadScript(PyObject * self, PyObject * args);
+
+	/**
 	* Log a message through the LogManager.
 	*/
 	PyObject * pyTadPole_log(PyObject * self, PyObject * args);

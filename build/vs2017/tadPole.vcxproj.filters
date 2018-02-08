@@ -93,6 +93,12 @@
     <ClCompile Include="..\..\src\PyTadPoleGameObject.cpp">
       <Filter>Source Files\Python Interface</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\PyTadPoleScriptComponent.cpp">
+      <Filter>Source Files\Python Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PythonScriptComponent.cpp">
+      <Filter>Source Files\Python Interface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Application.h">
@@ -162,6 +168,12 @@
       <Filter>Header Files\Python Interface</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\PyTadPoleGameObject.h">
+      <Filter>Header Files\Python Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\PyTadPoleScriptComponent.h">
+      <Filter>Header Files\Python Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\PythonScriptComponent.h">
       <Filter>Header Files\Python Interface</Filter>
     </ClInclude>
   </ItemGroup>

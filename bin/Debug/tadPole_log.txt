@@ -1,3 +1,3 @@
-[01/27/2018@08:06:07]  Initialized Successfully!
-[01/27/2018@08:06:07]  This is a message from Python!
-[01/27/2018@08:06:07]  Scene Saved to File: pyScene.txt
+[02/07/2018@10:25:14]  Initialized Successfully!
+[02/07/2018@10:25:15]  File Loaded: SceneView.json
+[02/07/2018@10:25:15]  Scene Saved to File: scTest.json

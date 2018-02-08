@@ -5,6 +5,7 @@
 
 #include "Serializable.h"
 #include "ComponentType.h"
+#include "PyTadPoleGameObject.h"
 
 namespace tadPole
 {
@@ -13,6 +14,7 @@ namespace tadPole
 	class MeshComponent;
 	class CameraComponent;
 	class LightComponent;
+	class PythonScriptComponent;
 	enum class LightType;
 
 	/**
@@ -32,6 +34,7 @@ namespace tadPole
 		GameObject * parentObject;													///< The parent GameObject of this GameObject.
 		std::vector<GameObject *> children;											///< The children of this GameObject.
 		Ogre::SceneNode * sceneNode;												///< The OGRE representation of this GameObject.
+		PyTadPole_GameObject * pythonGameObject;									///< The Python representation of this GameObject.
 		std::map<tadPole::ComponentType, std::vector<Component *>> components;		///< All components that this GameObject has, grouped by ComponentType.
 
 
@@ -95,6 +98,13 @@ namespace tadPole
 			LightType type	///< The type of the LightComponent to create.
 		);
 
+		/**
+		* Create a new LightComponent and add it to this GameObject.
+		*/
+		PythonScriptComponent * createPythonScriptComponent(
+			std::string scriptName	///< The file name of the file from which to create the PythonScriptObject.
+		);
+
 
 		// @@@@@ GENERAL GETTERS @@@@@
 	public:
@@ -109,6 +119,11 @@ namespace tadPole
 		int getComponentCount(
 			ComponentType type	///< The type of components to count.
 		);
+
+		/**
+		* Returns the Python representation of this GameObject;
+		*/
+		PyTadPole_GameObject * getPyObject();
 
 
 		// @@@@@ TRANSFORM GETTERS @@@@@
@@ -167,6 +182,13 @@ namespace tadPole
 		*/
 		void setParentInPlace(
 			GameObject * parent	///< The new parent GameObject of this GameObject.
+		);
+
+		/**
+		* Change the Python representation of this GameObject.
+		*/
+		void setPyObject(
+			PyTadPole_GameObject * pyObject	///< The new pyObject reference for this GameObject.
 		);
 
 

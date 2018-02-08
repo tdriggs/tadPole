@@ -7,6 +7,7 @@
 #include "Singleton.h"
 #include "GameObject.h"
 
+#define SCENE_FILE_LOCATION "Scene Files/"		///< The location of the scene files.
 #define NO_GROUP_NAME "No Group"				///< The name of the group for GameObjects that don't belong to a group.
 #define SCENE tadPole::Scene::getInstance()		///< Convienience macro for the singleton instance.
 
@@ -118,6 +119,13 @@ namespace tadPole
 		*/
 		void deleteGameObject(
 			std::string name	///< The unique name of the GameObject to be deleted.
+		);
+
+		/**
+		* Updates all GameObjects..
+		*/
+		void update(
+			float deltaTime	///< The time passed since the last update.
 		);
 
 

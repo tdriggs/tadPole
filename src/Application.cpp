@@ -17,11 +17,11 @@ void tadPole::Application::initialize(HWND windowHandle)
 {
 	try
 	{
+		PythonScriptManager * pythonScriptManager = new PythonScriptManager();
 		RenderManager * renderManager = new RenderManager(windowHandle);
 		LogManager * logManager = new LogManager();
 		DebugOverlay * debugOverlay = new DebugOverlay();
 		InputManager * inputManager = new InputManager();
-		PythonScriptManager * pythonScriptManager = new PythonScriptManager();
 		Scene * scene = new Scene();
 
 		LOG_MANAGER->log("Initialized Successfully!");
@@ -41,6 +41,7 @@ void tadPole::Application::update(float deltaTime)
 	try
 	{
 		DEBUG_OVERLAY->update(deltaTime);
+		SCENE->update(deltaTime);
 	}
 	catch (Exception e) {
 		if (LOG_MANAGER)

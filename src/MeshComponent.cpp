@@ -21,7 +21,6 @@ tadPole::MeshComponent::~MeshComponent()
 		}
 		RENDER_MANAGER->sceneManager->destroyEntity(this->entity);
 	}
-
 }
 
 void tadPole::MeshComponent::setActive(bool active)

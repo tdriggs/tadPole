@@ -8,6 +8,7 @@
 #include "MeshComponent.h"
 #include "CameraComponent.h"
 #include "LightComponent.h"
+#include "PythonScriptComponent.h"
 
 tadPole::GameObject::GameObject(std::string name)
 {
@@ -105,10 +106,10 @@ void tadPole::GameObject::update(float deltaTime)
 	std::map<tadPole::ComponentType, std::vector<Component *>>::iterator map_it;
 	for (map_it = this->components.begin(); map_it != this->components.end(); ++map_it)
 	{
-		std::vector<Component * >::iterator vector_it;
+		std::vector<Component *>::iterator vector_it;
 		for (vector_it = map_it->second.begin(); vector_it != map_it->second.end(); ++vector_it)
 		{
-			((Component*)(*vector_it))->update(deltaTime);
+			((Component *)(*vector_it))->update(deltaTime);
 		}
 	}
 }
@@ -143,6 +144,15 @@ tadPole::LightComponent * tadPole::GameObject::createLightComponent(LightType ty
 	return lightComponent;
 }
 
+tadPole::PythonScriptComponent * tadPole::GameObject::createPythonScriptComponent(std::string scriptName)
+{
+	PythonScriptComponent * scriptComponent = new PythonScriptComponent(this, scriptName);
+	this->components[ComponentType::SCRIPT].push_back(scriptComponent);
+	scriptComponent->setActive(this->active);
+
+	return scriptComponent;
+}
+
 std::string tadPole::GameObject::getName()
 {
 	return this->name;
@@ -151,6 +161,11 @@ std::string tadPole::GameObject::getName()
 int tadPole::GameObject::getComponentCount(ComponentType type)
 {
 	return this->components[type].size();
+}
+
+tadPole::PyTadPole_GameObject * tadPole::GameObject::getPyObject()
+{
+	return this->pythonGameObject;
 }
 
 glm::vec3 tadPole::GameObject::getLocalPosition()
@@ -231,6 +246,11 @@ void tadPole::GameObject::setParentInPlace(GameObject * parent)
 	this->setScale(newWorldScale);
 
 	this->setParent(parent);
+}
+
+void tadPole::GameObject::setPyObject(PyTadPole_GameObject * pyObject)
+{
+	this->pythonGameObject = pyObject;
 }
 
 void tadPole::GameObject::setPosition(glm::vec3 position)

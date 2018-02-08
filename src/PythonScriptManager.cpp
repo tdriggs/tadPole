@@ -5,9 +5,12 @@
 #include "LogManager.h"
 #include "Exception.h"
 
+extern PyTypeObject pyTadPole_GameObject_type;
+
 tadPole::PythonScriptManager::PythonScriptManager()
 {
-	PyImport_AppendInittab("pyTadPole", &tadPole::PyInit_tadPole);	Py_Initialize();
+	PyImport_AppendInittab("pyTadPole", &tadPole::PyInit_tadPole);
+	Py_Initialize();
 }
 
 tadPole::PythonScriptManager::~PythonScriptManager()
@@ -19,7 +22,7 @@ void tadPole::PythonScriptManager::executeScript(std::string scriptName)
 {
 	std::ifstream infile;
 	std::stringstream textBuffer;
-	infile.open(scriptName);
+	infile.open(SCRIPT_LOCATION + scriptName);
 	textBuffer << infile.rdbuf();
 	std::string fileText = textBuffer.str();
 
@@ -70,4 +73,32 @@ void tadPole::PythonScriptManager::executeScript(std::string scriptName)
 		Py_DecRef(value);
 		Py_DecRef(traceback);
 	}
+}
+
+void tadPole::PythonScriptManager::createPythonScriptComponent(PythonScriptComponent * scriptComponent, std::string scriptName)
+{
+	PYTHON_SCRIPT_MANAGER->executeScript(scriptName);
+	if (!PyObject_HasAttrString(scriptComponent->getModule(), scriptComponent->getClassName().c_str()))
+	{
+		EXCEPTION("Python class does not exist: " + scriptComponent->getClassName());
+	}
+
+	PyObject * cls = PyObject_GetAttrString(scriptComponent->getModule(), scriptComponent->getClassName().c_str());
+	PyObject * result = PyObject_CallObject(cls, NULL);
+	Py_INCREF(result);
+
+	((PyTadPole_ScriptComponent *)result)->scriptComponent = scriptComponent;
+	scriptComponent->setPyObject((PyObject *)result);
+
+	scriptComponent->executeCallback("OnStart");
+}
+
+void tadPole::PythonScriptManager::createPythonGameObject(tadPole::GameObject * gameObject)
+{
+	PyObject * pyObject = PyObject_CallObject((PyObject *)(&pyTadPole_GameObject_type), NULL);
+	PyTadPole_GameObject * result = (PyTadPole_GameObject *)pyObject;
+	Py_INCREF(result);
+
+	result->gameObject = gameObject;
+	gameObject->setPyObject(result);
 }

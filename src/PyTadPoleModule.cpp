@@ -4,9 +4,11 @@
 #include "PyTadPoleFunctions.h"
 
 extern PyTypeObject pyTadPole_GameObject_type;
+extern PyTypeObject pyTadPole_ScriptComponent_type;
 
 PyMethodDef pyTadPoleModuleFunctions[] =
 {
+	{ "loadScript", tadPole::pyTadPole_loadScript, METH_VARARGS, "Loads a Python script through the ScriptManager." },
 	{ "log", tadPole::pyTadPole_log, METH_VARARGS, "Logs a message through LogManager." },
 	{ "saveScene", tadPole::pyTadPole_saveScene, METH_VARARGS, "Saves the scene through the Scene." },
 	{ "loadScene", tadPole::pyTadPole_loadScene, METH_VARARGS, "Loads a scene through the Scene." },
@@ -41,9 +43,15 @@ PyMODINIT_FUNC tadPole::PyInit_tadPole()
 	{
 		return NULL;
 	}
+	if (PyType_Ready(&pyTadPole_ScriptComponent_type) < 0)
+	{
+		return NULL;
+	}
 
 	Py_INCREF(&pyTadPole_GameObject_type);
 	PyModule_AddObject(module, "GameObject", (PyObject*)&pyTadPole_GameObject_type);
+	Py_INCREF(&pyTadPole_ScriptComponent_type);
+	PyModule_AddObject(module, "ScriptComponent", (PyObject*)&pyTadPole_ScriptComponent_type);
 
 	return module;
 }
