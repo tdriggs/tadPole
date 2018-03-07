@@ -5,6 +5,7 @@
 
 #include "ComponentType.h"
 #include "Component.h"
+#include "PyTadPoleLightComponent.h"
 
 namespace tadPole
 {
@@ -29,6 +30,7 @@ namespace tadPole
 	protected:
 		Ogre::Light * light;	///< The OGRE representation of the LightComponent.
 		LightType type;			///< The type of light to render for this LightComponent.
+		PyTadPole_LightComponent * pyObject;
 
 
 		// @@@@@ CONSTRUCTORS / DESTRUCTOR @@@@@
@@ -69,6 +71,18 @@ namespace tadPole
 
 		// @@@@@ PUBLIC METHODS @@@@@
 	public:
+		/**
+		* Sets the PyObject of this LightComponent.
+		*/
+		void setPyObject(
+			PyTadPole_LightComponent * pyObject	///< the new PyObject for this LightComponent.
+		);
+
+		/**
+		* Gets the PyObject of this LightComponent.
+		*/
+		PyTadPole_LightComponent * getPyObject();
+
 		/**
 		* Set the direction that this LightComponent is pointing.
 		*/

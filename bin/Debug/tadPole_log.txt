@@ -1,3 +1,2 @@
-[02/07/2018@10:25:14]  Initialized Successfully!
-[02/07/2018@10:25:15]  File Loaded: SceneView.json
-[02/07/2018@10:25:15]  Scene Saved to File: scTest.json
+[03/06/2018@07:00:37]  Initialized Successfully!
+[03/06/2018@07:00:40]  Scene Saved to File: scTest.json

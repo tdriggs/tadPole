@@ -3,6 +3,9 @@
 
 #include "Scene.h"
 #include "GameObject.h"
+#include "CameraComponent.h"
+#include "LightComponent.h"
+#include "MeshComponent.h"
 
 PyObject * tadPole::pyTadPole_GameObject_new(PyTypeObject * type, PyObject * args, PyObject * kwargs)
 {
@@ -74,19 +77,39 @@ PyObject * tadPole::pyTadPole_GameObject_createMeshComponent(tadPole::PyTadPole_
 
 	tadPole::MeshComponent * meshComponent = self->gameObject->createMeshComponent(fileName);
 
-	// Eventually return reference to MeshComponent as PyObject *
-	Py_RETURN_NONE;
+	return (PyObject *)meshComponent->getPyObject();
 }
 
-/*PyObject * tadPole::pyTadPole_GameObject_createCameraComponent(tadPole::PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs)
+PyObject * tadPole::pyTadPole_GameObject_createCameraComponent(tadPole::PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs)
 {
-	
-}*/
+	if (!(
+		(PyTuple_Size(args) == 0)
+		))
+	{
+		PyErr_BadArgument();
+		return NULL;
+	}
 
-/*PyObject * tadPole::pyTadPole_GameObject_createLightComponent(tadPole::PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs)
+	tadPole::CameraComponent * cameraComponent = self->gameObject->createCameraComponent();
+
+	return (PyObject *)cameraComponent->getPyObject();
+}
+
+PyObject * tadPole::pyTadPole_GameObject_createLightComponent(tadPole::PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs)
 {
-	
-}*/
+	int lightType;
+	if (!(
+		(PyTuple_Size(args) == 1 && PyArg_ParseTuple(args, "i", &lightType))
+		))
+	{
+		PyErr_BadArgument();
+		return NULL;
+	}
+
+	LightComponent * lightComponent = self->gameObject->createLightComponent((tadPole::LightType)lightType);
+
+	return (PyObject *)lightComponent->getPyObject();
+}
 
 PyObject * tadPole::pyTadPole_GameObject_getName(tadPole::PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs)
 {
@@ -353,8 +376,8 @@ PyObject * tadPole::pyTadPole_GameObject_scale(tadPole::PyTadPole_GameObject * s
 PyMethodDef pyTadPole_GameObject_methods[] =
 {
 	{ "createMeshComponent", (PyCFunction)tadPole::pyTadPole_GameObject_createMeshComponent, METH_VARARGS, "" },
-	//{ "createCameraComponent", (PyCFunction)tadPole::pyTadPole_GameObject_createCameraComponent, METH_VARARGS, "" },
-	//{ "createLightComponent", (PyCFunction)tadPole::pyTadPole_GameObject_createLightComponent, METH_VARARGS, "" },
+	{ "createCameraComponent", (PyCFunction)tadPole::pyTadPole_GameObject_createCameraComponent, METH_VARARGS, "" },
+	{ "createLightComponent", (PyCFunction)tadPole::pyTadPole_GameObject_createLightComponent, METH_VARARGS, "" },
 	{ "getName", (PyCFunction)tadPole::pyTadPole_GameObject_getName, METH_VARARGS, "" },
 	//{ "getComponentCount", (PyCFunction)tadPole::pyTadPole_GameObject_getComponentCount, METH_VARARGS, "" },
 	{ "getLocalPosition", (PyCFunction)tadPole::pyTadPole_GameObject_getLocalPosition, METH_VARARGS, "" },

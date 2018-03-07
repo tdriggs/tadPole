@@ -61,6 +61,16 @@ std::string tadPole::LightComponent::serialize()
 	return result.str();
 }
 
+void tadPole::LightComponent::setPyObject(PyTadPole_LightComponent * pyObject)
+{
+	this->pyObject = pyObject;
+}
+
+tadPole::PyTadPole_LightComponent * tadPole::LightComponent::getPyObject()
+{
+	return this->pyObject;
+}
+
 void tadPole::LightComponent::setDirection(glm::vec3 direction)
 {
 	this->light->setDirection(Ogre::Vector3(direction.x, direction.y, direction.z));

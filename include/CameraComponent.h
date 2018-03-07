@@ -5,6 +5,7 @@
 
 #include "ComponentType.h"
 #include "Component.h"
+#include "PyTadPoleCameraComponent.h"
 
 namespace tadPole
 {
@@ -22,6 +23,7 @@ namespace tadPole
 		// @@@@@ ATTRIBUTES @@@@@
 	protected:
 		Ogre::Camera * camera;	///< The OGRE representation of the component.
+		PyTadPole_CameraComponent * pyObject;
 
 
 		// @@@@@ CONSTRUCTORS / DESTRUCTOR @@@@@
@@ -62,11 +64,16 @@ namespace tadPole
 		// @@@@@ GENERAL SETTERS @@@@@
 	public:
 		/**
-		* Set the direction that the CameraComponent is pointing.
+		* Sets the PyObject of this CameraComponent.
 		*/
-		void setDirection(
-			glm::vec3 direction	///< The new direction for the CameraComponent to point.
+		void setPyObject(
+			PyTadPole_CameraComponent * pyObject	///< the new PyObject for this CameraComponent.
 		);
+
+		/**
+		* Gets the PyObject of this CameraComponent.
+		*/
+		PyTadPole_CameraComponent * getPyObject();
 
 		/**
 		* Set the near and far clip distances of the CameraComponent.
@@ -81,7 +88,7 @@ namespace tadPole
 		* this CameraComponent is pointing towards.
 		*/
 		void setViewport(
-			std::string viewport	///< The name of the new viewport to attach to this CameraComponent.
+			int viewport	///< The id of the new viewport to attach to this CameraComponent.
 		);
 	};
 }

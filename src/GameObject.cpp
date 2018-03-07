@@ -4,6 +4,7 @@
 #include "Exception.h"
 #include "Scene.h"
 #include "RenderManager.h"
+#include "PythonScriptManager.h"
 #include "Component.h"
 #include "MeshComponent.h"
 #include "CameraComponent.h"
@@ -121,6 +122,8 @@ tadPole::MeshComponent * tadPole::GameObject::createMeshComponent(std::string fi
 	this->sceneNode->attachObject(meshComponent->entity);
 	meshComponent->setActive(this->active);
 
+	PYTHON_SCRIPT_MANAGER->createPythonMeshComponent(meshComponent);
+
 	return meshComponent;
 }
 
@@ -130,6 +133,8 @@ tadPole::CameraComponent * tadPole::GameObject::createCameraComponent()
 	this->components[ComponentType::CAMERA].push_back(cameraComponent);
 	this->sceneNode->attachObject(cameraComponent->camera);
 	cameraComponent->setActive(this->active);
+
+	PYTHON_SCRIPT_MANAGER->createPythonCameraComponent(cameraComponent);
 
 	return cameraComponent;
 }
@@ -141,6 +146,8 @@ tadPole::LightComponent * tadPole::GameObject::createLightComponent(LightType ty
 	this->sceneNode->attachObject(lightComponent->light);
 	lightComponent->setActive(this->active);
 
+	PYTHON_SCRIPT_MANAGER->createPythonLightComponent(lightComponent);
+
 	return lightComponent;
 }
 
@@ -149,6 +156,8 @@ tadPole::PythonScriptComponent * tadPole::GameObject::createPythonScriptComponen
 	PythonScriptComponent * scriptComponent = new PythonScriptComponent(this, scriptName);
 	this->components[ComponentType::SCRIPT].push_back(scriptComponent);
 	scriptComponent->setActive(this->active);
+
+	PYTHON_SCRIPT_MANAGER->createPythonScriptComponent(scriptComponent);
 
 	return scriptComponent;
 }
@@ -160,6 +169,11 @@ std::string tadPole::GameObject::getName()
 
 int tadPole::GameObject::getComponentCount(ComponentType type)
 {
+	if (this->components.find(type) == this->components.end())
+	{
+		return 0;
+	}
+
 	return this->components[type].size();
 }
 

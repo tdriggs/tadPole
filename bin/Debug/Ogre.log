@@ -1,594 +1,597 @@
-22:25:11: Creating resource group General
-22:25:11: Creating resource group Internal
-22:25:11: Creating resource group Autodetect
-22:25:11: SceneManagerFactory for type 'DefaultSceneManager' registered.
-22:25:11: Registering ResourceManager for type Material
-22:25:11: Registering ResourceManager for type Mesh
-22:25:11: Registering ResourceManager for type Skeleton
-22:25:11: MovableObjectFactory for type 'ParticleSystem' registered.
-22:25:11: ArchiveFactory for archive type FileSystem registered.
-22:25:11: ArchiveFactory for archive type Zip registered.
-22:25:11: ArchiveFactory for archive type EmbeddedZip registered.
-22:25:11: DDS codec registering
-22:25:11: FreeImage version: 3.15.3
-22:25:11: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
-22:25:11: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic
-22:25:11: ETC codec registering
-22:25:11: Registering ResourceManager for type HighLevelGpuProgram
-22:25:11: Registering ResourceManager for type Compositor
-22:25:11: MovableObjectFactory for type 'Entity' registered.
-22:25:11: MovableObjectFactory for type 'Light' registered.
-22:25:11: MovableObjectFactory for type 'BillboardSet' registered.
-22:25:11: MovableObjectFactory for type 'ManualObject' registered.
-22:25:11: MovableObjectFactory for type 'BillboardChain' registered.
-22:25:11: MovableObjectFactory for type 'RibbonTrail' registered.
-22:25:11: Loading library .\RenderSystem_Direct3D9_d
-22:25:11: Installing plugin: D3D9 RenderSystem
-22:25:11: D3D9 : Direct3D9 Rendering Subsystem created.
-22:25:11: D3D9: Driver Detection Starts
-22:25:11: D3D9: Driver Detection Ends
-22:25:11: Plugin successfully installed
-22:25:11: Loading library .\RenderSystem_Direct3D11_d
-22:25:11: Installing plugin: D3D11 RenderSystem
-22:25:11: D3D11: Direct3D11 Rendering Subsystem created.
-22:25:11: D3D11: Driver Detection Starts
-22:25:11: D3D11: "Intel(R) HD Graphics 630"
-22:25:11: D3D11: "NVIDIA GeForce GTX 1060"
-22:25:11: D3D11: "Microsoft Basic Render Driver (software)"
-22:25:11: D3D11: Driver Detection Ends
-22:25:12: Plugin successfully installed
-22:25:12: Loading library .\RenderSystem_GL_d
-22:25:12: Installing plugin: GL RenderSystem
-22:25:12: OpenGL Rendering Subsystem created.
-22:25:12: Plugin successfully installed
-22:25:12: Loading library .\RenderSystem_GL3Plus_d
-22:25:12: Installing plugin: GL 3+ RenderSystem
-22:25:12: OpenGL 3+ Rendering Subsystem created.
-22:25:12: Plugin successfully installed
-22:25:12: Loading library .\Plugin_ParticleFX_d
-22:25:12: Installing plugin: ParticleFX
-22:25:12: Particle Emitter Type 'Point' registered
-22:25:12: Particle Emitter Type 'Box' registered
-22:25:12: Particle Emitter Type 'Ellipsoid' registered
-22:25:12: Particle Emitter Type 'Cylinder' registered
-22:25:12: Particle Emitter Type 'Ring' registered
-22:25:12: Particle Emitter Type 'HollowEllipsoid' registered
-22:25:12: Particle Affector Type 'LinearForce' registered
-22:25:12: Particle Affector Type 'ColourFader' registered
-22:25:12: Particle Affector Type 'ColourFader2' registered
-22:25:12: Particle Affector Type 'ColourImage' registered
-22:25:12: Particle Affector Type 'ColourInterpolator' registered
-22:25:12: Particle Affector Type 'Scaler' registered
-22:25:12: Particle Affector Type 'Rotator' registered
-22:25:12: Particle Affector Type 'DirectionRandomiser' registered
-22:25:12: Particle Affector Type 'DeflectorPlane' registered
-22:25:12: Plugin successfully installed
-22:25:12: Loading library .\Plugin_BSPSceneManager_d
-22:25:12: Installing plugin: BSP Scene Manager
-22:25:12: Plugin successfully installed
-22:25:12: Loading library .\Plugin_CgProgramManager_d
-22:25:12: Installing plugin: Cg Program Manager
-22:25:12: Plugin successfully installed
-22:25:12: Loading library .\Plugin_PCZSceneManager_d
-22:25:12: Installing plugin: Portal Connected Zone Scene Manager
-22:25:12: PCZone Factory Type 'ZoneType_Default' registered
-22:25:12: Plugin successfully installed
-22:25:12: Loading library .\Plugin_OctreeZone_d
-22:25:12: Installing plugin: Octree Zone Factory
-22:25:12: Plugin successfully installed
-22:25:12: Loading library .\Plugin_OctreeSceneManager_d
-22:25:12: Installing plugin: Octree Scene Manager
-22:25:12: Plugin successfully installed
-22:25:12: *-*-* OGRE Initialising
-22:25:12: *-*-* Version 1.10.10 (Xalafu)
-22:25:12: OverlayElementFactory for type Panel registered.
-22:25:12: OverlayElementFactory for type BorderPanel registered.
-22:25:12: OverlayElementFactory for type TextArea registered.
-22:25:12: Registering ResourceManager for type Font
-22:25:12: D3D11: RenderSystem Option: Allow NVPerfHUD = No
-22:25:12: D3D11: RenderSystem Option: Backbuffer Count = Auto
-22:25:12: D3D11: RenderSystem Option: Driver type = Hardware
-22:25:12: D3D11: RenderSystem Option: FSAA = 1
-22:25:12: D3D11: RenderSystem Option: Floating-point mode = Fastest
-22:25:12: D3D11: RenderSystem Option: Full Screen = Yes
-22:25:12: D3D11: RenderSystem Option: Information Queue Exceptions Bottom Level = Info (exception on any message)
-22:25:12: D3D11: RenderSystem Option: Max Requested Feature Levels = 11.0
-22:25:12: D3D11: RenderSystem Option: Min Requested Feature Levels = 9.1
-22:25:12: D3D11: RenderSystem Option: Rendering Device = (default)
-22:25:12: D3D11: RenderSystem Option: VSync = No
-22:25:12: D3D11: RenderSystem Option: VSync Interval = 1
-22:25:12: D3D11: RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
-22:25:12: D3D11: RenderSystem Option: sRGB Gamma Conversion = No
-22:25:12: D3D9 : RenderSystem Option: Allow DirectX9Ex = No
-22:25:12: D3D9 : RenderSystem Option: Allow NVPerfHUD = No
-22:25:12: D3D9 : RenderSystem Option: Backbuffer Count = Auto
-22:25:12: D3D9 : RenderSystem Option: FSAA = 0
-22:25:12: D3D9 : RenderSystem Option: Fixed Pipeline Enabled = Yes
-22:25:12: D3D9 : RenderSystem Option: Floating-point mode = Fastest
-22:25:12: D3D9 : RenderSystem Option: Full Screen = Yes
-22:25:12: D3D9 : RenderSystem Option: Multi device memory hint = Use minimum system memory
-22:25:12: D3D9 : RenderSystem Option: Rendering Device = Monitor-1-Intel(R) HD Graphics 630
-22:25:12: D3D9 : RenderSystem Option: Resource Creation Policy = Create on all devices
-22:25:12: D3D9 : RenderSystem Option: Use Multihead = Auto
-22:25:12: D3D9 : RenderSystem Option: VSync = No
-22:25:12: D3D9 : RenderSystem Option: VSync Interval = 1
-22:25:12: D3D9 : RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
-22:25:12: D3D9 : RenderSystem Option: sRGB Gamma Conversion = No
-22:25:12: Added resource location '../../resources/thumbnails' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/SdkTrays.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/profiler.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/programs' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/programs/Cg' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/programs/GLSL' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/programs/GLSL120' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/programs/GLSL150' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/programs/GLSL400' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/programs/GLSLES' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/programs/HLSL' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/scripts' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/textures' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/materials/textures/nvidia' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/models' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/HLMS' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/CustomMeshs' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/CustomMeshs/orientation_arrows' of type 'FileSystem' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/cubemap.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/cubemapsJS.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/dragon.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/fresneldemo.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/ogretestmap.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/ogredance.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/Sinbad.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources/packs/skybox.zip' of type 'Zip' to resource group 'General'
-22:25:12: Added resource location '../../resources/volumeTerrain/volumeTerrainBig.zip' of type 'Zip' to resource group 'General'
-22:25:12: CPU Identifier & Features
-22:25:12: -------------------------
-22:25:12:  *   CPU ID: GenuineIntel: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
-22:25:12:  *          SSE: yes
-22:25:12:  *         SSE2: yes
-22:25:12:  *         SSE3: yes
-22:25:12:  *        SSE41: yes
-22:25:12:  *        SSE42: yes
-22:25:12:  *          MMX: yes
-22:25:12:  *       MMXEXT: yes
-22:25:12:  *        3DNOW: no
-22:25:12:  *     3DNOWEXT: no
-22:25:12:  *         CMOV: yes
-22:25:12:  *          TSC: yes
-22:25:12:  *INVARIANT TSC: yes
-22:25:12:  *          FPU: yes
-22:25:12:  *          PRO: yes
-22:25:12:  *           HT: no
-22:25:12: -------------------------
-22:25:12: D3D9 : Subsystem Initialising
-22:25:12: Registering ResourceManager for type Texture
-22:25:12: Registering ResourceManager for type GpuProgram
-22:25:12: ***************************************
-22:25:12: *** D3D9 : Subsystem Initialised OK ***
-22:25:12: ***************************************
-22:25:12: D3D9RenderSystem::_createRenderWindow "tadPole", 1280x720 windowed  miscParams: externalWindowHandle=1181548 
-22:25:12: D3D9 : Created D3D9 Rendering Window 'tadPole' : 1280x720, 32bpp
-22:25:12: D3D9 : WARNING - disabling VSync in windowed mode can cause timing issues at lower frame rates, turn VSync on if you observe this problem.
-22:25:12: D3D9: Vertex texture format supported - PF_L8
-22:25:12: D3D9: Vertex texture format supported - PF_L16
-22:25:12: D3D9: Vertex texture format supported - PF_A8
-22:25:12: D3D9: Vertex texture format supported - PF_A4L4
-22:25:12: D3D9: Vertex texture format supported - PF_BYTE_LA
-22:25:12: D3D9: Vertex texture format supported - PF_R5G6B5
-22:25:12: D3D9: Vertex texture format supported - PF_B5G6R5
-22:25:12: D3D9: Vertex texture format supported - PF_A4R4G4B4
-22:25:12: D3D9: Vertex texture format supported - PF_A1R5G5B5
-22:25:12: D3D9: Vertex texture format supported - PF_A8R8G8B8
-22:25:12: D3D9: Vertex texture format supported - PF_A8B8G8R8
-22:25:12: D3D9: Vertex texture format supported - PF_B8G8R8A8
-22:25:12: D3D9: Vertex texture format supported - PF_A2R10G10B10
-22:25:12: D3D9: Vertex texture format supported - PF_A2B10G10R10
-22:25:12: D3D9: Vertex texture format supported - PF_DXT1
-22:25:12: D3D9: Vertex texture format supported - PF_DXT2
-22:25:12: D3D9: Vertex texture format supported - PF_DXT3
-22:25:12: D3D9: Vertex texture format supported - PF_DXT4
-22:25:12: D3D9: Vertex texture format supported - PF_DXT5
-22:25:12: D3D9: Vertex texture format supported - PF_FLOAT16_RGB
-22:25:12: D3D9: Vertex texture format supported - PF_FLOAT16_RGBA
-22:25:12: D3D9: Vertex texture format supported - PF_FLOAT32_RGB
-22:25:12: D3D9: Vertex texture format supported - PF_FLOAT32_RGBA
-22:25:12: D3D9: Vertex texture format supported - PF_X8R8G8B8
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8B8A8
-22:25:12: D3D9: Vertex texture format supported - PF_DEPTH
-22:25:12: D3D9: Vertex texture format supported - PF_SHORT_RGBA
-22:25:12: D3D9: Vertex texture format supported - PF_FLOAT16_R
-22:25:12: D3D9: Vertex texture format supported - PF_FLOAT32_R
-22:25:12: D3D9: Vertex texture format supported - PF_SHORT_GR
-22:25:12: D3D9: Vertex texture format supported - PF_FLOAT16_GR
-22:25:12: D3D9: Vertex texture format supported - PF_FLOAT32_GR
-22:25:12: D3D9: Vertex texture format supported - PF_SHORT_RGB
-22:25:12: D3D9: Vertex texture format supported - PF_PVRTC_RGB2
-22:25:12: D3D9: Vertex texture format supported - PF_PVRTC_RGBA2
-22:25:12: D3D9: Vertex texture format supported - PF_PVRTC_RGB4
-22:25:12: D3D9: Vertex texture format supported - PF_PVRTC_RGBA4
-22:25:12: D3D9: Vertex texture format supported - PF_PVRTC2_2BPP
-22:25:12: D3D9: Vertex texture format supported - PF_PVRTC2_4BPP
-22:25:12: D3D9: Vertex texture format supported - PF_R11G11B10_FLOAT
-22:25:12: D3D9: Vertex texture format supported - PF_R8_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8B8_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8B8A8_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R16_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R16G16_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R16G16B16_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R16G16B16A16_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R32_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R32G32_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R32G32B32_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R32G32B32A32_UINT
-22:25:12: D3D9: Vertex texture format supported - PF_R8_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8B8_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8B8A8_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R16_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R16G16_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R16G16B16_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R16G16B16A16_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R32_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R32G32_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R32G32B32_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R32G32B32A32_SINT
-22:25:12: D3D9: Vertex texture format supported - PF_R9G9B9E5_SHAREDEXP
-22:25:12: D3D9: Vertex texture format supported - PF_BC4_UNORM
-22:25:12: D3D9: Vertex texture format supported - PF_BC4_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_BC5_UNORM
-22:25:12: D3D9: Vertex texture format supported - PF_BC5_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_BC6H_UF16
-22:25:12: D3D9: Vertex texture format supported - PF_BC6H_SF16
-22:25:12: D3D9: Vertex texture format supported - PF_BC7_UNORM
-22:25:12: D3D9: Vertex texture format supported - PF_BC7_UNORM_SRGB
-22:25:12: D3D9: Vertex texture format supported - PF_R8
-22:25:12: D3D9: Vertex texture format supported - PF_RG8
-22:25:12: D3D9: Vertex texture format supported - PF_R8_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8B8_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_R8G8B8A8_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_R16_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_R16G16_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_R16G16B16_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_R16G16B16A16_SNORM
-22:25:12: D3D9: Vertex texture format supported - PF_ETC1_RGB8
-22:25:12: D3D9: Vertex texture format supported - PF_ETC2_RGB8
-22:25:12: D3D9: Vertex texture format supported - PF_ETC2_RGBA8
-22:25:12: D3D9: Vertex texture format supported - PF_ETC2_RGB8A1
-22:25:12: D3D9: Vertex texture format supported - PF_ATC_RGB
-22:25:12: D3D9: Vertex texture format supported - PF_ATC_RGBA_EXPLICIT_ALPHA
-22:25:12: D3D9: Vertex texture format supported - PF_ATC_RGBA_INTERPOLATED_ALPHA
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_4X4_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_5X4_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_5X5_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_6X5_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_6X6_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_8X5_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_8X6_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_8X8_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_10X5_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_10X6_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_10X8_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_10X10_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_12X10_LDR
-22:25:12: D3D9: Vertex texture format supported - PF_ASTC_RGBA_12X12_LDR
-22:25:12: RenderSystem capabilities
-22:25:12: -------------------------
-22:25:12: RenderSystem Name: Direct3D9 Rendering Subsystem
-22:25:12: GPU Vendor: intel
-22:25:12: Device Name: Monitor-1-Intel(R) HD Graphics 630
-22:25:12: Driver Version: 22.20.16.4749
-22:25:12:  * Fixed function pipeline: yes
-22:25:12:  * Anisotropic texture filtering: yes
-22:25:12:  * Cube mapping: yes
-22:25:12:  * Hardware stencil buffer: yes
-22:25:12:    - Stencil depth: 8
-22:25:12:    - Two sided stencil support: yes
-22:25:12:    - Wrap stencil values: yes
-22:25:12:  * 32-bit index buffers: yes
-22:25:12:  * Vertex programs: yes
-22:25:12:  * Number of floating-point constants for vertex programs: 256
-22:25:12:  * Number of integer constants for vertex programs: 16
-22:25:12:  * Number of boolean constants for vertex programs: 16
-22:25:12:  * Fragment programs: yes
-22:25:12:  * Number of floating-point constants for fragment programs: 224
-22:25:12:  * Number of integer constants for fragment programs: 16
-22:25:12:  * Number of boolean constants for fragment programs: 16
-22:25:12:  * Geometry programs: no
-22:25:12:  * Number of floating-point constants for geometry programs: 52685
-22:25:12:  * Number of integer constants for geometry programs: 52685
-22:25:12:  * Number of boolean constants for geometry programs: 52685
-22:25:12:  * Tessellation Hull programs: no
-22:25:12:  * Number of floating-point constants for tessellation hull programs: 52685
-22:25:12:  * Number of integer constants for tessellation hull programs: 52685
-22:25:12:  * Number of boolean constants for tessellation hull programs: 52685
-22:25:12:  * Tessellation Domain programs: no
-22:25:12:  * Number of floating-point constants for tessellation domain programs: 52685
-22:25:12:  * Number of integer constants for tessellation domain programs: 52685
-22:25:12:  * Number of boolean constants for tessellation domain programs: 52685
-22:25:12:  * Compute programs: no
-22:25:12:  * Number of floating-point constants for compute programs: 52685
-22:25:12:  * Number of integer constants for compute programs: 52685
-22:25:12:  * Number of boolean constants for compute programs: 52685
-22:25:12:  * Supported Shader Profiles: hlsl ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 ps_2_a ps_2_b ps_2_x ps_3_0 vs_1_1 vs_2_0 vs_2_a vs_2_x vs_3_0
-22:25:12:  * Texture Compression: yes
-22:25:12:    - DXT: yes
-22:25:12:    - VTC: no
-22:25:12:    - PVRTC: no
-22:25:12:    - ATC: no
-22:25:12:    - ETC1: no
-22:25:12:    - ETC2: no
-22:25:12:    - BC4/BC5: no
-22:25:12:    - BC6H/BC7: no
-22:25:12:    - ASTC: no
-22:25:12:    - Mipmaps for compressed formats: yes
-22:25:12:  * Hardware Occlusion Query: yes
-22:25:12:  * User clip planes: yes
-22:25:12:  * VET_UBYTE4 vertex element type: yes
-22:25:12:  * Infinite far plane projection: yes
-22:25:12:  * Hardware render-to-texture: yes
-22:25:12:  * Floating point textures: yes
-22:25:12:  * Non-power-of-two textures: yes
-22:25:12:  * 1d textures: yes
-22:25:12:  * Volume textures: yes
-22:25:12:  * Multiple Render Targets: 4
-22:25:12:    - With different bit depths: yes
-22:25:12:  * Point Sprites: yes
-22:25:12:  * Hardware Gamma: no
-22:25:12:  * Extended point parameters: yes
-22:25:12:  * Max Point Size: 256
-22:25:12:  * Vertex texture fetch: yes
-22:25:12:  * Number of world matrices: 0
-22:25:12:  * Number of texture units: 8
-22:25:12:  * Stencil buffer depth: 8
-22:25:12:  * Number of vertex blend matrices: 0
-22:25:12:    - Max vertex textures: 4
-22:25:12:    - Vertex textures shared: no
-22:25:12:  * Render to Vertex Buffer : no
-22:25:12:  * Hardware Atomic Counters: no
-22:25:12:  * DirectX per stage constants: yes
-22:25:12: DefaultWorkQueue('Root') initialising on thread main.
-22:25:12: Particle Renderer Type 'billboard' registered
-22:25:12: SceneManagerFactory for type 'BspSceneManager' registered.
-22:25:12: Registering ResourceManager for type BspLevel
-22:25:12: SceneManagerFactory for type 'PCZSceneManager' registered.
-22:25:12: MovableObjectFactory for type 'PCZLight' registered.
-22:25:12: MovableObjectFactory for type 'Portal' registered.
-22:25:12: MovableObjectFactory for type 'AntiPortal' registered.
-22:25:12: PCZone Factory Type 'ZoneType_Octree' registered
-22:25:12: SceneManagerFactory for type 'OctreeSceneManager' registered.
-22:25:12: Parsing scripts for resource group Autodetect
-22:25:12: Finished parsing scripts for resource group Autodetect
-22:25:12: Creating resources for group Autodetect
-22:25:12: All done
-22:25:12: Parsing scripts for resource group General
-22:25:12: Parsing script DualQuaternion.program
-22:25:12: Invalid target for D3D11 shader 'Ogre/DualQuaternionHardwareSkinningTwoWeightsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/DualQuaternionHardwareSkinningTwoWeightsTwoPhaseHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/DualQuaternionHardwareSkinningTwoWeightsShadowCasterHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/DualQuaternionHardwareSkinningTwoWeightsTwoPhaseShadowCasterHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Parsing script Examples.program
-22:25:12: Invalid target for D3D11 shader 'Ogre/BasicVertexPrograms/AmbientOneTextureHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/BasicFragmentPrograms/DiffuseOneTextureHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/BasicFragmentPrograms/PassthroughFpHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/HardwareSkinningTwoWeightsShadowCasterHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/HardwareSkinningTwoWeightsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/HardwareSkinningFourWeightsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/HardwareMorphAnimationHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/HardwarePoseAnimationHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/HardwareMorphAnimationWithNormalsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/HardwarePoseAnimationWithNormalsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Parsing script Instancing.program
-22:25:12: Invalid target for D3D11 shader 'Ogre/Instancing_hlsl_ps' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/Instancing/shadow_caster_hlsl_ps' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:12: Parsing script StdQuad_vp.program
-22:25:12: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_Tex2_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_Tex2a_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_Tex3_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_Tex4_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Parsing script SdkTrays.material
-22:25:12: Parsing script OgreProfiler.material
-22:25:12: Parsing script AdaptivePNTrianglesTessellation.material
-22:25:12: Invalid target for D3D11 shader 'Ogre/AmbientNoTessellation_vs' - 'vs_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/AmbientNoTessellation_ps' - 'ps_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PerLightNoTessellation_vs' - 'vs_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PerLightNoTessellation_ps' - 'ps_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/simple_tessellation_vs' - 'vs_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/simple_tessellation_hs' - 'hs_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/simple_tessellation_ds' - 'ds_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/simple_tessellation_ps' - 'ps_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptive_tessellation_hs' - 'hs_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptivePNTriangles_tessellation_vs' - 'vs_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptivePNTriangles_tessellation_hs' - 'hs_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptivePNTriangles_tessellation_ds' - 'ds_5_0'
-22:25:12: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptivePNTriangles_tessellation_ps' - 'ps_5_0'
-22:25:12: Parsing script ASCII.material
-22:25:12: Parsing script AtomicCounters.material
-22:25:12: Parsing script BlackAndWhite.material
-22:25:12: Parsing script Bloom2.material
-22:25:12: Invalid target for D3D11 shader 'Blur_vs40_hlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'BlurV_ps40_hlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'BlurH_ps40_hlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'Bloom2_ps40_hlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:12: Invalid target for D3D11 shader 'BrightBloom2_ps40_hlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:12: Parsing script CompositorDemo.material
-22:25:12: Parsing script Compute.material
-22:25:12: Parsing script DepthShadowmap.material
-22:25:13: Parsing script Dither.material
-22:25:13: Parsing script DOF.material
-22:25:13: Parsing script DualQuaternion.material
-22:25:13: Parsing script Embossed.material
-22:25:13: Parsing script Examples-Advanced.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/CelShadingVPhlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Examples/TextureArrayPShlsl4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Compiler error: object unsupported by render system in Examples-Advanced.material(945): , Shader name: Examples/TextureArrayPSasm
-22:25:13: Parsing script Examples-DynTex.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/Dyn_Text_VS_HLSL' - 'vs_5_0 vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Dyn_Text_PS_HLSL' - 'ps_5_0 ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Parsing script Examples-Water.material
-22:25:13: Parsing script Examples.material
-22:25:13: Invalid target for D3D11 shader 'Examples/ShowUV_pHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Examples/ShowUVdir3D_pHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Parsing script facial.material
-22:25:13: Parsing script FluidSim.material
-22:25:13: Parsing script Glass.material
-22:25:13: Parsing script Hair.material
-22:25:13: Parsing script Halftone.material
-22:25:13: Parsing script hdr.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/downscale2x2LuminenceHLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/downscale3x3HLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/downscale3x3brightpassHLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/bloomHLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/finaltonemappingHLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Parsing script HeatVision.material
-22:25:13: Invalid target for D3D11 shader 'Fury/HeatVision/HeatCaster_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Fury/HeatVision/HeatCaster_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Fury/HeatVision/ColdCaster_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Fury/HeatVision/ColdCaster_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Fury/HeatVision/LightToHeat_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Fury/HeatVision/Blur_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Parsing script Hurt.material
-22:25:13: Parsing script HWInstancing.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/HWBasic_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/HWBasic/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Parsing script HW_VTFInstancing.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/shadow_caster_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/shadow_caster_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Parsing script HW_VTF_LUTInstancing.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_LUT_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/LUT/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_LUT_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/LUT/shadow_caster_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_LUT_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/LUT/shadow_caster_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Parsing script instancing.material
-22:25:13: Invalid target for D3D11 shader 'Instancinghlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'InstancingShadowCasterhlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Parsing script InstancingMisc.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/Instancing/Misc_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Parsing script Invert.material
-22:25:13: Parsing script Island.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/Island/FullScreenQuadVS' - 'vs_4_0'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Island/RefractionDepthManualResolvePS1' - 'ps_4_0'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Island/RefractionDepthManualResolvePS2' - 'ps_4_0'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Island/RefractionDepthManualResolvePS4' - 'ps_4_0'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Island/MainToBackBufferPS' - 'ps_4_0'
-22:25:13: Parsing script IsoSurf.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/Isosurf/SampleFieldVS_HLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Isosurf/TessellateTetrahedraGS_HLSL' - 'gs_4_0'
-22:25:13: Invalid target for D3D11 shader 'Ogre/Isosurf/MetaballPS_HLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Parsing script Laplace.material
-22:25:13: Parsing script MotionBlur.material
-22:25:13: Invalid target for D3D11 shader 'Ogre/Compositor/Combine_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Parsing script MRTtest.material
-22:25:13: Parsing script NightVision.material
-22:25:13: Parsing script Ocean.material
-22:25:13: Invalid target for D3D11 shader 'HLSL4/OceanVS' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'HLSL4/OceanFS' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'HLSL4/Ocean2VS' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:13: Invalid target for D3D11 shader 'HLSL4/Ocean2FS' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:14: Parsing script OffsetMapping.material
-22:25:14: Parsing script Ogre.material
-22:25:14: Parsing script OldMovie.material
-22:25:14: Invalid target for D3D11 shader 'Ogre/Compositor/OldMovie_HLSL_FP' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:14: Parsing script OldTV.material
-22:25:14: Invalid target for D3D11 shader 'Ogre/Compositor/OldTV_FPHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:14: Parsing script ParticleGS.material
-22:25:14: Invalid target for D3D11 shader 'Ogre/ParticleGS/GenerateVShlsl4' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/ParticleGS/GenerateGShlsl4' - 'gs_4_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/ParticleGS/DisplayVShlsl4' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/ParticleGS/DisplayGShlsl4' - 'gs_4_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/ParticleGS/DisplayPShlsl4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:14: Parsing script Penguin.material
-22:25:14: Parsing script Posterize.material
-22:25:14: Parsing script pssm.material
-22:25:14: Parsing script RadialBlur.material
-22:25:14: Parsing script RasterizationOrder.material
-22:25:14: Parsing script RZR-002.material
-22:25:14: Parsing script ShaderInstancing.material
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/ShaderBased_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/ShaderBased_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/shadow_caster_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/ShaderBased_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/shadow_caster_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Parsing script ShaderSystem.material
-22:25:14: Parsing script shadows.material
-22:25:14: Invalid target for D3D11 shader 'Ogre/shadow/caster/depth/vphlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/shadow/caster/depth/fphlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/shadow/receiver/depth/pssm3/vphlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/shadow/receiver/depth/pssm3/fphlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
-22:25:14: Parsing script SharpenEdges.material
-22:25:14: Parsing script sibenik.material
-22:25:14: Parsing script smoke.material
-22:25:14: Parsing script Swizzle.material
-22:25:14: Parsing script TerrainTessellation.material
-22:25:14: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/InitializationVS' - 'vs_4_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/InitializationPS' - 'ps_4_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/GradientPS' - 'ps_4_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/HwTessellationPassThruVS' - 'vs_5_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/VTFDisplacementVS' - 'vs_4_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/TerrainScreenspaceLODHS' - 'hs_5_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/TerrainDisplaceDS' - 'ds_5_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/SmoothShadePS' - 'ps_5_0'
-22:25:14: Parsing script Tessellation.material
-22:25:14: Invalid target for D3D11 shader 'Ogre/Tessellation/VertexProgramHLSL' - 'vs_5_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Tessellation/TessellationHullProgramHLSL' - 'hs_5_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Tessellation/TessellationDomainProgramHLSL' - 'ds_5_0'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Tessellation/FragmentProgramHLSL' - 'ps_5_0'
-22:25:14: Parsing script Tiling.material
-22:25:14: Parsing script VarianceShadowmap.material
-22:25:14: Parsing script VTFInstancing.material
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/VTF_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/VTF_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/shadow_caster_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/VTF_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/shadow_caster_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
-22:25:14: Parsing script Material.001.material
-22:25:14: Parsing script Material.002.material
-22:25:14: Parsing script Material.003.material
-22:25:14: Parsing script Material.004.material
-22:25:14: Parsing script RomanBath.material
-22:25:14: Parsing script Sinbad.material
-22:25:14: Parsing script Examples.compositor
-22:25:14: Parsing script SdkTrays.fontdef
-22:25:14: Parsing script SdkTrays.overlay
-22:25:14: Texture: sdk_cursor.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
-22:25:14: Texture: sdk_tray.png: Loading 1 faces(PF_A8R8G8B8,64x64x1) Internal format is PF_A8R8G8B8,64x64x1.
-22:25:14: Texture: sdk_button_up.png: Loading 1 faces(PF_A8R8G8B8,128x32x1) Internal format is PF_A8R8G8B8,128x32x1.
-22:25:14: Texture: sdk_text_box.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
-22:25:14: Texture: sdk_mini_tray.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
-22:25:14: Texture: sdk_track.png: Loading 1 faces(PF_A8R8G8B8,16x32x1) Internal format is PF_A8R8G8B8,16x32x1.
-22:25:14: Texture: sdk_handle.png: Loading 1 faces(PF_A8R8G8B8,16x16x1) Internal format is PF_A8R8G8B8,16x16x1.
-22:25:14: Texture: sdk_mini_text_box.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
-22:25:14: Texture: sdk_label.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
-22:25:14: Texture: sdk_separator.png: Loading 1 faces(PF_A8R8G8B8,64x16x1) Internal format is PF_A8R8G8B8,64x16x1.
-22:25:14: Texture: sdk_logo.png: Loading 1 faces(PF_A8R8G8B8,128x64x1) Internal format is PF_A8R8G8B8,128x64x1.
-22:25:14: Texture: sdk_shade.png: Loading 1 faces(PF_A8R8G8B8,64x48x1) Internal format is PF_A8R8G8B8,64x48x1.
-22:25:14: Texture: sdk_frame.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
-22:25:14: Texture: sdk_mini_text_box_over.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
-22:25:14: Texture: sdk_pulse.png: Loading 1 faces(PF_R8G8B8,8x1x1) Internal format is PF_X8R8G8B8,8x1x1.
-22:25:14: Finished parsing scripts for resource group General
-22:25:14: Creating resources for group General
-22:25:14: All done
-22:25:14: Parsing scripts for resource group Internal
-22:25:14: Finished parsing scripts for resource group Internal
-22:25:14: Creating resources for group Internal
-22:25:14: All done
-22:25:15: Mesh: Loading penguin.mesh.
-22:25:15: Skeleton: Loading penguin.skeleton
-22:25:15: WARNING: penguin.mesh is an older format ([MeshSerializer_v1.8]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
-22:25:15: Texture: penguin.jpg: Loading 1 faces(PF_R8G8B8,512x512x1) Internal format is PF_X8R8G8B8,512x512x1.
-22:25:15: InvalidParametersException: Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\taylo\Documents\Code\Libraries\OGRE-1.10.9\OgreMain\src\OgreGpuProgramParams.cpp (line 2194)
-22:25:15: InvalidParametersException: Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\taylo\Documents\Code\Libraries\OGRE-1.10.9\OgreMain\src\OgreGpuProgramParams.cpp (line 2194)
-22:25:15: Texture: spot_shadow_fade.png: Loading 1 faces(PF_R8G8B8,128x128x1) Internal format is PF_X8R8G8B8,128x128x1.
-22:25:15: Font SdkTrays/Value using texture size 512x256
-22:25:15: Texture: SdkTrays/ValueTexture: Loading 1 faces(PF_BYTE_LA,512x256x1) with 0 generated mipmaps from Image. Internal format is PF_BYTE_LA,512x256x1.
+19:00:22: Creating resource group General
+19:00:22: Creating resource group Internal
+19:00:22: Creating resource group Autodetect
+19:00:22: SceneManagerFactory for type 'DefaultSceneManager' registered.
+19:00:22: Registering ResourceManager for type Material
+19:00:22: Registering ResourceManager for type Mesh
+19:00:22: Registering ResourceManager for type Skeleton
+19:00:22: MovableObjectFactory for type 'ParticleSystem' registered.
+19:00:22: ArchiveFactory for archive type FileSystem registered.
+19:00:22: ArchiveFactory for archive type Zip registered.
+19:00:22: ArchiveFactory for archive type EmbeddedZip registered.
+19:00:22: DDS codec registering
+19:00:22: FreeImage version: 3.15.3
+19:00:22: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+19:00:22: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic
+19:00:22: ETC codec registering
+19:00:22: Registering ResourceManager for type HighLevelGpuProgram
+19:00:22: Registering ResourceManager for type Compositor
+19:00:22: MovableObjectFactory for type 'Entity' registered.
+19:00:22: MovableObjectFactory for type 'Light' registered.
+19:00:22: MovableObjectFactory for type 'BillboardSet' registered.
+19:00:22: MovableObjectFactory for type 'ManualObject' registered.
+19:00:22: MovableObjectFactory for type 'BillboardChain' registered.
+19:00:22: MovableObjectFactory for type 'RibbonTrail' registered.
+19:00:22: Loading library .\RenderSystem_Direct3D9_d
+19:00:22: Installing plugin: D3D9 RenderSystem
+19:00:22: D3D9 : Direct3D9 Rendering Subsystem created.
+19:00:22: D3D9: Driver Detection Starts
+19:00:22: D3D9: Driver Detection Ends
+19:00:22: Plugin successfully installed
+19:00:22: Loading library .\RenderSystem_Direct3D11_d
+19:00:23: Installing plugin: D3D11 RenderSystem
+19:00:23: D3D11: Direct3D11 Rendering Subsystem created.
+19:00:23: D3D11: Driver Detection Starts
+19:00:23: D3D11: "Intel(R) HD Graphics 630"
+19:00:23: D3D11: "NVIDIA GeForce GTX 1060"
+19:00:23: D3D11: "Microsoft Basic Render Driver (software)"
+19:00:23: D3D11: Driver Detection Ends
+19:00:24: Plugin successfully installed
+19:00:24: Loading library .\RenderSystem_GL_d
+19:00:25: Installing plugin: GL RenderSystem
+19:00:25: OpenGL Rendering Subsystem created.
+19:00:25: Plugin successfully installed
+19:00:25: Loading library .\RenderSystem_GL3Plus_d
+19:00:26: Installing plugin: GL 3+ RenderSystem
+19:00:26: OpenGL 3+ Rendering Subsystem created.
+19:00:26: Plugin successfully installed
+19:00:26: Loading library .\Plugin_ParticleFX_d
+19:00:27: Installing plugin: ParticleFX
+19:00:27: Particle Emitter Type 'Point' registered
+19:00:27: Particle Emitter Type 'Box' registered
+19:00:27: Particle Emitter Type 'Ellipsoid' registered
+19:00:27: Particle Emitter Type 'Cylinder' registered
+19:00:27: Particle Emitter Type 'Ring' registered
+19:00:27: Particle Emitter Type 'HollowEllipsoid' registered
+19:00:27: Particle Affector Type 'LinearForce' registered
+19:00:27: Particle Affector Type 'ColourFader' registered
+19:00:27: Particle Affector Type 'ColourFader2' registered
+19:00:27: Particle Affector Type 'ColourImage' registered
+19:00:27: Particle Affector Type 'ColourInterpolator' registered
+19:00:27: Particle Affector Type 'Scaler' registered
+19:00:27: Particle Affector Type 'Rotator' registered
+19:00:27: Particle Affector Type 'DirectionRandomiser' registered
+19:00:27: Particle Affector Type 'DeflectorPlane' registered
+19:00:27: Plugin successfully installed
+19:00:27: Loading library .\Plugin_BSPSceneManager_d
+19:00:27: Installing plugin: BSP Scene Manager
+19:00:27: Plugin successfully installed
+19:00:27: Loading library .\Plugin_CgProgramManager_d
+19:00:29: Installing plugin: Cg Program Manager
+19:00:29: Plugin successfully installed
+19:00:29: Loading library .\Plugin_PCZSceneManager_d
+19:00:30: Installing plugin: Portal Connected Zone Scene Manager
+19:00:30: PCZone Factory Type 'ZoneType_Default' registered
+19:00:30: Plugin successfully installed
+19:00:30: Loading library .\Plugin_OctreeZone_d
+19:00:30: Installing plugin: Octree Zone Factory
+19:00:30: Plugin successfully installed
+19:00:30: Loading library .\Plugin_OctreeSceneManager_d
+19:00:31: Installing plugin: Octree Scene Manager
+19:00:31: Plugin successfully installed
+19:00:31: *-*-* OGRE Initialising
+19:00:31: *-*-* Version 1.10.10 (Xalafu)
+19:00:31: OverlayElementFactory for type Panel registered.
+19:00:31: OverlayElementFactory for type BorderPanel registered.
+19:00:31: OverlayElementFactory for type TextArea registered.
+19:00:31: Registering ResourceManager for type Font
+19:00:31: D3D11: RenderSystem Option: Allow NVPerfHUD = No
+19:00:31: D3D11: RenderSystem Option: Backbuffer Count = Auto
+19:00:31: D3D11: RenderSystem Option: Driver type = Hardware
+19:00:31: D3D11: RenderSystem Option: FSAA = 1
+19:00:31: D3D11: RenderSystem Option: Floating-point mode = Fastest
+19:00:31: D3D11: RenderSystem Option: Full Screen = Yes
+19:00:31: D3D11: RenderSystem Option: Information Queue Exceptions Bottom Level = Info (exception on any message)
+19:00:31: D3D11: RenderSystem Option: Max Requested Feature Levels = 11.0
+19:00:31: D3D11: RenderSystem Option: Min Requested Feature Levels = 9.1
+19:00:31: D3D11: RenderSystem Option: Rendering Device = (default)
+19:00:31: D3D11: RenderSystem Option: VSync = No
+19:00:31: D3D11: RenderSystem Option: VSync Interval = 1
+19:00:31: D3D11: RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
+19:00:31: D3D11: RenderSystem Option: sRGB Gamma Conversion = No
+19:00:31: D3D9 : RenderSystem Option: Allow DirectX9Ex = No
+19:00:31: D3D9 : RenderSystem Option: Allow NVPerfHUD = No
+19:00:31: D3D9 : RenderSystem Option: Backbuffer Count = Auto
+19:00:31: D3D9 : RenderSystem Option: FSAA = 0
+19:00:31: D3D9 : RenderSystem Option: Fixed Pipeline Enabled = Yes
+19:00:31: D3D9 : RenderSystem Option: Floating-point mode = Fastest
+19:00:31: D3D9 : RenderSystem Option: Full Screen = Yes
+19:00:31: D3D9 : RenderSystem Option: Multi device memory hint = Use minimum system memory
+19:00:31: D3D9 : RenderSystem Option: Rendering Device = Monitor-1-Intel(R) HD Graphics 630
+19:00:31: D3D9 : RenderSystem Option: Resource Creation Policy = Create on all devices
+19:00:31: D3D9 : RenderSystem Option: Use Multihead = Auto
+19:00:31: D3D9 : RenderSystem Option: VSync = No
+19:00:31: D3D9 : RenderSystem Option: VSync Interval = 1
+19:00:31: D3D9 : RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
+19:00:31: D3D9 : RenderSystem Option: sRGB Gamma Conversion = No
+19:00:31: Added resource location '../../resources/packs' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/thumbnails' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/packs/profiler.zip' of type 'Zip' to resource group 'General'
+19:00:31: Added resource location '../../resources' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/programs' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/programs/Cg' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/programs/GLSL' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/programs/GLSL120' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/programs/GLSL150' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/programs/GLSL400' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/programs/GLSLES' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/programs/HLSL' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/scripts' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/textures' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/materials/textures/nvidia' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/models' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/HLMS' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/CustomMeshs' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/CustomMeshs/orientation_arrows' of type 'FileSystem' to resource group 'General'
+19:00:31: Added resource location '../../resources/packs/cubemap.zip' of type 'Zip' to resource group 'General'
+19:00:31: Added resource location '../../resources/packs/cubemapsJS.zip' of type 'Zip' to resource group 'General'
+19:00:31: Added resource location '../../resources/packs/dragon.zip' of type 'Zip' to resource group 'General'
+19:00:32: Added resource location '../../resources/packs/fresneldemo.zip' of type 'Zip' to resource group 'General'
+19:00:32: Added resource location '../../resources/packs/ogretestmap.zip' of type 'Zip' to resource group 'General'
+19:00:32: Added resource location '../../resources/packs/ogredance.zip' of type 'Zip' to resource group 'General'
+19:00:32: Added resource location '../../resources/packs/Sinbad.zip' of type 'Zip' to resource group 'General'
+19:00:32: Added resource location '../../resources/packs/skybox.zip' of type 'Zip' to resource group 'General'
+19:00:33: Added resource location '../../resources/volumeTerrain/volumeTerrainBig.zip' of type 'Zip' to resource group 'General'
+19:00:33: CPU Identifier & Features
+19:00:33: -------------------------
+19:00:33:  *   CPU ID: GenuineIntel: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+19:00:33:  *          SSE: yes
+19:00:33:  *         SSE2: yes
+19:00:33:  *         SSE3: yes
+19:00:33:  *        SSE41: yes
+19:00:33:  *        SSE42: yes
+19:00:33:  *          MMX: yes
+19:00:33:  *       MMXEXT: yes
+19:00:33:  *        3DNOW: no
+19:00:33:  *     3DNOWEXT: no
+19:00:33:  *         CMOV: yes
+19:00:33:  *          TSC: yes
+19:00:33:  *INVARIANT TSC: yes
+19:00:33:  *          FPU: yes
+19:00:33:  *          PRO: yes
+19:00:33:  *           HT: no
+19:00:33: -------------------------
+19:00:33: D3D9 : Subsystem Initialising
+19:00:33: Registering ResourceManager for type Texture
+19:00:33: Registering ResourceManager for type GpuProgram
+19:00:33: ***************************************
+19:00:33: *** D3D9 : Subsystem Initialised OK ***
+19:00:33: ***************************************
+19:00:33: D3D9RenderSystem::_createRenderWindow "tadPole", 1280x720 windowed  miscParams: externalWindowHandle=460840 
+19:00:33: D3D9 : Created D3D9 Rendering Window 'tadPole' : 1280x720, 32bpp
+19:00:33: D3D9 : WARNING - disabling VSync in windowed mode can cause timing issues at lower frame rates, turn VSync on if you observe this problem.
+19:00:33: D3D9: Vertex texture format supported - PF_L8
+19:00:33: D3D9: Vertex texture format supported - PF_L16
+19:00:33: D3D9: Vertex texture format supported - PF_A8
+19:00:33: D3D9: Vertex texture format supported - PF_A4L4
+19:00:33: D3D9: Vertex texture format supported - PF_BYTE_LA
+19:00:33: D3D9: Vertex texture format supported - PF_R5G6B5
+19:00:33: D3D9: Vertex texture format supported - PF_B5G6R5
+19:00:33: D3D9: Vertex texture format supported - PF_A4R4G4B4
+19:00:33: D3D9: Vertex texture format supported - PF_A1R5G5B5
+19:00:33: D3D9: Vertex texture format supported - PF_A8R8G8B8
+19:00:33: D3D9: Vertex texture format supported - PF_A8B8G8R8
+19:00:33: D3D9: Vertex texture format supported - PF_B8G8R8A8
+19:00:33: D3D9: Vertex texture format supported - PF_A2R10G10B10
+19:00:33: D3D9: Vertex texture format supported - PF_A2B10G10R10
+19:00:33: D3D9: Vertex texture format supported - PF_DXT1
+19:00:33: D3D9: Vertex texture format supported - PF_DXT2
+19:00:33: D3D9: Vertex texture format supported - PF_DXT3
+19:00:33: D3D9: Vertex texture format supported - PF_DXT4
+19:00:33: D3D9: Vertex texture format supported - PF_DXT5
+19:00:33: D3D9: Vertex texture format supported - PF_FLOAT16_RGB
+19:00:33: D3D9: Vertex texture format supported - PF_FLOAT16_RGBA
+19:00:33: D3D9: Vertex texture format supported - PF_FLOAT32_RGB
+19:00:33: D3D9: Vertex texture format supported - PF_FLOAT32_RGBA
+19:00:33: D3D9: Vertex texture format supported - PF_X8R8G8B8
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8B8A8
+19:00:33: D3D9: Vertex texture format supported - PF_DEPTH
+19:00:33: D3D9: Vertex texture format supported - PF_SHORT_RGBA
+19:00:33: D3D9: Vertex texture format supported - PF_FLOAT16_R
+19:00:33: D3D9: Vertex texture format supported - PF_FLOAT32_R
+19:00:33: D3D9: Vertex texture format supported - PF_SHORT_GR
+19:00:33: D3D9: Vertex texture format supported - PF_FLOAT16_GR
+19:00:33: D3D9: Vertex texture format supported - PF_FLOAT32_GR
+19:00:33: D3D9: Vertex texture format supported - PF_SHORT_RGB
+19:00:33: D3D9: Vertex texture format supported - PF_PVRTC_RGB2
+19:00:33: D3D9: Vertex texture format supported - PF_PVRTC_RGBA2
+19:00:33: D3D9: Vertex texture format supported - PF_PVRTC_RGB4
+19:00:33: D3D9: Vertex texture format supported - PF_PVRTC_RGBA4
+19:00:33: D3D9: Vertex texture format supported - PF_PVRTC2_2BPP
+19:00:33: D3D9: Vertex texture format supported - PF_PVRTC2_4BPP
+19:00:33: D3D9: Vertex texture format supported - PF_R11G11B10_FLOAT
+19:00:33: D3D9: Vertex texture format supported - PF_R8_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8B8_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8B8A8_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R16_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R16G16_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R16G16B16_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R16G16B16A16_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R32_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R32G32_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R32G32B32_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R32G32B32A32_UINT
+19:00:33: D3D9: Vertex texture format supported - PF_R8_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8B8_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8B8A8_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R16_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R16G16_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R16G16B16_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R16G16B16A16_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R32_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R32G32_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R32G32B32_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R32G32B32A32_SINT
+19:00:33: D3D9: Vertex texture format supported - PF_R9G9B9E5_SHAREDEXP
+19:00:33: D3D9: Vertex texture format supported - PF_BC4_UNORM
+19:00:33: D3D9: Vertex texture format supported - PF_BC4_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_BC5_UNORM
+19:00:33: D3D9: Vertex texture format supported - PF_BC5_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_BC6H_UF16
+19:00:33: D3D9: Vertex texture format supported - PF_BC6H_SF16
+19:00:33: D3D9: Vertex texture format supported - PF_BC7_UNORM
+19:00:33: D3D9: Vertex texture format supported - PF_BC7_UNORM_SRGB
+19:00:33: D3D9: Vertex texture format supported - PF_R8
+19:00:33: D3D9: Vertex texture format supported - PF_RG8
+19:00:33: D3D9: Vertex texture format supported - PF_R8_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8B8_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_R8G8B8A8_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_R16_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_R16G16_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_R16G16B16_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_R16G16B16A16_SNORM
+19:00:33: D3D9: Vertex texture format supported - PF_ETC1_RGB8
+19:00:33: D3D9: Vertex texture format supported - PF_ETC2_RGB8
+19:00:33: D3D9: Vertex texture format supported - PF_ETC2_RGBA8
+19:00:33: D3D9: Vertex texture format supported - PF_ETC2_RGB8A1
+19:00:33: D3D9: Vertex texture format supported - PF_ATC_RGB
+19:00:33: D3D9: Vertex texture format supported - PF_ATC_RGBA_EXPLICIT_ALPHA
+19:00:33: D3D9: Vertex texture format supported - PF_ATC_RGBA_INTERPOLATED_ALPHA
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_4X4_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_5X4_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_5X5_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_6X5_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_6X6_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_8X5_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_8X6_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_8X8_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_10X5_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_10X6_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_10X8_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_10X10_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_12X10_LDR
+19:00:33: D3D9: Vertex texture format supported - PF_ASTC_RGBA_12X12_LDR
+19:00:33: RenderSystem capabilities
+19:00:33: -------------------------
+19:00:33: RenderSystem Name: Direct3D9 Rendering Subsystem
+19:00:33: GPU Vendor: intel
+19:00:33: Device Name: Monitor-1-Intel(R) HD Graphics 630
+19:00:33: Driver Version: 22.20.16.4749
+19:00:33:  * Fixed function pipeline: yes
+19:00:33:  * Anisotropic texture filtering: yes
+19:00:33:  * Cube mapping: yes
+19:00:33:  * Hardware stencil buffer: yes
+19:00:33:    - Stencil depth: 8
+19:00:33:    - Two sided stencil support: yes
+19:00:33:    - Wrap stencil values: yes
+19:00:33:  * 32-bit index buffers: yes
+19:00:33:  * Vertex programs: yes
+19:00:33:  * Number of floating-point constants for vertex programs: 256
+19:00:33:  * Number of integer constants for vertex programs: 16
+19:00:33:  * Number of boolean constants for vertex programs: 16
+19:00:33:  * Fragment programs: yes
+19:00:33:  * Number of floating-point constants for fragment programs: 224
+19:00:33:  * Number of integer constants for fragment programs: 16
+19:00:33:  * Number of boolean constants for fragment programs: 16
+19:00:33:  * Geometry programs: no
+19:00:33:  * Number of floating-point constants for geometry programs: 52685
+19:00:33:  * Number of integer constants for geometry programs: 52685
+19:00:33:  * Number of boolean constants for geometry programs: 52685
+19:00:33:  * Tessellation Hull programs: no
+19:00:33:  * Number of floating-point constants for tessellation hull programs: 52685
+19:00:33:  * Number of integer constants for tessellation hull programs: 52685
+19:00:33:  * Number of boolean constants for tessellation hull programs: 52685
+19:00:33:  * Tessellation Domain programs: no
+19:00:33:  * Number of floating-point constants for tessellation domain programs: 52685
+19:00:33:  * Number of integer constants for tessellation domain programs: 52685
+19:00:33:  * Number of boolean constants for tessellation domain programs: 52685
+19:00:33:  * Compute programs: no
+19:00:33:  * Number of floating-point constants for compute programs: 52685
+19:00:33:  * Number of integer constants for compute programs: 52685
+19:00:33:  * Number of boolean constants for compute programs: 52685
+19:00:33:  * Supported Shader Profiles: hlsl ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 ps_2_a ps_2_b ps_2_x ps_3_0 vs_1_1 vs_2_0 vs_2_a vs_2_x vs_3_0
+19:00:33:  * Texture Compression: yes
+19:00:33:    - DXT: yes
+19:00:33:    - VTC: no
+19:00:33:    - PVRTC: no
+19:00:33:    - ATC: no
+19:00:33:    - ETC1: no
+19:00:33:    - ETC2: no
+19:00:33:    - BC4/BC5: no
+19:00:33:    - BC6H/BC7: no
+19:00:33:    - ASTC: no
+19:00:33:    - Mipmaps for compressed formats: yes
+19:00:33:  * Hardware Occlusion Query: yes
+19:00:33:  * User clip planes: yes
+19:00:33:  * VET_UBYTE4 vertex element type: yes
+19:00:33:  * Infinite far plane projection: yes
+19:00:33:  * Hardware render-to-texture: yes
+19:00:33:  * Floating point textures: yes
+19:00:33:  * Non-power-of-two textures: yes
+19:00:33:  * 1d textures: yes
+19:00:33:  * Volume textures: yes
+19:00:33:  * Multiple Render Targets: 4
+19:00:33:    - With different bit depths: yes
+19:00:33:  * Point Sprites: yes
+19:00:33:  * Hardware Gamma: no
+19:00:33:  * Extended point parameters: yes
+19:00:33:  * Max Point Size: 256
+19:00:33:  * Vertex texture fetch: yes
+19:00:33:  * Number of world matrices: 0
+19:00:33:  * Number of texture units: 8
+19:00:33:  * Stencil buffer depth: 8
+19:00:33:  * Number of vertex blend matrices: 0
+19:00:33:    - Max vertex textures: 4
+19:00:33:    - Vertex textures shared: no
+19:00:33:  * Render to Vertex Buffer : no
+19:00:33:  * Hardware Atomic Counters: no
+19:00:33:  * DirectX per stage constants: yes
+19:00:33: DefaultWorkQueue('Root') initialising on thread main.
+19:00:33: Particle Renderer Type 'billboard' registered
+19:00:33: SceneManagerFactory for type 'BspSceneManager' registered.
+19:00:33: Registering ResourceManager for type BspLevel
+19:00:33: SceneManagerFactory for type 'PCZSceneManager' registered.
+19:00:33: MovableObjectFactory for type 'PCZLight' registered.
+19:00:33: MovableObjectFactory for type 'Portal' registered.
+19:00:33: MovableObjectFactory for type 'AntiPortal' registered.
+19:00:33: PCZone Factory Type 'ZoneType_Octree' registered
+19:00:33: SceneManagerFactory for type 'OctreeSceneManager' registered.
+19:00:33: Parsing scripts for resource group Autodetect
+19:00:33: Finished parsing scripts for resource group Autodetect
+19:00:33: Creating resources for group Autodetect
+19:00:33: All done
+19:00:33: Parsing scripts for resource group General
+19:00:33: Parsing script DualQuaternion.program
+19:00:33: Invalid target for D3D11 shader 'Ogre/DualQuaternionHardwareSkinningTwoWeightsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/DualQuaternionHardwareSkinningTwoWeightsTwoPhaseHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/DualQuaternionHardwareSkinningTwoWeightsShadowCasterHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/DualQuaternionHardwareSkinningTwoWeightsTwoPhaseShadowCasterHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Parsing script Examples.program
+19:00:33: Invalid target for D3D11 shader 'Ogre/BasicVertexPrograms/AmbientOneTextureHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/BasicFragmentPrograms/DiffuseOneTextureHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/BasicFragmentPrograms/PassthroughFpHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/HardwareSkinningTwoWeightsShadowCasterHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/HardwareSkinningTwoWeightsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/HardwareSkinningFourWeightsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/HardwareMorphAnimationHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/HardwarePoseAnimationHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/HardwareMorphAnimationWithNormalsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/HardwarePoseAnimationWithNormalsHLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Parsing script Instancing.program
+19:00:33: Invalid target for D3D11 shader 'Ogre/Instancing_hlsl_ps' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/Instancing/shadow_caster_hlsl_ps' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:33: Parsing script StdQuad_vp.program
+19:00:33: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_Tex2_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_Tex2a_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_Tex3_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Ogre/Compositor/StdQuad_Tex4_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Parsing script SdkTrays.material
+19:00:33: Parsing script OgreProfiler.material
+19:00:33: Parsing script AdaptivePNTrianglesTessellation.material
+19:00:33: Invalid target for D3D11 shader 'Ogre/AmbientNoTessellation_vs' - 'vs_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/AmbientNoTessellation_ps' - 'ps_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PerLightNoTessellation_vs' - 'vs_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PerLightNoTessellation_ps' - 'ps_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/simple_tessellation_vs' - 'vs_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/simple_tessellation_hs' - 'hs_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/simple_tessellation_ds' - 'ds_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/simple_tessellation_ps' - 'ps_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptive_tessellation_hs' - 'hs_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptivePNTriangles_tessellation_vs' - 'vs_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptivePNTriangles_tessellation_hs' - 'hs_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptivePNTriangles_tessellation_ds' - 'ds_5_0'
+19:00:33: Invalid target for D3D11 shader 'Ogre/PNTrianglesTessellation/adaptivePNTriangles_tessellation_ps' - 'ps_5_0'
+19:00:33: Parsing script ASCII.material
+19:00:33: Parsing script AtomicCounters.material
+19:00:33: Parsing script BlackAndWhite.material
+19:00:33: Parsing script Bloom2.material
+19:00:33: Invalid target for D3D11 shader 'Blur_vs40_hlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'BlurV_ps40_hlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'BlurH_ps40_hlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'Bloom2_ps40_hlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:33: Invalid target for D3D11 shader 'BrightBloom2_ps40_hlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:34: Parsing script CompositorDemo.material
+19:00:34: Parsing script Compute.material
+19:00:34: Parsing script DepthShadowmap.material
+19:00:34: Parsing script Dither.material
+19:00:34: Parsing script DOF.material
+19:00:34: Parsing script DualQuaternion.material
+19:00:34: Parsing script Embossed.material
+19:00:34: Parsing script Examples-Advanced.material
+19:00:34: Invalid target for D3D11 shader 'Ogre/CelShadingVPhlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:34: Invalid target for D3D11 shader 'Examples/TextureArrayPShlsl4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:34: Compiler error: object unsupported by render system in Examples-Advanced.material(945): , Shader name: Examples/TextureArrayPSasm
+19:00:34: Parsing script Examples-DynTex.material
+19:00:34: Invalid target for D3D11 shader 'Ogre/Dyn_Text_VS_HLSL' - 'vs_5_0 vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:34: Invalid target for D3D11 shader 'Ogre/Dyn_Text_PS_HLSL' - 'ps_5_0 ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:34: Parsing script Examples-Water.material
+19:00:34: Parsing script Examples.material
+19:00:34: Invalid target for D3D11 shader 'Examples/ShowUV_pHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:34: Invalid target for D3D11 shader 'Examples/ShowUVdir3D_pHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:34: Parsing script facial.material
+19:00:34: Parsing script FluidSim.material
+19:00:34: Parsing script Glass.material
+19:00:34: Parsing script Hair.material
+19:00:34: Parsing script Halftone.material
+19:00:34: Parsing script hdr.material
+19:00:35: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/downscale2x2LuminenceHLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/downscale3x3HLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/downscale3x3brightpassHLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/bloomHLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Compositor/HDR/finaltonemappingHLSL_fp4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Parsing script HeatVision.material
+19:00:35: Invalid target for D3D11 shader 'Fury/HeatVision/HeatCaster_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Fury/HeatVision/HeatCaster_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Fury/HeatVision/ColdCaster_HLSL_vp' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Fury/HeatVision/ColdCaster_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Fury/HeatVision/LightToHeat_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Fury/HeatVision/Blur_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Parsing script Hurt.material
+19:00:35: Parsing script HWInstancing.material
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/HWBasic_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/HWBasic/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Parsing script HW_VTFInstancing.material
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/shadow_caster_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/shadow_caster_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Parsing script HW_VTF_LUTInstancing.material
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_LUT_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/LUT/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_LUT_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/LUT/shadow_caster_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/HW_VTF_LUT_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/HW/LUT/shadow_caster_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Parsing script instancing.material
+19:00:35: Invalid target for D3D11 shader 'Instancinghlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'InstancingShadowCasterhlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Parsing script InstancingMisc.material
+19:00:35: Invalid target for D3D11 shader 'Ogre/Instancing/Misc_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Parsing script Invert.material
+19:00:35: Parsing script Island.material
+19:00:35: Invalid target for D3D11 shader 'Ogre/Island/FullScreenQuadVS' - 'vs_4_0'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Island/RefractionDepthManualResolvePS1' - 'ps_4_0'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Island/RefractionDepthManualResolvePS2' - 'ps_4_0'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Island/RefractionDepthManualResolvePS4' - 'ps_4_0'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Island/MainToBackBufferPS' - 'ps_4_0'
+19:00:35: Parsing script IsoSurf.material
+19:00:35: Invalid target for D3D11 shader 'Ogre/Isosurf/SampleFieldVS_HLSL' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Isosurf/TessellateTetrahedraGS_HLSL' - 'gs_4_0'
+19:00:35: Invalid target for D3D11 shader 'Ogre/Isosurf/MetaballPS_HLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Parsing script Laplace.material
+19:00:35: Parsing script MotionBlur.material
+19:00:35: Invalid target for D3D11 shader 'Ogre/Compositor/Combine_HLSL_fp' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Parsing script MRTtest.material
+19:00:35: Parsing script NightVision.material
+19:00:35: Parsing script Ocean.material
+19:00:35: Invalid target for D3D11 shader 'HLSL4/OceanVS' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'HLSL4/OceanFS' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'HLSL4/Ocean2VS' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:35: Invalid target for D3D11 shader 'HLSL4/Ocean2FS' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:36: Parsing script OffsetMapping.material
+19:00:36: Parsing script Ogre.material
+19:00:36: Parsing script OldMovie.material
+19:00:36: Invalid target for D3D11 shader 'Ogre/Compositor/OldMovie_HLSL_FP' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:36: Parsing script OldTV.material
+19:00:36: Invalid target for D3D11 shader 'Ogre/Compositor/OldTV_FPHLSL' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:36: Parsing script ParticleGS.material
+19:00:36: Invalid target for D3D11 shader 'Ogre/ParticleGS/GenerateVShlsl4' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/ParticleGS/GenerateGShlsl4' - 'gs_4_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/ParticleGS/DisplayVShlsl4' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/ParticleGS/DisplayGShlsl4' - 'gs_4_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/ParticleGS/DisplayPShlsl4' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:36: Parsing script Penguin.material
+19:00:36: Parsing script Posterize.material
+19:00:36: Parsing script pssm.material
+19:00:36: Parsing script RadialBlur.material
+19:00:36: Parsing script RasterizationOrder.material
+19:00:36: Parsing script RZR-002.material
+19:00:36: Parsing script ShaderInstancing.material
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/ShaderBased_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/ShaderBased_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/shadow_caster_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/ShaderBased_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/shadow_caster_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Parsing script ShaderSystem.material
+19:00:36: Parsing script shadows.material
+19:00:36: Invalid target for D3D11 shader 'Ogre/shadow/caster/depth/vphlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/shadow/caster/depth/fphlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/shadow/receiver/depth/pssm3/vphlsl' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/shadow/receiver/depth/pssm3/fphlsl' - 'ps_4_0 ps_4_0_level_9_1 ps_4_0_level_9_3'
+19:00:36: Parsing script SharpenEdges.material
+19:00:36: Parsing script sibenik.material
+19:00:36: Parsing script smoke.material
+19:00:36: Parsing script Swizzle.material
+19:00:36: Parsing script TerrainTessellation.material
+19:00:36: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/InitializationVS' - 'vs_4_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/InitializationPS' - 'ps_4_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/GradientPS' - 'ps_4_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/HwTessellationPassThruVS' - 'vs_5_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/VTFDisplacementVS' - 'vs_4_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/TerrainScreenspaceLODHS' - 'hs_5_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/TerrainDisplaceDS' - 'ds_5_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/TerrainTessellation/SmoothShadePS' - 'ps_5_0'
+19:00:36: Parsing script Tessellation.material
+19:00:36: Invalid target for D3D11 shader 'Ogre/Tessellation/VertexProgramHLSL' - 'vs_5_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Tessellation/TessellationHullProgramHLSL' - 'hs_5_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Tessellation/TessellationDomainProgramHLSL' - 'ds_5_0'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Tessellation/FragmentProgramHLSL' - 'ps_5_0'
+19:00:36: Parsing script Tiling.material
+19:00:36: Parsing script VarianceShadowmap.material
+19:00:36: Parsing script VTFInstancing.material
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/VTF_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/shadow_caster_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/VTF_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/shadow_caster_dq_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/VTF_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Invalid target for D3D11 shader 'Ogre/Instancing/VTF/shadow_caster_dq_two_weights_hlsl_vs' - 'vs_4_0 vs_4_0_level_9_1 vs_4_0_level_9_3'
+19:00:36: Parsing script Material.001.material
+19:00:37: Parsing script Material.002.material
+19:00:37: Parsing script Material.003.material
+19:00:37: Parsing script Material.004.material
+19:00:37: Parsing script RomanBath.material
+19:00:37: Parsing script Sinbad.material
+19:00:37: Parsing script Examples.compositor
+19:00:37: Parsing script SdkTrays.fontdef
+19:00:37: Parsing script SdkTrays.overlay
+19:00:37: Texture: sdk_cursor.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
+19:00:37: Texture: sdk_tray.png: Loading 1 faces(PF_A8R8G8B8,64x64x1) Internal format is PF_A8R8G8B8,64x64x1.
+19:00:37: Texture: sdk_button_up.png: Loading 1 faces(PF_A8R8G8B8,128x32x1) Internal format is PF_A8R8G8B8,128x32x1.
+19:00:37: Texture: sdk_text_box.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
+19:00:37: Texture: sdk_mini_tray.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
+19:00:37: Texture: sdk_track.png: Loading 1 faces(PF_A8R8G8B8,16x32x1) Internal format is PF_A8R8G8B8,16x32x1.
+19:00:37: Texture: sdk_handle.png: Loading 1 faces(PF_A8R8G8B8,16x16x1) Internal format is PF_A8R8G8B8,16x16x1.
+19:00:37: Texture: sdk_mini_text_box.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
+19:00:37: Texture: sdk_label.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
+19:00:37: Texture: sdk_separator.png: Loading 1 faces(PF_A8R8G8B8,64x16x1) Internal format is PF_A8R8G8B8,64x16x1.
+19:00:37: Texture: sdk_logo.png: Loading 1 faces(PF_A8R8G8B8,128x64x1) Internal format is PF_A8R8G8B8,128x64x1.
+19:00:37: Texture: sdk_shade.png: Loading 1 faces(PF_A8R8G8B8,64x48x1) Internal format is PF_A8R8G8B8,64x48x1.
+19:00:37: Texture: sdk_frame.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
+19:00:37: Texture: sdk_mini_text_box_over.png: Loading 1 faces(PF_A8R8G8B8,32x32x1) Internal format is PF_A8R8G8B8,32x32x1.
+19:00:37: Texture: sdk_pulse.png: Loading 1 faces(PF_R8G8B8,8x1x1) Internal format is PF_X8R8G8B8,8x1x1.
+19:00:37: Finished parsing scripts for resource group General
+19:00:37: Creating resources for group General
+19:00:37: All done
+19:00:37: Parsing scripts for resource group Internal
+19:00:37: Finished parsing scripts for resource group Internal
+19:00:37: Creating resources for group Internal
+19:00:37: All done
+19:00:39: Mesh: Loading barrel.mesh.
+19:00:39: WARNING: barrel.mesh is an older format ([MeshSerializer_v1.8]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
+19:00:40: Texture: RustyBarrel.png: Loading 1 faces(PF_R8G8B8,256x256x1) Internal format is PF_X8R8G8B8,256x256x1.
+19:00:40: Mesh: Loading penguin.mesh.
+19:00:40: Skeleton: Loading penguin.skeleton
+19:00:40: WARNING: penguin.mesh is an older format ([MeshSerializer_v1.8]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
+19:00:40: Texture: penguin.jpg: Loading 1 faces(PF_R8G8B8,512x512x1) Internal format is PF_X8R8G8B8,512x512x1.
+19:00:40: InvalidParametersException: Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\taylo\Documents\Code\Libraries\OGRE-1.10.9\OgreMain\src\OgreGpuProgramParams.cpp (line 2194)
+19:00:40: InvalidParametersException: Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\taylo\Documents\Code\Libraries\OGRE-1.10.9\OgreMain\src\OgreGpuProgramParams.cpp (line 2194)
+19:00:40: Texture: spot_shadow_fade.png: Loading 1 faces(PF_R8G8B8,128x128x1) Internal format is PF_X8R8G8B8,128x128x1.
+19:00:40: Font SdkTrays/Value using texture size 512x256
+19:00:40: Texture: SdkTrays/ValueTexture: Loading 1 faces(PF_BYTE_LA,512x256x1) with 0 generated mipmaps from Image. Internal format is PF_BYTE_LA,512x256x1.

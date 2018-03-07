@@ -112,10 +112,6 @@ void tadPole::Scene::load(std::string fileName)
 
 			GameObject * gameObject = this->createGameObject(groupName, name);
 			PYTHON_SCRIPT_MANAGER->createPythonGameObject(gameObject);
-			gameObject->active = active;
-			gameObject->setPosition(worldPosition);
-			gameObject->setOrientation(worldOrientationAxis, worldOrientationAngle);
-			gameObject->setScale(worldScale);
 
 			const rapidjson::Value & components = (*gameObject_it)["components"];
 			for (rapidjson::Value::ConstValueIterator component_it = components.Begin(); component_it != components.End(); ++component_it)
@@ -130,20 +126,20 @@ void tadPole::Scene::load(std::string fileName)
 				{
 					std::string scriptName = (*component_it)["scriptName"].GetString();
 					PythonScriptComponent * scriptComponent = gameObject->createPythonScriptComponent(scriptName);
-					PYTHON_SCRIPT_MANAGER->createPythonScriptComponent(scriptComponent, scriptName);
+					scriptComponent->executeCallback("OnStart");
 				}
 				else if (type == "CAMERA")
 				{
-					const rapidjson::Value & directionArray = (*component_it)["direction"];
-					glm::vec3 direction(directionArray[0].GetFloat(), directionArray[1].GetFloat(), directionArray[2].GetFloat());
 					float nearClipDistance = (*component_it)["nearClipDistance"].GetFloat();
 					float farClipDistance = (*component_it)["farClipDistance"].GetFloat();
-					std::string viewport = (*component_it)["viewport"].GetString();
+					int viewport = (*component_it)["viewport"].GetInt();
 
 					CameraComponent * cameraComponent = gameObject->createCameraComponent();
-					cameraComponent->setDirection(direction);
 					cameraComponent->setClipDistances(nearClipDistance, farClipDistance);
-					cameraComponent->setViewport(viewport);
+					if (viewport >= 0)
+					{
+						cameraComponent->setViewport(viewport);
+					}
 				}
 				else if (type == "LIGHT")
 				{
@@ -165,6 +161,11 @@ void tadPole::Scene::load(std::string fileName)
 					lightComponent->setSpotlightAngles(spotlightInnerAngle, spotlightOuterAngle);
 				}
 			}
+
+			gameObject->active = active;
+			gameObject->setPosition(worldPosition);
+			gameObject->setOrientation(worldOrientationAxis.x, worldOrientationAxis.y, worldOrientationAxis.z, worldOrientationAngle);
+			gameObject->setScale(worldScale);
 
 			if (parentName != "ROOT")
 			{

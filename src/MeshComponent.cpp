@@ -41,3 +41,13 @@ std::string tadPole::MeshComponent::serialize()
 
 	return result.str();
 }
+
+void tadPole::MeshComponent::setPyObject(PyTadPole_MeshComponent * pyObject)
+{
+	this->pyObject = pyObject;
+}
+
+tadPole::PyTadPole_MeshComponent * tadPole::MeshComponent::getPyObject()
+{
+	return this->pyObject;
+}

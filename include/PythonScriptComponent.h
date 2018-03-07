@@ -26,7 +26,7 @@ namespace tadPole
 		std::string scriptName;
 		std::string className;
 		PyObject * tadPoleModule;
-		PyObject * pyObject;
+		PyTadPole_ScriptComponent * pyObject;
 
 
 		// @@@@@ CONSTRUCTORS / DESTRUCTOR @@@@@
@@ -96,7 +96,7 @@ namespace tadPole
 		* Sets the PyObject of this PythonScriptComponent.
 		*/
 		void setPyObject(
-			PyObject * pyObject	///< the new PyObject for this PythonScriptComponent.
+			PyTadPole_ScriptComponent * pyObject	///< the new PyObject for this PythonScriptComponent.
 		);
 
 		// @@@@@ PUBLIC METHODS @@@@@

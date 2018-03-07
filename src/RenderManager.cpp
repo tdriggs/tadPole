@@ -3,6 +3,7 @@
 
 #include "Exception.h"
 #include "Application.h"
+#include "CameraComponent.h"
 
 tadPole::RenderManager::RenderManager(HWND windowHandle) : Singleton<RenderManager>()
 {
@@ -33,7 +34,7 @@ tadPole::RenderManager::RenderManager(HWND windowHandle) : Singleton<RenderManag
 	this->sceneManager = this->root->createSceneManager();
 	this->sceneManager->addRenderQueueListener(this->overlaySystem);
 	this->sceneManager->setShadowTechnique(Ogre::SHADOWTYPE_STENCIL_MODULATIVE);
-	this->sceneManager->setAmbientLight(Ogre::ColourValue(0.8f, 0.8f, 0.8f));
+	this->sceneManager->setAmbientLight(Ogre::ColourValue(0.0f, 0.0f, 0.0f));
 
 	// To move to SceneView class after Big Picture
 	this->mainCamera = this->sceneManager->createCamera("MAIN");

@@ -56,14 +56,14 @@ PyObject * tadPole::PythonScriptComponent::getModule()
 	return this->tadPoleModule;
 }
 
-void tadPole::PythonScriptComponent::setPyObject(PyObject * pyObject)
+void tadPole::PythonScriptComponent::setPyObject(PyTadPole_ScriptComponent * pyObject)
 {
 	this->pyObject = pyObject;
 }
 
 void tadPole::PythonScriptComponent::executeCallback(std::string callbackName)
 {
-	if (PyObject_HasAttrString(this->pyObject, callbackName.c_str()))
+	if (PyObject_HasAttrString((PyObject *)this->pyObject, callbackName.c_str()))
 	{
 		PyObject * result = PyObject_CallMethodObjArgs((PyObject *)this->pyObject, PyUnicode_FromString(callbackName.c_str()), NULL);
 
@@ -86,7 +86,7 @@ void tadPole::PythonScriptComponent::executeCallback(std::string callbackName)
 					PyObject * newLine = PyUnicode_FromString("\n");
 					PyObject * tracebackString = PyUnicode_Join(newLine, tracebackInformation);
 
-					LOG_MANAGER->log(PyUnicode_AsUTF8(tracebackString));
+					EXCEPTION(PyUnicode_AsUTF8(tracebackString));
 
 					Py_DECREF(tracebackModule);
 					Py_DECREF(tracebackInformation);
@@ -98,13 +98,13 @@ void tadPole::PythonScriptComponent::executeCallback(std::string callbackName)
 					if (type)
 					{
 						PyObject* stringRepresentation = PyObject_Repr(type);
-						LOG_MANAGER->log(PyUnicode_AsUTF8(stringRepresentation));
+						EXCEPTION(PyUnicode_AsUTF8(stringRepresentation));
 						Py_DecRef(stringRepresentation);
 					}
 					if (value)
 					{
 						PyObject* stringRepresentation = PyObject_Repr(value);
-						LOG_MANAGER->log(PyUnicode_AsUTF8(stringRepresentation));
+						EXCEPTION(PyUnicode_AsUTF8(stringRepresentation));
 						Py_DecRef(stringRepresentation);
 					}
 				}

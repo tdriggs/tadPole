@@ -6,6 +6,9 @@
 #include "Exception.h"
 
 extern PyTypeObject pyTadPole_GameObject_type;
+extern PyTypeObject pyTadPole_MeshComponent_type;
+extern PyTypeObject pyTadPole_CameraComponent_type;
+extern PyTypeObject pyTadPole_LightComponent_type;
 
 tadPole::PythonScriptManager::PythonScriptManager()
 {
@@ -46,7 +49,7 @@ void tadPole::PythonScriptManager::executeScript(std::string scriptName)
 			PyObject * newLine = PyUnicode_FromString("\n");
 			PyObject * tracebackString = PyUnicode_Join(newLine, tracebackInformation);
 
-			LOG_MANAGER->log(PyUnicode_AsUTF8(tracebackString));
+			EXCEPTION(PyUnicode_AsUTF8(tracebackString));
 
 			Py_DECREF(tracebackModule);
 			Py_DECREF(tracebackInformation);
@@ -58,13 +61,13 @@ void tadPole::PythonScriptManager::executeScript(std::string scriptName)
 			if (type)
 			{
 				PyObject* stringRepresentation = PyObject_Repr(type);
-				LOG_MANAGER->log(PyUnicode_AsUTF8(stringRepresentation));
+				EXCEPTION(PyUnicode_AsUTF8(stringRepresentation));
 				Py_DecRef(stringRepresentation);
 			}
 			if (value)
 			{
 				PyObject* stringRepresentation = PyObject_Repr(value);
-				LOG_MANAGER->log(PyUnicode_AsUTF8(stringRepresentation));
+				EXCEPTION(PyUnicode_AsUTF8(stringRepresentation));
 				Py_DecRef(stringRepresentation);
 			}
 		}
@@ -75,9 +78,19 @@ void tadPole::PythonScriptManager::executeScript(std::string scriptName)
 	}
 }
 
-void tadPole::PythonScriptManager::createPythonScriptComponent(PythonScriptComponent * scriptComponent, std::string scriptName)
+void tadPole::PythonScriptManager::createPythonGameObject(tadPole::GameObject * gameObject)
 {
-	PYTHON_SCRIPT_MANAGER->executeScript(scriptName);
+	PyObject * pyObject = PyObject_CallObject((PyObject *)(&pyTadPole_GameObject_type), NULL);
+	PyTadPole_GameObject * result = (PyTadPole_GameObject *)pyObject;
+	Py_INCREF(result);
+
+	result->gameObject = gameObject;
+	gameObject->setPyObject(result);
+}
+
+void tadPole::PythonScriptManager::createPythonScriptComponent(PythonScriptComponent * scriptComponent)
+{
+	PYTHON_SCRIPT_MANAGER->executeScript(scriptComponent->getScriptName());
 	if (!PyObject_HasAttrString(scriptComponent->getModule(), scriptComponent->getClassName().c_str()))
 	{
 		EXCEPTION("Python class does not exist: " + scriptComponent->getClassName());
@@ -88,17 +101,35 @@ void tadPole::PythonScriptManager::createPythonScriptComponent(PythonScriptCompo
 	Py_INCREF(result);
 
 	((PyTadPole_ScriptComponent *)result)->scriptComponent = scriptComponent;
-	scriptComponent->setPyObject((PyObject *)result);
-
-	scriptComponent->executeCallback("OnStart");
+	scriptComponent->setPyObject((PyTadPole_ScriptComponent *)result);
 }
 
-void tadPole::PythonScriptManager::createPythonGameObject(tadPole::GameObject * gameObject)
+void tadPole::PythonScriptManager::createPythonMeshComponent(MeshComponent * meshComponent)
 {
-	PyObject * pyObject = PyObject_CallObject((PyObject *)(&pyTadPole_GameObject_type), NULL);
-	PyTadPole_GameObject * result = (PyTadPole_GameObject *)pyObject;
+	PyObject * pyObject = PyObject_CallObject((PyObject *)(&pyTadPole_MeshComponent_type), NULL);
+	PyTadPole_MeshComponent * result = (PyTadPole_MeshComponent *)pyObject;
 	Py_INCREF(result);
 
-	result->gameObject = gameObject;
-	gameObject->setPyObject(result);
+	result->meshComponent = meshComponent;
+	meshComponent->setPyObject(result);
+}
+
+void tadPole::PythonScriptManager::createPythonCameraComponent(CameraComponent * cameraComponent)
+{
+	PyObject * pyObject = PyObject_CallObject((PyObject *)(&pyTadPole_CameraComponent_type), NULL);
+	PyTadPole_CameraComponent * result = (PyTadPole_CameraComponent *)pyObject;
+	Py_INCREF(result);
+
+	result->cameraComponent = cameraComponent;
+	cameraComponent->setPyObject(result);
+}
+
+void tadPole::PythonScriptManager::createPythonLightComponent(LightComponent * lightComponent)
+{
+	PyObject * pyObject = PyObject_CallObject((PyObject *)(&pyTadPole_LightComponent_type), NULL);
+	PyTadPole_LightComponent * result = (PyTadPole_LightComponent *)pyObject;
+	Py_INCREF(result);
+
+	result->lightComponent = lightComponent;
+	lightComponent->setPyObject(result);
 }

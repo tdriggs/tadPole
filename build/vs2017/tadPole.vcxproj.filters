@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Python Interface">
       <UniqueIdentifier>{a4e7f806-0044-46f1-86a3-3031161fdeeb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Python Interface\Object Interfaces">
+      <UniqueIdentifier>{3ab5008d-d9fb-4e66-b776-23d6aee0d599}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Python Interface\Object Interface">
+      <UniqueIdentifier>{fc060f24-67f5-460b-a957-7cf9f23529ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Application.cpp">
@@ -90,14 +96,23 @@
     <ClCompile Include="..\..\src\PyTadPoleModule.cpp">
       <Filter>Source Files\Python Interface</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\PyTadPoleGameObject.cpp">
+    <ClCompile Include="..\..\src\PythonScriptComponent.cpp">
       <Filter>Source Files\Python Interface</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\PyTadPoleScriptComponent.cpp">
-      <Filter>Source Files\Python Interface</Filter>
+      <Filter>Source Files\Python Interface\Object Interfaces</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\PythonScriptComponent.cpp">
-      <Filter>Source Files\Python Interface</Filter>
+    <ClCompile Include="..\..\src\PyTadPoleGameObject.cpp">
+      <Filter>Source Files\Python Interface\Object Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PyTadPoleLightComponent.cpp">
+      <Filter>Source Files\Python Interface\Object Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PyTadPoleMeshComponent.cpp">
+      <Filter>Source Files\Python Interface\Object Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PyTadPoleCameraComponent.cpp">
+      <Filter>Source Files\Python Interface\Object Interfaces</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -167,14 +182,23 @@
     <ClInclude Include="..\..\include\PyTadPoleModule.h">
       <Filter>Header Files\Python Interface</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\PyTadPoleGameObject.h">
+    <ClInclude Include="..\..\include\PythonScriptComponent.h">
       <Filter>Header Files\Python Interface</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\PyTadPoleScriptComponent.h">
-      <Filter>Header Files\Python Interface</Filter>
+      <Filter>Header Files\Python Interface\Object Interface</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\PythonScriptComponent.h">
-      <Filter>Header Files\Python Interface</Filter>
+    <ClInclude Include="..\..\include\PyTadPoleGameObject.h">
+      <Filter>Header Files\Python Interface\Object Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\PyTadPoleMeshComponent.h">
+      <Filter>Header Files\Python Interface\Object Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\PyTadPoleCameraComponent.h">
+      <Filter>Header Files\Python Interface\Object Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\PyTadPoleLightComponent.h">
+      <Filter>Header Files\Python Interface\Object Interface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

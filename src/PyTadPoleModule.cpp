@@ -5,6 +5,9 @@
 
 extern PyTypeObject pyTadPole_GameObject_type;
 extern PyTypeObject pyTadPole_ScriptComponent_type;
+extern PyTypeObject pyTadPole_MeshComponent_type;
+extern PyTypeObject pyTadPole_LightComponent_type;
+extern PyTypeObject pyTadPole_CameraComponent_type;
 
 PyMethodDef pyTadPoleModuleFunctions[] =
 {
@@ -47,11 +50,29 @@ PyMODINIT_FUNC tadPole::PyInit_tadPole()
 	{
 		return NULL;
 	}
+	if (PyType_Ready(&pyTadPole_MeshComponent_type) < 0)
+	{
+		return NULL;
+	}
+	if (PyType_Ready(&pyTadPole_LightComponent_type) < 0)
+	{
+		return NULL;
+	}
+	if (PyType_Ready(&pyTadPole_CameraComponent_type) < 0)
+	{
+		return NULL;
+	}
 
 	Py_INCREF(&pyTadPole_GameObject_type);
 	PyModule_AddObject(module, "GameObject", (PyObject*)&pyTadPole_GameObject_type);
 	Py_INCREF(&pyTadPole_ScriptComponent_type);
 	PyModule_AddObject(module, "ScriptComponent", (PyObject*)&pyTadPole_ScriptComponent_type);
+	Py_INCREF(&pyTadPole_MeshComponent_type);
+	PyModule_AddObject(module, "MeshComponent", (PyObject*)&pyTadPole_MeshComponent_type);
+	Py_INCREF(&pyTadPole_LightComponent_type);
+	PyModule_AddObject(module, "LightComponent", (PyObject*)&pyTadPole_LightComponent_type);
+	Py_INCREF(&pyTadPole_CameraComponent_type);
+	PyModule_AddObject(module, "CameraComponent", (PyObject*)&pyTadPole_CameraComponent_type);
 
 	return module;
 }

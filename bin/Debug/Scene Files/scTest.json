@@ -1,39 +1,97 @@
 {
 	"groups": [
 		{
-			"groupName": "No Group", 
-			"gameObjects": [
-				
-			]
-		},{
-			"groupName": "SCENEVIEW", 
+			"groupName": "Cameras", 
 			"gameObjects": [
 				{
-					"name": "SCENECAMERA",
+					"name": "mainCamera",
 					"parentName": "ROOT",
 					"active": true,
-					"worldPosition": [0, 5, 40],
-					"worldOrientation": [0, 0, 1, 0],
+					"worldPosition": [0, 30, 100],
+					"worldOrientation": [0, 0, 0.984808, -0.173648],
 					"worldScale": [1, 1, 1],
 					"components": [
 						{
 							"type": "CAMERA",
-							"direction": [0, 0, -1],
 							"nearClipDistance": 0.1,
 							"farClipDistance": 1000,
-							"viewport": "MAIN"
+							"viewport": 0
 						}
 					]
 				}
 			]
 		},{
-			"groupName": "SceneComponents", 
+			"groupName": "Floor", 
+			"gameObjects": [
+				{
+					"name": "floor",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [0, -65, 0],
+					"worldOrientation": [0, 0, 1, 0],
+					"worldScale": [20, 20, 20],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "barrel.mesh"
+						}
+					]
+				}
+			]
+		},{
+			"groupName": "Lights", 
+			"gameObjects": [
+				{
+					"name": "frontLight",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [0, 30, 100],
+					"worldOrientation": [0, 0, 1, 0],
+					"worldScale": [1, 1, 1],
+					"components": [
+						{
+							"type": "LIGHT",
+							"lightType": "SPOT",
+							"direction": [0, 0, -1],
+							"diffuseColor": [255, 255, 255],
+							"specularColor": [255, 255, 255],
+							"spotlightInnerAngle": 0.523599,
+							"spotlightOuterAngle": 0.698132
+						}
+					]
+				},{
+					"name": "topLight",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [0, 0, 0],
+					"worldOrientation": [0, 0, 1, 0],
+					"worldScale": [1, 1, 1],
+					"components": [
+						{
+							"type": "LIGHT",
+							"lightType": "DIRECTIONAL",
+							"direction": [0, -1, 0],
+							"diffuseColor": [255, 255, 255],
+							"specularColor": [255, 255, 255],
+							"spotlightInnerAngle": 0.523599,
+							"spotlightOuterAngle": 0.698132
+						}
+					]
+				}
+			]
+		},{
+			"groupName": "No Group", 
+			"gameObjects": [
+				
+			]
+		},{
+			"groupName": "penguins", 
 			"gameObjects": [
 				{
 					"name": "sc0",
 					"parentName": "ROOT",
 					"active": true,
-					"worldPosition": [20, 0, 0],
+					"worldPosition": [0, 0, 45],
 					"worldOrientation": [0, 0, 1, 0],
 					"worldScale": [0.15, 0.15, 0.15],
 					"components": [
@@ -49,8 +107,8 @@
 					"name": "sc1",
 					"parentName": "ROOT",
 					"active": true,
-					"worldPosition": [10, 0, 0],
-					"worldOrientation": [0, 0, 1, 0],
+					"worldPosition": [13.9058, 0, 42.7975],
+					"worldOrientation": [0.156434, 0, 0.987688, 0],
 					"worldScale": [0.15, 0.15, 0.15],
 					"components": [
 						{
@@ -65,8 +123,8 @@
 					"name": "sc2",
 					"parentName": "ROOT",
 					"active": true,
-					"worldPosition": [0, 0, 0],
-					"worldOrientation": [0, 0, 1, 0],
+					"worldPosition": [26.4503, 0, 36.4058],
+					"worldOrientation": [0.309017, 0, 0.951057, 0],
 					"worldScale": [0.15, 0.15, 0.15],
 					"components": [
 						{
@@ -81,8 +139,8 @@
 					"name": "sc3",
 					"parentName": "ROOT",
 					"active": true,
-					"worldPosition": [-10, 0, 0],
-					"worldOrientation": [0, 0, 1, 0],
+					"worldPosition": [36.4058, 0, 26.4503],
+					"worldOrientation": [0.45399, 0, 0.891007, 0],
 					"worldScale": [0.15, 0.15, 0.15],
 					"components": [
 						{
@@ -97,8 +155,248 @@
 					"name": "sc4",
 					"parentName": "ROOT",
 					"active": true,
-					"worldPosition": [-20, 0, 0],
-					"worldOrientation": [0, 0, 1, 0],
+					"worldPosition": [42.7975, 0, 13.9058],
+					"worldOrientation": [0.587785, 0, 0.809017, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc5",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [45, 0, -3.8147e-06],
+					"worldOrientation": [0.707107, 0, 0.707107, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc6",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [42.7975, 0, -13.9058],
+					"worldOrientation": [0.809017, 0, 0.587785, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc7",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [36.4058, 0, -26.4503],
+					"worldOrientation": [0.891007, 0, 0.453991, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc8",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [26.4503, 0, -36.4058],
+					"worldOrientation": [0.951057, 0, 0.309017, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc9",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [13.9058, 0, -42.7975],
+					"worldOrientation": [0.987688, 0, 0.156434, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc10",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-3.93402e-06, 0, -45],
+					"worldOrientation": [1, 0, -4.37114e-08, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc11",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-13.9058, 0, -42.7975],
+					"worldOrientation": [0.987688, 0, -0.156434, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc12",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-26.4503, 0, -36.4058],
+					"worldOrientation": [0.951057, 0, -0.309017, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc13",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-36.4058, 0, -26.4503],
+					"worldOrientation": [0.891007, 0, -0.45399, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc14",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-42.7975, 0, -13.9058],
+					"worldOrientation": [0.809017, 0, -0.587785, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc15",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-45, 0, -3.8147e-06],
+					"worldOrientation": [0.707107, 0, -0.707107, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc16",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-42.7975, 0, 13.9058],
+					"worldOrientation": [0.587785, 0, -0.809017, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc17",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-36.4058, 0, 26.4503],
+					"worldOrientation": [0.453991, 0, -0.891007, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc18",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-26.4503, 0, 36.4058],
+					"worldOrientation": [0.309017, 0, -0.951057, 0],
+					"worldScale": [0.15, 0.15, 0.15],
+					"components": [
+						{
+							"type": "MESH",
+							"fileName": "penguin.mesh"
+						},{
+							"type": "SCRIPT",
+							"scriptName": "RandomPenguin.py"
+						}
+					]
+				},{
+					"name": "sc19",
+					"parentName": "ROOT",
+					"active": true,
+					"worldPosition": [-13.9058, 0, 42.7975],
+					"worldOrientation": [0.156434, 0, -0.987688, 0],
 					"worldScale": [0.15, 0.15, 0.15],
 					"components": [
 						{

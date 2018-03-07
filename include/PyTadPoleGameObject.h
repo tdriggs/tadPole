@@ -23,13 +23,13 @@ namespace tadPole
 
 	PyObject * pyTadPole_GameObject_createMeshComponent(PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs);
 
-	//PyObject * pyTadPole_GameObject_createCameraComponent(PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs);
+	PyObject * pyTadPole_GameObject_createCameraComponent(PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs);
 
-	//PyObject * pyTadPole_GameObject_createLightComponent(PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs);
+	PyObject * pyTadPole_GameObject_createLightComponent(PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs);
 
 	PyObject * pyTadPole_GameObject_getName(PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs);
 
-	//PyObject * pyTadPole_GameObject_getComponentCount(PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs);
+	// PyObject * pyTadPole_GameObject_getComponentCount(PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs);
 
 	PyObject * pyTadPole_GameObject_getLocalPosition(PyTadPole_GameObject * self, PyObject * args, PyObject * kwargs);
 

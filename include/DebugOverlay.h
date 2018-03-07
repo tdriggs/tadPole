@@ -6,8 +6,8 @@
 #include "Singleton.h"
 
 #define DEBUG_OVERLAY tadPole::DebugOverlay::getInstance()													///< Convienience macro for the singleton instance.
-#define DEBUG_MESSAGE_MAX_COUNT 15																			///< The maximum number of messages to be displayed.
-#define DEBUG_MESSAGE_PANEL_RELATIVE_HEIGHT 0.75f															///< The height of the debug message panel relative to the screen height.
+#define DEBUG_MESSAGE_MAX_COUNT 40																			///< The maximum number of messages to be displayed.
+#define DEBUG_MESSAGE_PANEL_RELATIVE_HEIGHT 1.0f															///< The height of the debug message panel relative to the screen height.
 #define DEBUG_MESSAGE_PANEL_RELATIVE_WIDTH 0.2f																///< The width of the debug message panel relative to the screen width.
 #define DEBUG_MESSAGE_CHAR_HEIGHT (1.0f / DEBUG_MESSAGE_MAX_COUNT) * DEBUG_MESSAGE_PANEL_RELATIVE_HEIGHT	///< The height of the debug message panel characters.
 #define DEBUG_INFO_PANEL_RELATIVE_HEIGHT 0.1f																///< The height of the debug info panel relative to the screen height.
@@ -89,7 +89,8 @@ namespace tadPole
 			std::string name,					///< The name of the element to create.
 			std::string caption,				///< The display text of the element to create.
 			float relativeX,					///< The x value of the position of the element to create relative to the screen width.
-			float relativeY						///< The y value of the position of the element to create relative to the screen height.
+			float relativeY,					///< The y value of the position of the element to create relative to the screen height.
+			bool isMessage						///< Whether this text element will be going into the message queue.
 		);
 
 		/**

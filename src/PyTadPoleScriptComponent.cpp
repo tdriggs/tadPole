@@ -40,7 +40,7 @@ int tadPole::pyTadPole_ScriptComponent_init(PyTadPole_ScriptComponent * self, Py
 
 		PythonScriptComponent * scriptComponent = gameObject->createPythonScriptComponent(scriptName);
 		self->scriptComponent = scriptComponent;
-		scriptComponent->setPyObject((PyObject *)self);
+		scriptComponent->setPyObject(self);
 		Py_INCREF(self);
 
 		scriptComponent->executeCallback("OnStart");

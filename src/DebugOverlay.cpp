@@ -22,25 +22,48 @@ tadPole::DebugOverlay::~DebugOverlay()
 
 void tadPole::DebugOverlay::postMessage(std::string message)
 {
-	if (this->messageElements.size() + 1 > DEBUG_MESSAGE_MAX_COUNT)
+	std::string messageLine = "";
+	std::string messageRemainder = message;
+
+	while (messageRemainder != "" && messageRemainder != "\n")
 	{
-		this->messagePanel->removeChild(this->messageElements.at(0)->getName());
+		int newLineIndex = messageRemainder.find_first_of("\n");
+		if (newLineIndex != std::string::npos)
+		{
+			messageLine = messageRemainder.substr(0, newLineIndex);
+			messageRemainder = messageRemainder.substr(newLineIndex + 1, messageRemainder.size());
+		}
+		else
+		{
+			messageLine = messageRemainder;
+			messageRemainder = "";
+		}
 
-		Ogre::TextAreaOverlayElement * message = this->messageElements.at(0);
-		this->messageElements.erase(this->messageElements.begin());
-		delete message;
+		if (this->messageElements.size() + 1 > DEBUG_MESSAGE_MAX_COUNT)
+		{
+			Ogre::TextAreaOverlayElement * m = this->messageElements.at(0);
+			this->messagePanel->removeChild(m->getName());
+			this->messageElements.erase(this->messageElements.begin());
+			delete m;
+		}
+
+		Ogre::TextAreaOverlayElement * messageElement = this->createTextElement(
+			this->messagePanel,
+			"Message " + std::to_string(this->messageCount),
+			messageLine,
+			0.0f,
+			DEBUG_MESSAGE_CHAR_HEIGHT * this->messageElements.size(),
+			true
+		);
+
+		this->messageElements.push_back(messageElement);
+		++this->messageCount;
+
+		for (int i = 0; i < this->messageElements.size(); ++i)
+		{
+			this->messageElements.at(i)->setPosition(0.0f, DEBUG_MESSAGE_CHAR_HEIGHT * i);
+		}
 	}
-
-	Ogre::TextAreaOverlayElement * messageElement = this->createTextElement(
-		this->messagePanel,
-		"Message " + std::to_string(this->messageCount),
-		message,
-		0.0f,
-		DEBUG_MESSAGE_CHAR_HEIGHT * this->messageElements.size()
-	);
-
-	this->messageElements.push_back(messageElement);
-	++this->messageCount;
 }
 
 void tadPole::DebugOverlay::toggleVisible()
@@ -57,7 +80,6 @@ void tadPole::DebugOverlay::toggleVisible()
 
 void tadPole::DebugOverlay::update(float deltaTime)
 {
-	// Update Message Panel
 	for (int i = 0; i < this->messageElements.size(); ++i)
 	{
 		this->messageElements.at(i)->setPosition(0.0f, DEBUG_MESSAGE_CHAR_HEIGHT * i);
@@ -67,7 +89,7 @@ void tadPole::DebugOverlay::update(float deltaTime)
 	this->updateInfoPanelCaptions(deltaTime);
 }
 
-Ogre::TextAreaOverlayElement * tadPole::DebugOverlay::createTextElement(Ogre::OverlayContainer * parent, std::string name, std::string caption, float relativeX, float relativeY)
+Ogre::TextAreaOverlayElement * tadPole::DebugOverlay::createTextElement(Ogre::OverlayContainer * parent, std::string name, std::string caption, float relativeX, float relativeY, bool isMessage)
 {
 	Ogre::TextAreaOverlayElement * result = (Ogre::TextAreaOverlayElement *)
 		(RENDER_MANAGER->overlayManager->createOverlayElement("TextArea", name));
@@ -76,7 +98,7 @@ Ogre::TextAreaOverlayElement * tadPole::DebugOverlay::createTextElement(Ogre::Ov
 	result->setPosition(relativeX, relativeY);
 	result->setColourBottom(DEBUG_TEXT_BOTTOM_COLOR);
 	result->setColourTop(DEBUG_TEXT_TOP_COLOR);
-	result->setCharHeight(DEBUG_INFO_CHAR_HEIGHT);
+	result->setCharHeight(isMessage ? DEBUG_MESSAGE_CHAR_HEIGHT : DEBUG_INFO_CHAR_HEIGHT);
 	result->setFontName(DEBUG_TEXT_FONT_NAME);
 	result->setCaption(caption);
 	parent->addChild(result);
@@ -123,7 +145,8 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 		"AvgFps",
 		"",
 		DEBUG_INFO_PANEL_RELATIVE_WIDTH,
-		0.0f
+		0.0f,
+		false
 	);
 
 	this->bestFpsElement = this->createTextElement(
@@ -131,7 +154,8 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 		"BestFps",
 		"",
 		DEBUG_INFO_PANEL_RELATIVE_WIDTH,
-		DEBUG_INFO_CHAR_HEIGHT
+		DEBUG_INFO_CHAR_HEIGHT,
+		false
 	);
 
 	this->lastFpsElement = this->createTextElement(
@@ -139,7 +163,8 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 		"LastFps",
 		"",
 		DEBUG_INFO_PANEL_RELATIVE_WIDTH,
-		DEBUG_INFO_CHAR_HEIGHT * 2
+		DEBUG_INFO_CHAR_HEIGHT * 2,
+		false
 	);
 
 	this->worstFpsElement = this->createTextElement(
@@ -147,7 +172,8 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 		"WorstFps",
 		"",
 		DEBUG_INFO_PANEL_RELATIVE_WIDTH,
-		DEBUG_INFO_CHAR_HEIGHT * 3
+		DEBUG_INFO_CHAR_HEIGHT * 3,
+		false
 	);
 
 	this->triCountElement = this->createTextElement(
@@ -155,7 +181,8 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 		"TriCount",
 		"",
 		DEBUG_INFO_PANEL_RELATIVE_WIDTH,
-		DEBUG_INFO_CHAR_HEIGHT * 4
+		DEBUG_INFO_CHAR_HEIGHT * 4,
+		false
 	);
 
 	this->batchCountElement = this->createTextElement(
@@ -163,7 +190,8 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 		"BatchCount",
 		"",
 		DEBUG_INFO_PANEL_RELATIVE_WIDTH,
-		DEBUG_INFO_CHAR_HEIGHT * 5
+		DEBUG_INFO_CHAR_HEIGHT * 5,
+		false
 	);
 
 	this->bestFrameTimeElement = this->createTextElement(
@@ -171,7 +199,8 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 		"BestFrameTime",
 		"",
 		DEBUG_INFO_PANEL_RELATIVE_WIDTH,
-		DEBUG_INFO_CHAR_HEIGHT * 6
+		DEBUG_INFO_CHAR_HEIGHT * 6,
+		false
 	);
 
 	this->worstFrameTimeElement = this->createTextElement(
@@ -179,7 +208,8 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 		"WorstFrameTime",
 		"",
 		DEBUG_INFO_PANEL_RELATIVE_WIDTH,
-		DEBUG_INFO_CHAR_HEIGHT * 7
+		DEBUG_INFO_CHAR_HEIGHT * 7,
+		false
 	);
 
 	this->deltaTimeElement = this->createTextElement(
@@ -187,7 +217,8 @@ void tadPole::DebugOverlay::initializeInfoPanel()
 		"DeltaTime",
 		"",
 		DEBUG_INFO_PANEL_RELATIVE_WIDTH,
-		DEBUG_INFO_CHAR_HEIGHT * 8
+		DEBUG_INFO_CHAR_HEIGHT * 8,
+		false
 	);
 
 	this->avgFpsElement->setAlignment(Ogre::TextAreaOverlayElement::Alignment::Right);

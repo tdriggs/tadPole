@@ -36,20 +36,31 @@ tadPole::ComponentType tadPole::CameraComponent::getType()
 std::string tadPole::CameraComponent::serialize()
 {
 	std::ostringstream result;
-	std::ostringstream directionString;
-	Ogre::Vector3 direction = this->camera->getDerivedDirection();
-	directionString << "[" << direction.x << ", " << direction.y << ", " << direction.z << "]";
 
-	result << "{\n\t\t\t\t\t\t\t\"type\": \"" << "CAMERA" << "\",\n\t\t\t\t\t\t\t\"direction\": " << directionString.str()
-		<< ",\n\t\t\t\t\t\t\t\"nearClipDistance\": " << this->camera->getNearClipDistance() << ",\n\t\t\t\t\t\t\t\"farClipDistance\": " << this->camera->getFarClipDistance()
-		<< ",\n\t\t\t\t\t\t\t\"viewport\": \"" << ((this->camera->getViewport() == RENDER_MANAGER->mainViewport) ? "MAIN" : "") << "\"\n\t\t\t\t\t\t}";
+	int viewportIndex = -1;
+	for (int i = 0; i < RENDER_MANAGER->renderWindow->getNumViewports(); ++i)
+	{
+		if (this->camera->getViewport() == RENDER_MANAGER->renderWindow->getViewport(i))
+		{
+			viewportIndex = i;
+			break;
+		}
+	}
+
+	result << "{\n\t\t\t\t\t\t\t\"type\": \"" << "CAMERA" << "\",\n\t\t\t\t\t\t\t\"nearClipDistance\": " << this->camera->getNearClipDistance() << ",\n\t\t\t\t\t\t\t\"farClipDistance\": " << this->camera->getFarClipDistance()
+		<< ",\n\t\t\t\t\t\t\t\"viewport\": " << std::to_string(viewportIndex) << "\n\t\t\t\t\t\t}";
 
 	return result.str();
 }
 
-void tadPole::CameraComponent::setDirection(glm::vec3 direction)
+void tadPole::CameraComponent::setPyObject(PyTadPole_CameraComponent * pyObject)
 {
-	this->camera->setDirection(Ogre::Vector3(direction.x, direction.y, direction.z));
+	this->pyObject = pyObject;
+}
+
+tadPole::PyTadPole_CameraComponent * tadPole::CameraComponent::getPyObject()
+{
+	return this->pyObject;
 }
 
 void tadPole::CameraComponent::setClipDistances(float n, float f)
@@ -58,14 +69,12 @@ void tadPole::CameraComponent::setClipDistances(float n, float f)
 	this->camera->setFarClipDistance(f);
 }
 
-void tadPole::CameraComponent::setViewport(std::string viewport)
+void tadPole::CameraComponent::setViewport(int viewport)
 {
-	if (viewport == "MAIN")
+	if (viewport >= RENDER_MANAGER->renderWindow->getNumViewports() || viewport < 0)
 	{
-		RENDER_MANAGER->mainViewport->setCamera(this->camera);
+		EXCEPTION("Viewport does not exist: " + std::to_string(viewport));
 	}
-	else if (viewport != "")
-	{
-		EXCEPTION("Viewport does not exist: " + viewport);
-	}
+
+	RENDER_MANAGER->renderWindow->getViewport(viewport)->setCamera(this->camera);
 }

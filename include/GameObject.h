@@ -99,10 +99,10 @@ namespace tadPole
 		);
 
 		/**
-		* Create a new LightComponent and add it to this GameObject.
+		* Create a new PythonScriptComponent and add it to this GameObject.
 		*/
 		PythonScriptComponent * createPythonScriptComponent(
-			std::string scriptName	///< The file name of the file from which to create the PythonScriptObject.
+			std::string scriptName	///< The name of the script to attach to this GameObject.
 		);
 
 
